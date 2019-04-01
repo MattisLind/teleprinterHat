@@ -1,6 +1,7 @@
 # teleprinterHat
 A RaspberryPi HAT that interfaces a old school teleprinter
 
+## History
 Some time ago I started planning to get an old Lorenz Lo15b teleprinter working. Then arose the question about how to interface those old machines to the real world. While investigating this I gained quite some knowledge of teleprinter interfacing and Telex networks. For example the normal line voltage of a US teleprinter line is 120VDC and the current is 60 mA.
 
 Preferbly the interfacing should be as simple and small as possible. Using some big expensive 50 Hz 120 VAC transformer, rectifier and 2kOhm 6W resistor was not on the table.
@@ -10,6 +11,8 @@ Preferbly the circuit should be able to run off a standard USB charger. I.e. 5V 
 When I started to work with this project I also made a slamm announcment in the i-Telex forum and got a repy from Jochen that had done something similar and the same point in time. What a coincidence! [piTelex project](https://github.com/fablab-wue/piTelex)
 
 Jochen have compiled a lot of interesting and useful information there but the project is based on os a Raspberry Pi and cannt be used stand alone. One of my requirments are that it should be able to run completely stand alone. I don't want the bloat of a Linux kernel just to push a few bytes back and forth!
+
+## Requirments
 
 So I put together a list of requirments
 
@@ -35,3 +38,17 @@ So I put together a list of requirments
 21. Diagnostic LED to indicate what line voltage is selected. Maybe multicolor RGB LED?
 22. RX and TX LEDs
 23. Support for FSG device (optional)
+
+## Stepup converter
+
+The first thing to verify is that the idea of the step up converter was ok. I did a small circuit board to check the circuit and during this I found that the parameters of the coil si very importantant. It has to have a high enough Isat. Then the choice of MOSFET is important. The MOSFET has to full turn on at only 5V gate voltage which is what is available in this circuit. Thus Vgs(ON) is of high interest. Then to deliver as much of the 5V into the coil means that as little loss of energy in the MOSFET is important. The rDS(ON) is the parameter to look for. 
+
+![Step up hook up](https://i.imgur.com/SqzuRBvm.jpg)
+
+It turned out that this circuit worked well and could easily deliver 120VDC.
+
+## Using PWM to control the selector magnet.
+
+The main idea with this circuit is to generate the required 60mA with as litle loss as possible. The idea is that when a voltage is appled over an indcutor the current will start flowing linearly with time. When the voltage is removed over the coil the energy stored in the magnetic field tries to force the current to continue to flow. Normally this would cause sparks and high voltage over the coil. But if we lead the current back to the coil using a diode the magnetic field will slowsly start to collapse in an orerly fashion.
+
+The idea is to control the ON and OFF of the voltage over the magnet based on the measured current in the loop by a small microcontroller. Whenever the current increased over the nominal current plus some margin the controller will switch off the line voltage. Then current slowly decreases until it exceeds the lower margin at the time the controller switches ON line voltage again. Thus regulating the current in  the loop.
