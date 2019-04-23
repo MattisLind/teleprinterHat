@@ -38,6 +38,7 @@ So I put together a list of requirments
 21. Diagnostic LED to indicate what line voltage is selected. Maybe multicolor RGB LED?
 22. RX and TX LEDs
 23. Support for FSG device (optional)
+24. A few test sequences are built in. Continous RY and "The quick brown fox jumps over the lazy dog"
 
 ## Stepup converter
 
@@ -49,6 +50,8 @@ It turned out that this circuit worked well and could easily deliver 120VDC.
 
 ## Using PWM to control the selector magnet.
 
-The main idea with this circuit is to generate the required 60mA with as litle loss as possible. The idea is that when a voltage is appled over an indcutor the current will start flowing linearly with time. When the voltage is removed over the coil the energy stored in the magnetic field tries to force the current to continue to flow. Normally this would cause sparks and high voltage over the coil. But if we lead the current back to the coil using a diode the magnetic field will slowsly start to collapse in an orerly fashion.
+The main idea with this circuit is to generate the required 60mA with as litle loss as possible. By measuring the current in the loop using a small resistance and then hysteresis regulate the current using a PNP transistor as switch. The current is feed through a small inductor which will no saturate. (The receiver magnet goes into saturation and stays saturated over the whole bit.
 
-The idea is to control the ON and OFF of the voltage over the magnet based on the measured current in the loop by a small microcontroller. Whenever the current increased over the nominal current plus some margin the controller will switch off the line voltage. Then current slowly decreases until it exceeds the lower margin at the time the controller switches ON line voltage again. Thus regulating the current in  the loop.
+## Keying.
+
+A simple NPN trnsistor is used to key the current in the loop ON/OFF. This has to be done without any free-wheeling diode since otherwise the release of the magnet when swithcing of the current will be very much delayed and might not even happen at all.
