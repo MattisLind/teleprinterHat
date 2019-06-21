@@ -86,7 +86,7 @@ Running the circuit with the actual Lorenz Lo15 teleprinter also yielded good re
 
 Keying the signal, 90V line voltage, 40 mA line current. The large spikes are created by the selector magnet as the switch cuts off. Had initial problems that the choosen PNP transistor was unable to cope with these. Intalled a 300 V PNP transistor and a MOV to handle the spikes. Worked well. But I am considering using a TVS instead.
 
-![Current source regulating](https://i.imgur.com/07wgvVe.jpg)
+![Current source regulating](https://i.imgur.com/1IbDv2K.jpg)
 
 This picture shows when regulating the 40mA output to the selector magnet when the line is in marking state.
 
