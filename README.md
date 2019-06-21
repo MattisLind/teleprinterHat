@@ -60,6 +60,35 @@ The transistor switch is composed of a PNP transistor as the main switch transis
 
 The reference voltage to the hysteresis comparator is supplied from a PWM signal output of the mikroprocessor. Thereby making it possible to control the current level through software. The PWM signal is low pass filtered in a simple RC network and then buffered through a buffering op-amp.
 
-## Keying.
+I did a quick mockup with components at hand but it turned out that the comparator needed to be pretty fast and the transistor switch as well. It simply didn't work very well. I decided to try to do simulations in LTspice before doing further breadboarding. 
 
-A simple NPN transistor is used to key the current in the loop ON/OFF. This has to be done without any free-wheeling diode since otherwise the release of the magnet when swithcing of the current will be very much delayed and might not even happen at all.
+Searches on internet gave a decent circuit for a P-MOS FET based switch. Simulations in LTspice gave proper values for resistors and capacitors and it was time to make a peroper board.
+
+![Current source prototype](https://i.imgur.com/m5oTShe.jpg)
+
+Schematic.
+
+![Current source prototype schematic](https://i.imgur.com/kEjGToI.png)
+
+The design also included an PNP and NPN transistor to handle keying of the sening signal.
+
+A simple NPN transistor is used to key the current in the loop ON/OFF. This has to be done without any free-wheeling diode since otherwise the release of the magnet when swithcing of the current will be very much delayed and might not even happen at all. 
+
+Initial tests showed good performance. It could regulate the desired current at varying line voltages without any problem.
+
+![Current source regulating](https://i.imgur.com/07wgvVe.jpg)
+
+This picture show the voltage over the measurement resistor. The scale is 100mV per division and the resistor is 51 ohm so the interval it is regulating over is +/- 2mA as designed.
+
+Running the circuit with the actual Lorenz Lo15 teleprinter also yielded good results.
+
+![Current source regulating](https://i.imgur.com/mdcDE5u.jpg)
+
+Keying the signal, 90V line voltage, 40 mA line current. The large spikes are created by the selector magnet as the switch cuts off. Had initial problems that the choosen PNP transistor was unable to cope with these. Intalled a 300 V PNP transistor and a MOV to handle the spikes. Worked well. But I am considering using a TVS instead.
+
+![Current source regulating](https://i.imgur.com/07wgvVe.jpg)
+
+This picture shows when regulating the 40mA output to the selector magnet when the line is in marking state.
+
+
+
