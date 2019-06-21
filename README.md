@@ -90,5 +90,9 @@ Keying the signal, 90V line voltage, 40 mA line current. The large spikes are cr
 
 This picture shows when regulating the 40mA output to the selector magnet when the line is in marking state.
 
+## Prototyping the Step up converter and current source 
 
+I already did a prototype of the step-up converter. But the MOSFET used was quite big and overdimensioned. I also wanted to use a proper gate driver as well as off load the micro controller doing the chore of keeping the PWM rate continuosly measuring the output voltage. A separate, very small, switch control IC, cheap as well, was a better choice. So I designed another prototype board to test out these concept as well as testing the current loop circuit.
+
+![Current source regulating](https://i.imgur.com/Q6KLGss.png)
 
