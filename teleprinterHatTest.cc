@@ -5,6 +5,55 @@ int shiftMode = 0;
 int state = -1;
 char ch;
 
+#define SIZE 16
+
+volatile int inPtr, outPtr, bufferFull, bufferEmpty;
+int buffer[SIZE];
+
+int isBufferFull () {
+  return bufferFull;
+}
+
+int isBufferEmpty () {
+  return bufferEmpty;
+}
+
+void writeBuffer (int data) {
+  printf ("write data %X |", data);
+  buffer[inPtr] = data;
+  bufferEmpty = 0;
+  inPtr++;
+  if (inPtr == SIZE) {
+    inPtr = 0;
+  }
+  if (inPtr == outPtr) {
+    bufferFull = 1;
+  } else {
+    bufferFull = 0;
+  }
+}
+
+int readBuffer () {
+  int out = buffer[outPtr];
+  bufferFull = 0;
+  outPtr++;
+  if (outPtr == SIZE) {
+    outPtr = 0;
+  }
+  if (inPtr == outPtr) {
+    bufferEmpty = 1;
+  } else {
+    bufferEmpty = 0;
+  }
+  return out;
+}
+
+void  initBuffer () {
+  bufferEmpty = 1;
+  bufferFull = 0;
+  inPtr = 0;
+  outPtr = 0;
+}
 
 
 const char * ryMsg = "RYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRY\r\n";
@@ -34,6 +83,76 @@ int Serial::available () {
 
 char Serial::read() {
   return quickMsg[cnt++];
+}
+
+
+int baudotTxState = 0;
+int lastChWasCr = 0;
+char txCh;
+
+void inline txBit(char data) {
+  printf("%d ", data & 1);
+}
+
+
+void baudotTransmitStateMachine ()
+{
+  switch (baudotTxState) {
+  case 0: // First half stop bit
+    if (isBufferEmpty()) {
+      return;
+    }
+    if (!lastChWasCr) { // make sure we send CR twice..
+      txCh = readBuffer();
+      if (txCh==2) lastChWasCr = 1;
+    }
+    else {
+      lastChWasCr = 0;
+    }
+    txBit(0);
+    baudotTxState++;
+    break;
+  case 1:
+    txBit(0);
+    baudotTxState++;
+    break;
+  case 2:
+  case 3:
+    txBit(txCh >> 4);
+    baudotTxState++;
+    break;
+  case 4:
+  case 5:
+    txBit(txCh >> 3);
+    baudotTxState++;
+    break;
+  case 6:
+  case 7:
+    txBit(txCh >> 2);
+    baudotTxState++;
+    break;
+  case 8:
+  case 9:
+    txBit(txCh >> 1);
+    baudotTxState++;
+    break;
+  case 10:
+  case 11:
+    txBit(txCh >> 0);
+    baudotTxState++;
+    break;
+  case 12:
+  case 13:
+    txBit(1);
+    baudotTxState++;
+    break;
+  case 14:
+    txBit(1);
+    baudotTxState=0;
+    break;
+
+  }
+
 }
 
 // Letter  = 1 figures = 0
@@ -145,55 +264,6 @@ volatile char chCnt =0;
 volatile int chState;
 
 
-#define SIZE 16
-
-volatile int inPtr, outPtr, bufferFull, bufferEmpty;
-int buffer[SIZE];
-
-int isBufferFull () {
-  return bufferFull;
-}
-
-int isBufferEmpty () {
-  return bufferEmpty;
-}
-
-void writeBuffer (int data) {
-  printf ("write data %X |", data);
-  buffer[inPtr] = data;
-  bufferEmpty = 0;
-  inPtr++;
-  if (inPtr == SIZE) {
-    inPtr = 0;
-  }
-  if (inPtr == outPtr) {
-    bufferFull = 1;
-  } else {
-    bufferFull = 0;
-  }
-}
-
-int readBuffer () {
-  int out = buffer[outPtr];
-  bufferFull = 0;
-  outPtr++;
-  if (outPtr == SIZE) {
-    outPtr = 0;
-  }
-  if (inPtr == outPtr) {
-    bufferEmpty = 1;
-  } else {
-    bufferEmpty = 0;
-  }
-  return out;
-}
-
-void  initBuffer () {
-  bufferEmpty = 1;
-  bufferFull = 0;
-  inPtr = 0;
-  outPtr = 0;
-}
 
 void loop() {
   char out;
@@ -218,6 +288,7 @@ void loop() {
 
 
 int  main () {
+  int i;
   char ch;
   initBuffer();
   while (Serial1.available()) {
@@ -237,12 +308,38 @@ int  main () {
   }
   // Now the buffer should be full!
   printf ("buffer is full %d\n", isBufferFull());
-  for (int i=0; i<SIZE; i++) {
+  for (i=0; i<SIZE; i++) {
     ch = readBuffer();
     printf("Read %d | ", ch);
     printf ("buffer is full %d |", isBufferFull());
     printf ("buffer is empty: %d \n", isBufferEmpty());
   }
   printf ("buffer is empty: %d\n", isBufferEmpty());
+  
+  Serial1.reset();
+  loop();
+  printf("TX:");
+  for (i=0;i<15; i++) {
+    baudotTransmitStateMachine();
+  }
+  printf("\n");
+  loop();
+  printf("TX:");
+  for (i=0;i<15; i++) {
+    baudotTransmitStateMachine();
+  }
+  printf("\n");
+  loop();
+  printf("TX:");
+  for (i=0;i<15; i++) {
+    baudotTransmitStateMachine();
+  }
+  printf("\n");
+  loop();
+  printf("TX:");
+  for (i=0;i<15; i++) {
+    baudotTransmitStateMachine();
+  }
+  printf("\n");
   return 0;
 }
