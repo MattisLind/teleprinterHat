@@ -7,18 +7,28 @@ char ch;
 
 #define SIZE 16
 
-volatile int inPtr, outPtr, bufferFull, bufferEmpty;
-int buffer[SIZE];
+class RingBuffer {
+  volatile int inPtr, outPtr, bufferFull, bufferEmpty;
+  int buffer[SIZE];
+public:
+  int isBufferFull () {
+    return bufferFull;
+  };
+  int isBufferEmpty () {
+    return bufferEmpty;
+  }
+  void writeBuffer (int data);
+  int readBuffer ();
+  void  initBuffer ();
+};
 
-int isBufferFull () {
-  return bufferFull;
-}
 
-int isBufferEmpty () {
-  return bufferEmpty;
-}
 
-void writeBuffer (int data) {
+
+
+
+
+void RingBuffer::writeBuffer (int data) {
   printf ("write data %X |", data);
   buffer[inPtr] = data;
   bufferEmpty = 0;
@@ -33,7 +43,7 @@ void writeBuffer (int data) {
   }
 }
 
-int readBuffer () {
+int RingBuffer::readBuffer () {
   int out = buffer[outPtr];
   bufferFull = 0;
   outPtr++;
@@ -48,13 +58,16 @@ int readBuffer () {
   return out;
 }
 
-void  initBuffer () {
+void RingBuffer::initBuffer () {
   bufferEmpty = 1;
   bufferFull = 0;
   inPtr = 0;
   outPtr = 0;
 }
 
+
+class RingBuffer txBuffer;
+class RingBuffer rxBuffer;
 
 const char * ryMsg = "RYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRY\r\n";
 
@@ -90,8 +103,82 @@ int baudotTxState = 0;
 int lastChWasCr = 0;
 char txCh;
 
+
+char txData[500];
+int txPtr=0;
+int rxPtr=0;
+int rxCnt=0;
 void inline txBit(char data) {
   printf("%d ", data & 1);
+  txData[txPtr++]=data&1;
+}
+
+
+char inline rxBit () { 
+  char d = txData[rxPtr];
+  printf ("rxCnt = %d rxPtr = %d dataBit=%d \n", rxCnt, rxPtr, d);
+  if (rxCnt < 7) {
+    rxCnt++;
+  } else {
+    rxCnt=0;
+    rxPtr++;
+  }
+
+  return d;
+}
+
+int rxState=0;
+int sampleCounter = 0;
+int rxDataByte; 
+int bitCnt=0;
+
+void baudotReceiveStateMachine () {
+  char bit;
+  printf("baudotReceiveStateMachine BEGIN, rxState=%d bitCnt=%d, sampleCounter=%d rxDataByte=%02X", rxState, bitCnt, sampleCounter,rxDataByte);
+  switch (rxState) {
+    case 0:   // Searching fo start bit 
+      if (rxBit() == 0) {
+	rxState = 1;
+      }
+      break;
+    case 1:  // Qualify start bit has to be 7 in a row.
+      if (rxBit() == 0) {
+	// Still a statbit. Need to count to 7 to find the middle of the start bit!
+	if (sampleCounter >= 6) {
+	  rxState = 2;
+	  sampleCounter = 0;
+	  rxDataByte = 0;
+	  bitCnt=0;
+	} else {
+	  sampleCounter ++;
+	}
+      } else {
+	rxState = 0; // go back if a marking state detected again. False start bit !
+      }
+      break;
+    case 2: // Sampling in the middle of the bit - first bit!
+      bit = rxBit();
+      if (sampleCounter >= 15) {
+	rxDataByte = rxDataByte << 1;
+	rxDataByte |= 1 & bit;
+	bitCnt++;
+	if (bitCnt==5) {
+	  rxState=3;
+	}
+	sampleCounter=0;
+      } else {
+	sampleCounter++;
+      }
+      break;
+    case 3: // 1.5 stop bits
+      rxBit();
+      if (sampleCounter < 22) {
+	sampleCounter++;
+      } else {
+	rxState = 0;
+	rxBuffer.writeBuffer(rxDataByte);
+      }
+  }
 }
 
 
@@ -99,11 +186,11 @@ void baudotTransmitStateMachine ()
 {
   switch (baudotTxState) {
   case 0: // First half stop bit
-    if (isBufferEmpty()) {
+    if (txBuffer.isBufferEmpty()) {
       return;
     }
     if (!lastChWasCr) { // make sure we send CR twice..
-      txCh = readBuffer();
+      txCh = txBuffer.readBuffer();
       if (txCh==2) lastChWasCr = 1;
     }
     else {
@@ -268,19 +355,19 @@ volatile int chState;
 void loop() {
   char out;
   printf("before checking buffer full | ");
-  if (!isBufferFull()) {
+  if (!txBuffer.isBufferFull()) {
     printf("buffer not full |");
     if (shiftMode) {
        printf("shift mode |");
        out = asciiToBaudot(ch, &state, &shiftMode);
-       writeBuffer(out);
+       txBuffer.writeBuffer(out);
     } else {
        printf("not shift mode | ");
       if (Serial1.available()) {
         ch = Serial1.read();
 	printf("got a character %c |", ch);
         out = asciiToBaudot(ch, &state, &shiftMode);
-        writeBuffer(out);  
+        txBuffer.writeBuffer(out);  
       }
     }
   }
@@ -290,31 +377,32 @@ void loop() {
 int  main () {
   int i;
   char ch;
-  initBuffer();
+  rxBuffer.initBuffer();
+  txBuffer.initBuffer();
   while (Serial1.available()) {
     loop();
-    if (!isBufferEmpty()) {
-      ch = readBuffer();
+    if (!txBuffer.isBufferEmpty()) {
+      ch = txBuffer.readBuffer();
       printf("Read %d\n", ch);
     }
   }
-  printf ("buffer is empty: %d\n", isBufferEmpty());
+  printf ("buffer is empty: %d\n", txBuffer.isBufferEmpty());
   Serial1.reset();
   for (int i=0; i<SIZE; i++) {
     loop();
-    printf ("buffer is full %d |", isBufferFull());
-    printf ("buffer is empty: %d \n", isBufferEmpty());
+    printf ("buffer is full %d |", txBuffer.isBufferFull());
+    printf ("buffer is empty: %d \n", txBuffer.isBufferEmpty());
 
   }
   // Now the buffer should be full!
-  printf ("buffer is full %d\n", isBufferFull());
+  printf ("buffer is full %d\n", txBuffer.isBufferFull());
   for (i=0; i<SIZE; i++) {
-    ch = readBuffer();
+    ch = txBuffer.readBuffer();
     printf("Read %d | ", ch);
-    printf ("buffer is full %d |", isBufferFull());
-    printf ("buffer is empty: %d \n", isBufferEmpty());
+    printf ("buffer is full %d |", txBuffer.isBufferFull());
+    printf ("buffer is empty: %d \n", txBuffer.isBufferEmpty());
   }
-  printf ("buffer is empty: %d\n", isBufferEmpty());
+  printf ("buffer is empty: %d\n", txBuffer.isBufferEmpty());
   
   Serial1.reset();
   loop();
@@ -341,5 +429,13 @@ int  main () {
     baudotTransmitStateMachine();
   }
   printf("\n");
+  printf("Databits: ");
+  for (i=0; i< 60; i++) {
+    printf("%d ", txData[i]);
+  }
+  printf("\n");
+  for (i=0; i< 60*8; i++) {
+    baudotReceiveStateMachine();
+  }
   return 0;
 }
