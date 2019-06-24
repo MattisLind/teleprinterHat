@@ -5,16 +5,12 @@
 #include "../src/BaudotCodec.h"
 
 
-char ch;
 
 const char ft [] = {22, 23, 19, 1, 11, 16, 21, 7, 6, 24};
 const char lt [] = {3, 25, 14, 9, 1, 13, 26, 20, 6, 11, 15, 18, 28, 12, 24, 22, 23, 10, 5, 16, 7, 30, 19, 29, 21, 17};
 class RingBuffer txBuffer;
 class RingBuffer rxBuffer;
 class BaudotCodec baudotCodec(ft, lt);
-
-const char * ryMsg = "RYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRY\r\n";
-
 
 
 class Serial {
@@ -66,12 +62,9 @@ char inline rxBit () {
   return d;
 }
 
-
-
-volatile char chCnt =0;
-volatile int chState;
-
 int shiftMode=0;
+
+char ch;
 
 void loop() {
   char out;
@@ -94,13 +87,10 @@ void loop() {
   }
 }
 
-
 int  main () {
   int i;
   char ch;
   class SoftUART softUART(rxBit, txBit, &txBuffer, &rxBuffer);
-
-
   rxBuffer.initBuffer();
   txBuffer.initBuffer();
   while (Serial1.available()) {
