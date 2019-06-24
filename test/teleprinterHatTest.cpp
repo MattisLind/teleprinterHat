@@ -1,69 +1,11 @@
 #include <stdio.h>
 #include <string.h>
+#include "../src/RingBuffer.h"
+#include "../src/SoftUART.h"
 
 int shiftMode = 0;
 int state = -1;
 char ch;
-
-#define SIZE 16
-
-class RingBuffer {
-  volatile int inPtr, outPtr, bufferFull, bufferEmpty;
-  int buffer[SIZE];
-public:
-  int isBufferFull () {
-    return bufferFull;
-  };
-  int isBufferEmpty () {
-    return bufferEmpty;
-  }
-  void writeBuffer (int data);
-  int readBuffer ();
-  void  initBuffer ();
-};
-
-
-
-
-
-
-
-void RingBuffer::writeBuffer (int data) {
-  printf ("write data %X |", data);
-  buffer[inPtr] = data;
-  bufferEmpty = 0;
-  inPtr++;
-  if (inPtr == SIZE) {
-    inPtr = 0;
-  }
-  if (inPtr == outPtr) {
-    bufferFull = 1;
-  } else {
-    bufferFull = 0;
-  }
-}
-
-int RingBuffer::readBuffer () {
-  int out = buffer[outPtr];
-  bufferFull = 0;
-  outPtr++;
-  if (outPtr == SIZE) {
-    outPtr = 0;
-  }
-  if (inPtr == outPtr) {
-    bufferEmpty = 1;
-  } else {
-    bufferEmpty = 0;
-  }
-  return out;
-}
-
-void RingBuffer::initBuffer () {
-  bufferEmpty = 1;
-  bufferFull = 0;
-  inPtr = 0;
-  outPtr = 0;
-}
 
 
 class RingBuffer txBuffer;
@@ -99,9 +41,6 @@ char Serial::read() {
 }
 
 
-int baudotTxState = 0;
-int lastChWasCr = 0;
-char txCh;
 
 
 char txData[500];
@@ -127,120 +66,6 @@ char inline rxBit () {
   return d;
 }
 
-int rxState=0;
-int sampleCounter = 0;
-int rxDataByte; 
-int bitCnt=0;
-
-void baudotReceiveStateMachine () {
-  char bit;
-  printf("baudotReceiveStateMachine BEGIN, rxState=%d bitCnt=%d, sampleCounter=%d rxDataByte=%02X", rxState, bitCnt, sampleCounter,rxDataByte);
-  switch (rxState) {
-    case 0:   // Searching fo start bit 
-      if (rxBit() == 0) {
-	rxState = 1;
-      }
-      break;
-    case 1:  // Qualify start bit has to be 7 in a row.
-      if (rxBit() == 0) {
-	// Still a statbit. Need to count to 7 to find the middle of the start bit!
-	if (sampleCounter >= 6) {
-	  rxState = 2;
-	  sampleCounter = 0;
-	  rxDataByte = 0;
-	  bitCnt=0;
-	} else {
-	  sampleCounter ++;
-	}
-      } else {
-	rxState = 0; // go back if a marking state detected again. False start bit !
-      }
-      break;
-    case 2: // Sampling in the middle of the bit - first bit!
-      bit = rxBit();
-      if (sampleCounter >= 15) {
-	rxDataByte = rxDataByte << 1;
-	rxDataByte |= 1 & bit;
-	bitCnt++;
-	if (bitCnt==5) {
-	  rxState=3;
-	}
-	sampleCounter=0;
-      } else {
-	sampleCounter++;
-      }
-      break;
-    case 3: // 1.5 stop bits
-      rxBit();
-      if (sampleCounter < 22) {
-	sampleCounter++;
-      } else {
-	rxState = 0;
-	rxBuffer.writeBuffer(rxDataByte);
-      }
-  }
-}
-
-
-void baudotTransmitStateMachine ()
-{
-  switch (baudotTxState) {
-  case 0: // First half stop bit
-    if (txBuffer.isBufferEmpty()) {
-      return;
-    }
-    if (!lastChWasCr) { // make sure we send CR twice..
-      txCh = txBuffer.readBuffer();
-      if (txCh==2) lastChWasCr = 1;
-    }
-    else {
-      lastChWasCr = 0;
-    }
-    txBit(0);
-    baudotTxState++;
-    break;
-  case 1:
-    txBit(0);
-    baudotTxState++;
-    break;
-  case 2:
-  case 3:
-    txBit(txCh >> 4);
-    baudotTxState++;
-    break;
-  case 4:
-  case 5:
-    txBit(txCh >> 3);
-    baudotTxState++;
-    break;
-  case 6:
-  case 7:
-    txBit(txCh >> 2);
-    baudotTxState++;
-    break;
-  case 8:
-  case 9:
-    txBit(txCh >> 1);
-    baudotTxState++;
-    break;
-  case 10:
-  case 11:
-    txBit(txCh >> 0);
-    baudotTxState++;
-    break;
-  case 12:
-  case 13:
-    txBit(1);
-    baudotTxState++;
-    break;
-  case 14:
-    txBit(1);
-    baudotTxState=0;
-    break;
-
-  }
-
-}
 
 // Letter  = 1 figures = 0
 
@@ -377,6 +202,7 @@ void loop() {
 int  main () {
   int i;
   char ch;
+  class SoftUART softUART(rxBit, txBit, &txBuffer, &rxBuffer);
   rxBuffer.initBuffer();
   txBuffer.initBuffer();
   while (Serial1.available()) {
@@ -408,25 +234,25 @@ int  main () {
   loop();
   printf("TX:");
   for (i=0;i<15; i++) {
-    baudotTransmitStateMachine();
+    softUART.baudotTransmitStateMachine();
   }
   printf("\n");
   loop();
   printf("TX:");
   for (i=0;i<15; i++) {
-    baudotTransmitStateMachine();
+    softUART.baudotTransmitStateMachine();
   }
   printf("\n");
   loop();
   printf("TX:");
   for (i=0;i<15; i++) {
-    baudotTransmitStateMachine();
+    softUART.baudotTransmitStateMachine();
   }
   printf("\n");
   loop();
   printf("TX:");
   for (i=0;i<15; i++) {
-    baudotTransmitStateMachine();
+    softUART.baudotTransmitStateMachine();
   }
   printf("\n");
   printf("Databits: ");
@@ -435,7 +261,7 @@ int  main () {
   }
   printf("\n");
   for (i=0; i< 60*8; i++) {
-    baudotReceiveStateMachine();
+    softUART.baudotReceiveStateMachine();
   }
   return 0;
 }
