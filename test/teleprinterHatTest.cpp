@@ -4,14 +4,9 @@
 #include "../src/SoftUART.h"
 #include "../src/BaudotCodec.h"
 
-
-
-const char ft [] = {22, 23, 19, 1, 11, 16, 21, 7, 6, 24};
-const char lt [] = {3, 25, 14, 9, 1, 13, 26, 20, 6, 11, 15, 18, 28, 12, 24, 22, 23, 10, 5, 16, 7, 30, 19, 29, 21, 17};
 class RingBuffer txBuffer;
 class RingBuffer rxBuffer;
-class BaudotCodec baudotCodec(ft, lt);
-
+class BaudotCodec baudotCodec;
 
 class Serial {
   const char * quickMsg;
@@ -20,6 +15,7 @@ class Serial {
   Serial() : quickMsg("RYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRY\r\n0123456789\r\nABCDEFGHIJKLMNOPQRSTUVWXYZ\r\n-\',!:(\")#?&./;\r\nThe quick brown fox jumps over the lazy dog\r\n!\"#$%&/()=|\\{}[]*~_-:.;,<>"), cnt(0) {}
   int available ();
   char read ();
+  void write(char ch);
   void reset() { cnt = 0; };
 } Serial1;
 
@@ -36,6 +32,9 @@ char Serial::read() {
   return quickMsg[cnt++];
 }
 
+void Serial::write(char ch) {
+  printf("Serial.write: %c", ch);
+}
 
 
 
@@ -67,10 +66,10 @@ int shiftMode=0;
 char ch;
 
 void loop() {
-  char out;
+  char out, rxChar;
   printf("before checking buffer full | ");
   if (!txBuffer.isBufferFull()) {
-    printf("buffer not full |");
+    printf("txBuffer is not full |");
     if (shiftMode) {
        printf("shift mode |");
        out = baudotCodec.asciiToBaudot(ch, &shiftMode);
@@ -84,6 +83,12 @@ void loop() {
         txBuffer.writeBuffer(out);  
       }
     }
+  }
+  if (!rxBuffer.isBufferEmpty()) {
+    printf("rxBuffer is not full");
+    rxChar = rxBuffer.readBuffer();
+    out = baudotCodec.baudotToAscii(rxChar);
+    Serial1.write(out);
   }
 }
 
