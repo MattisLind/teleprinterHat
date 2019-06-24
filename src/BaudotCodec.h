@@ -1,10 +1,11 @@
 class BaudotCodec {
   int letterState;
   int doAgain;
-  const char * figuresTable;
-  const char * lettersTable;
+  static const char  figuresTable[];
+  static const char lettersTable[]; 
   char handleLetterFigure(char, int, int *);
  public:
   char asciiToBaudot(char, int *);
-  BaudotCodec(const char *, const char *);
+  char baudotToAscii(char);
+  BaudotCodec();
 };

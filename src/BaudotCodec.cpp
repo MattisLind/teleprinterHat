@@ -3,11 +3,14 @@
 #include "BaudotCodec.h"
 #include <stdio.h>
 
-BaudotCodec::BaudotCodec(const char * ft, const char * lt) {
+BaudotCodec::BaudotCodec() {
   letterState=-1;
-  figuresTable = ft; 
-  lettersTable = lt;
+  //figuresTable = ft; 
+  //lettersTable = lt;
 }
+
+const char BaudotCodec::lettersTable[] =  {3, 25, 14, 9, 1, 13, 26, 20, 6, 11, 15, 18, 28, 12, 24, 22, 23, 10, 5, 16, 7, 30, 19, 29, 21, 17};;
+const char BaudotCodec::figuresTable[] =  {22, 23, 19, 1, 11, 16, 21, 7, 6, 24};
 
 char BaudotCodec::handleLetterFigure(char out, int requestedState, int * doAgain) {
   if (letterState==requestedState) {
@@ -107,7 +110,9 @@ char BaudotCodec::asciiToBaudot(char ch, int * doAgain) {
     else 
       return 0;
   }
-
-  
 }
 
+
+char BaudotCodec::baudotToAscii(char ch) {
+  return ch;
+}
