@@ -2,19 +2,19 @@
 #include <string.h>
 #include "../src/RingBuffer.h"
 #include "../src/SoftUART.h"
+#include "../src/BaudotCodec.h"
 
-int shiftMode = 0;
-int state = -1;
+
 char ch;
 
-
+const char ft [] = {22, 23, 19, 1, 11, 16, 21, 7, 6, 24};
+const char lt [] = {3, 25, 14, 9, 1, 13, 26, 20, 6, 11, 15, 18, 28, 12, 24, 22, 23, 10, 5, 16, 7, 30, 19, 29, 21, 17};
 class RingBuffer txBuffer;
 class RingBuffer rxBuffer;
+class BaudotCodec baudotCodec(ft, lt);
 
 const char * ryMsg = "RYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRYRY\r\n";
 
-char figuresTable[] = {22, 23, 19, 1, 11, 16, 21, 7, 6, 24};
-char lettersTable[] = {3, 25, 14, 9, 1, 13, 26, 20, 6, 11, 15, 18, 28, 12, 24, 22, 23, 10, 5, 16, 7, 30, 19, 29, 21, 17};
 
 
 class Serial {
@@ -67,115 +67,11 @@ char inline rxBit () {
 }
 
 
-// Letter  = 1 figures = 0
-
-int handleLetterFigure(char out, int * letterState, int requestedState, int * doAgain) {
-  if (*letterState==requestedState) {
-    *doAgain = 0;
-    printf("doAgain=0 |");
-    return out;    
-  }
-  else {
-    if (requestedState==1) {
-      *doAgain = 1;
-      *letterState = 1; 
-      printf("doAgain=1 letterState=1 |");
-      return 31;
-    }
-    else {
-      *doAgain = 1;
-      *letterState = 0;
-      printf("doAgain=1 letterState=0 |");
-      return 27;
-    }
-  }
-}
-
-int asciiToBaudot(char ch, int * letterState, int * doAgain) {
-  int out, handled;
-  if (ch >= 48 && ch <= 57) {
-    // Figures
-      out = figuresTable[ch-48];
-      return handleLetterFigure(out, letterState, 0, doAgain); 
-  } else if (ch >= 65 && ch <= 90)  { 
-    out = lettersTable[ch-65]; // letters
-    return handleLetterFigure(out, letterState, 1, doAgain); 
-    // A-Z letters
-  } else if (ch >= 97 && ch <= 122) {
-    out = lettersTable[ch-97]; // letters
-    return handleLetterFigure(out, letterState, 1, doAgain); 
-    // a-z letter
-  } else if (ch == ' ') {
-    return 4;
-  } else if (ch == '\r') {
-    return 2;
-  } else if (ch == '\n') {
-    return 8;
-  } else if (ch == '\0') {
-    return 0;
-  } else {
-    handled = true;
-    switch (ch) {
-      case ',':
-        out = 12;
-        break;
-      case '.':
-        out = 28;       
-        break;
-      case ':': 
-        out = 14;
-        break;
-      case ';':
-        out = 30;
-        break;
-      case '\"':
-        out = 17;
-        break;
-      case '!': 
-        out = 13;
-        break;
-      case '/':
-        out = 29;
-        break;
-      case '-':
-        out = 3;
-        break;
-      case '\'':
-        out = 10;
-        break;
-      case '(': 
-        out = 15;
-        break;
-      case ')':
-        out = 18;
-        break;
-      case '&':
-        out = 26;
-        break;
-      case '#':
-        out = 20;
-        break;
-      case '?':
-	out = 25;
-	break;
-      default:
-        handled = false;
-	break;
-    }
-    if (handled)
-      return handleLetterFigure(out, letterState, 0, doAgain);
-    else 
-      return 0;
-  }
-
-  
-}
-
 
 volatile char chCnt =0;
 volatile int chState;
 
-
+int shiftMode=0;
 
 void loop() {
   char out;
@@ -184,14 +80,14 @@ void loop() {
     printf("buffer not full |");
     if (shiftMode) {
        printf("shift mode |");
-       out = asciiToBaudot(ch, &state, &shiftMode);
+       out = baudotCodec.asciiToBaudot(ch, &shiftMode);
        txBuffer.writeBuffer(out);
     } else {
        printf("not shift mode | ");
       if (Serial1.available()) {
         ch = Serial1.read();
 	printf("got a character %c |", ch);
-        out = asciiToBaudot(ch, &state, &shiftMode);
+        out = baudotCodec.asciiToBaudot(ch, &shiftMode);
         txBuffer.writeBuffer(out);  
       }
     }
@@ -203,6 +99,8 @@ int  main () {
   int i;
   char ch;
   class SoftUART softUART(rxBit, txBit, &txBuffer, &rxBuffer);
+
+
   rxBuffer.initBuffer();
   txBuffer.initBuffer();
   while (Serial1.available()) {
