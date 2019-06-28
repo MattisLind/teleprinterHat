@@ -8,9 +8,9 @@ Preferbly the interfacing should be as simple and small as possible. Using some 
 
 Preferbly the circuit should be able to run off a standard USB charger. I.e. 5V 500mA. Experimenting a bit with a stepup circuit gave that is perfectly possibly to step up 5V to 120V. SO one could ask how could a 5V 500 mA supply be able to supply the power for a 120V 60mA load. Of course it cannot, but the problem lies in the fact tat most of the power is absorbed in the current limiting 2kOhm resistor of the old school circuit. The actual teleprinter has an internal resistance of approximately 100 Ohm. So why 120V? The reason for 120V is to achieve a fast pull of the magnet inside the teleprinter. After the initial pull the steady state voltage drop is between 5 to 10 V at 60mA. 
 
-When I started to work with this project I also made a slamm announcment in the i-Telex forum and got a repy from Jochen that had done something similar and the same point in time. What a coincidence! [piTelex project](https://github.com/fablab-wue/piTelex)
+When I started to work with this project I also made an announcment in the i-Telex forum and got a reply from Jochen that had done something similar and the same point in time. What a coincidence! [piTelex project](https://github.com/fablab-wue/piTelex)
 
-Jochen have compiled a lot of interesting and useful information there but the project is based on os a Raspberry Pi and cannt be used stand alone. One of my requirments are that it should be able to run completely stand alone. I don't want the bloat of a Linux kernel just to push a few bytes back and forth!
+Jochen have compiled a lot of interesting and useful information there but the project is based on a Raspberry Pi and cannt be used stand alone. One of my requirements are that it should be able to run completely stand alone. I don't want the bloat of a Linux kernel just to push a few bytes back and forth!
 
 ## Requirments
 
