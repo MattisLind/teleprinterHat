@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 void RingBuffer::writeBuffer (int data) {
-  printf ("write data %X |", data);
+  //printf ("write data %X |", data);
   buffer[inPtr] = data;
   bufferEmpty = 0;
   inPtr++;

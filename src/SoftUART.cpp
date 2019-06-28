@@ -17,7 +17,7 @@ SoftUART::SoftUART(readFuncType readFunc, writeFuncType writeFunc, class RingBuf
 
 void SoftUART::baudotReceiveStateMachine () {
   char bit;
-  printf("baudotReceiveStateMachine BEGIN, rxState=%d bitCnt=%d, sampleCounter=%d rxDataByte=%02X", rxState, bitCnt, sampleCounter,rxDataByte);
+  //printf("baudotReceiveStateMachine BEGIN, rxState=%d bitCnt=%d, sampleCounter=%d rxDataByte=%02X", rxState, bitCnt, sampleCounter,rxDataByte);
   switch (rxState) {
     case 0:   // Searching fo start bit 
       if (rxBit() == 0) {
