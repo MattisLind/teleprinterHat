@@ -6,7 +6,7 @@
 
 class RingBuffer txBuffer;
 class RingBuffer rxBuffer;
-class BaudotCodec baudotCodec;
+class BaudotCodec baudotCodec(1);
 
 class Serial {
   const char * quickMsg;
@@ -33,12 +33,12 @@ char Serial::read() {
 }
 
 void Serial::write(char ch) {
-  printf("Serial.write: %c", ch);
+  printf("%c", ch);
 }
 
 
 
-char txData[500];
+char txData[5000];
 int txPtr=0;
 int rxPtr=0;
 int rxCnt=0;
@@ -50,7 +50,7 @@ void inline txBit(char data) {
 
 char inline rxBit () { 
   char d = txData[rxPtr];
-  printf ("rxCnt = %d rxPtr = %d dataBit=%d \n", rxCnt, rxPtr, d);
+  //printf ("rxCnt = %d rxPtr = %d dataBit=%d \n", rxCnt, rxPtr, d);
   if (rxCnt < 7) {
     rxCnt++;
   } else {
@@ -67,15 +67,15 @@ char ch;
 
 void loop() {
   char out, rxChar;
-  printf("before checking buffer full | ");
+  //printf("before checking buffer full | ");
   if (!txBuffer.isBufferFull()) {
-    printf("txBuffer is not full |");
+    //printf("txBuffer is not full |");
     if (shiftMode) {
        printf("shift mode |");
        out = baudotCodec.asciiToBaudot(ch, &shiftMode);
        txBuffer.writeBuffer(out);
     } else {
-       printf("not shift mode | ");
+      //printf("not shift mode | ");
       if (Serial1.available()) {
         ch = Serial1.read();
 	printf("got a character %c |", ch);
@@ -85,10 +85,12 @@ void loop() {
     }
   }
   if (!rxBuffer.isBufferEmpty()) {
-    printf("rxBuffer is not full");
+    //printf("rxBuffer is not empty");
     rxChar = rxBuffer.readBuffer();
     out = baudotCodec.baudotToAscii(rxChar);
-    Serial1.write(out);
+    if (out != -1) {
+      Serial1.write(out);
+    }
   }
 }
 
@@ -96,6 +98,9 @@ int  main () {
   int i;
   char ch;
   class SoftUART softUART(rxBit, txBit, &txBuffer, &rxBuffer);
+  for (i=0; i< 5000; i++) {
+    txData[i]=1;
+  }
   rxBuffer.initBuffer();
   txBuffer.initBuffer();
   while (Serial1.available()) {
@@ -122,39 +127,27 @@ int  main () {
     printf ("buffer is empty: %d \n", txBuffer.isBufferEmpty());
   }
   printf ("buffer is empty: %d\n", txBuffer.isBufferEmpty());
-  
+
   Serial1.reset();
-  loop();
-  printf("TX:");
-  for (i=0;i<15; i++) {
-    softUART.baudotTransmitStateMachine();
+
+  while (Serial1.available()) {
+    loop();
+    printf("TX:");
+    for (i=0;i<15; i++) {
+      softUART.baudotTransmitStateMachine();
+    }
+    printf("\n");
   }
-  printf("\n");
-  loop();
-  printf("TX:");
-  for (i=0;i<15; i++) {
-    softUART.baudotTransmitStateMachine();
-  }
-  printf("\n");
-  loop();
-  printf("TX:");
-  for (i=0;i<15; i++) {
-    softUART.baudotTransmitStateMachine();
-  }
-  printf("\n");
-  loop();
-  printf("TX:");
-  for (i=0;i<15; i++) {
-    softUART.baudotTransmitStateMachine();
-  }
+  
   printf("\n");
   printf("Databits: ");
-  for (i=0; i< 60; i++) {
+  for (i=0; i< 5000; i++) {
     printf("%d ", txData[i]);
   }
   printf("\n");
-  for (i=0; i< 60*8; i++) {
+  for (i=0; i< 5000*8; i++) {
     softUART.baudotReceiveStateMachine();
+    loop();
   }
   return 0;
 }
