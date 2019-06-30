@@ -42,8 +42,8 @@ void SoftUART::baudotReceiveStateMachine () {
     case 2: // Sampling in the middle of the bit - first bit!
       bit = rxBit();
       if (sampleCounter >= 15) {
-	rxDataByte = rxDataByte << 1;
-	rxDataByte |= 1 & bit;
+	rxDataByte = rxDataByte >> 1;
+	rxDataByte |= (1 & bit) << 4;
 	bitCnt++;
 	if (bitCnt==5) {
 	  rxState=3;
@@ -88,12 +88,12 @@ void SoftUART::baudotTransmitStateMachine ()
     break;
   case 2:
   case 3:
-    txBit(txCh >> 4);
+    txBit(txCh >> 0);
     baudotTxState++;
     break;
   case 4:
   case 5:
-    txBit(txCh >> 3);
+    txBit(txCh >> 1);
     baudotTxState++;
     break;
   case 6:
@@ -103,12 +103,12 @@ void SoftUART::baudotTransmitStateMachine ()
     break;
   case 8:
   case 9:
-    txBit(txCh >> 1);
+    txBit(txCh >> 3);
     baudotTxState++;
     break;
   case 10:
   case 11:
-    txBit(txCh >> 0);
+    txBit(txCh >> 4);
     baudotTxState++;
     break;
   case 12:

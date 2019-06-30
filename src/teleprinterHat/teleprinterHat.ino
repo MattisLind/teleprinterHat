@@ -33,7 +33,7 @@ void txBit (char bit) {
 
 
 char rxBit () {
-  return digitalRead(PA5) & 1;
+  return ((~digitalRead(PA5)) & 1;
 }
 
 class SoftUART softUART(rxBit, txBit, &txBuffer, &rxBuffer);
