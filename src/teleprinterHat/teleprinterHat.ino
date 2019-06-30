@@ -1,4 +1,4 @@
-#define LED_RATE 10000    // in microseconds; should give 0.5Hz toggles
+#define LED_RATE 1250    // in microseconds; should give 0.5Hz toggles
 #include "RingBuffer.h"
 #include "SoftUART.h"
 #include "BaudotCodec.h"
@@ -33,7 +33,11 @@ void txBit (char bit) {
 
 
 char rxBit () {
+<<<<<<< Updated upstream
   return ((~digitalRead(PA5)) & 1;
+=======
+  return digitalRead(PA6) & 1;
+>>>>>>> Stashed changes
 }
 
 class SoftUART softUART(rxBit, txBit, &txBuffer, &rxBuffer);
@@ -102,7 +106,7 @@ void loop() {
   }
 
   pwmWrite(pwmOutPin, duty); // 0<=duty<=maxduty
-
+  
   if (!txBuffer.isBufferFull()) {
     if (shiftMode) {
        out = baudotCodec.asciiToBaudot(ch, &shiftMode);
@@ -122,4 +126,5 @@ void loop() {
       Serial1.write(out);
     }
   }
+  
 }
