@@ -19,7 +19,7 @@ So I put together a list of requirments
 1. Shall only need 5V supply. The generation of up 120V DC is built into the device. Using a step-up converter.
 2. Low power consumption. No 6W 2kOhm resistor. Use PWM to control the current through the solenoid. 
 3. Configurable for 60mA, 40mA and 20mA current loop.
-4. Automatically detect the line voltage to use based on line current and required rise time of current through coil. Measure what kinde of loop inductance there is and adapt to a possibly resistive remote.
+4. ~~Automatically detect the line voltage to use based on line current and required rise time of current through coil. Measure what kinde of loop inductance there is and adapt to a possibly resistive remote.~~ Deemed not possible with current design.
 5. Interface directly to RS-232-E levels on board. (option) using a MAX232 or equivalent and a couple of capacitors
 6. Interface directly to USB using FTDI chip on board (option)
 7. Do baudot to ASCII conversion locally.
@@ -39,6 +39,7 @@ So I put together a list of requirments
 22. RX and TX LEDs
 23. Support for FSG device (optional)
 24. A few test sequences are built in. Continous RY and "The quick brown fox jumps over the lazy dog"
+25. Flow control using XON/XOFF, RTS/CTS or DSR/DTR. Selcteable using jumpers. Both via USB/FTDI or RS-232
 
 ## Stepup converter
 
