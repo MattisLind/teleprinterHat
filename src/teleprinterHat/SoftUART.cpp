@@ -74,7 +74,7 @@ void SoftUART::baudotTransmitStateMachine ()
     }
     if (!lastChWasCr) { // make sure we send CR twice..
       txCh = txBuffer->readBuffer();
-      if (txCh==2) lastChWasCr = 1;
+      if (txCh==8) lastChWasCr = 1;
     }
     else {
       lastChWasCr = 0;
