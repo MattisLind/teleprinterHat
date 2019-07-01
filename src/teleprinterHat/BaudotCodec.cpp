@@ -54,9 +54,9 @@ char BaudotCodec::asciiToBaudot(char ch, int * doAgain) {
   } else if (ch == ' ') {
     return 4;
   } else if (ch == '\r') {
-    return 2;
-  } else if (ch == '\n') {
     return 8;
+  } else if (ch == '\n') {
+    return 2;
   } else if (ch == '\0') {
     return 0;
   } else {
