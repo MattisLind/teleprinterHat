@@ -33,11 +33,7 @@ void txBit (char bit) {
 
 
 char rxBit () {
-<<<<<<< Updated upstream
-  return ((~digitalRead(PA5)) & 1;
-=======
   return digitalRead(PA6) & 1;
->>>>>>> Stashed changes
 }
 
 class SoftUART softUART(rxBit, txBit, &txBuffer, &rxBuffer);
