@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
-#include "../src/RingBuffer.h"
-#include "../src/SoftUART.h"
-#include "../src/BaudotCodec.h"
+#include "../src/teleprinterHat/RingBuffer.h"
+#include "../src/teleprinterHat/SoftUART.h"
+#include "../src/teleprinterHat/BaudotCodec.h"
 
 class RingBuffer txBuffer;
 class RingBuffer rxBuffer;
