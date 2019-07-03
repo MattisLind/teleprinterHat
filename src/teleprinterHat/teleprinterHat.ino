@@ -31,9 +31,25 @@ void txBit (char bit) {
   }
 }
 
+char rxOut = 1;
+int rxSum=16;
 
 char rxBit () {
-  return digitalRead(PA6) & 1;
+  char in = (~digitalRead(PA6)) & 1;
+  if (in==1) {
+     sum++;
+     if (sum>16) sum=16;
+  } else {
+    sum--;
+    if (sum<0) sum=0;
+  }
+  if (rxOut == 1 && rxSum < 8) {
+     rxOut = 0;
+  }
+  if (rxOut == 0 && rxSum > 8) {
+     rxOut = 1;
+  }
+  return rxOut;
 }
 
 class SoftUART softUART(rxBit, txBit, &txBuffer, &rxBuffer);
