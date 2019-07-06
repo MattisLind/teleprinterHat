@@ -37,11 +37,11 @@ int rxSum=16;
 char rxBit () {
   char in = (~digitalRead(PA6)) & 1;
   if (in==1) {
-     sum++;
-     if (sum>16) sum=16;
+     rxSum++;
+     if (rxSum>16) rxSum=16;
   } else {
-    sum--;
-    if (sum<0) sum=0;
+    rxSum--;
+    if (rxSum<0) rxSum=0;
   }
   if (rxOut == 1 && rxSum < 8) {
      rxOut = 0;
@@ -49,28 +49,40 @@ char rxBit () {
   if (rxOut == 0 && rxSum > 8) {
      rxOut = 1;
   }
+  digitalWrite(PC14, rxOut);
   return rxOut;
 }
 
-class SoftUART softUART(rxBit, txBit, &txBuffer, &rxBuffer);
+int debugState = 0;
+
+void debug () {
+  debugState ^= 1;
+  digitalWrite (PC15, debugState);  
+}
+
+class SoftUART softUART(rxBit, txBit, &txBuffer, &rxBuffer, debug);
 
 void setup() {
   
   rxBuffer.initBuffer();
   txBuffer.initBuffer();
   pinMode(PC13, OUTPUT);
+  pinMode(PC14, OUTPUT);
+  pinMode(PC15, OUTPUT);
+  digitalWrite (PC15, 0);
   pwmtimer.pause();
   period = 40; // PWM period in useconds, freq 4Hz
   maxduty = pwmtimer.setPeriod(period);
   pwmtimer.refresh();
   pwmtimer.resume();
-  pinMode(pwmOutPin, PWM);
+ // pinMode(pwmOutPin, PWM);
   pinMode(PA1, PWM);
   pwmWrite(PA1, 1800); // 1000 = 21mA 1900 = 43 mA 
   pinMode(PA2, OUTPUT);
+  pinMode(PA6, INPUT);
   pinMode(PA4, INPUT_ANALOG);
   pinMode(PA5, INPUT_ANALOG);
-  Serial1.begin(9600);
+  Serial1.begin(115200);
   digitalWrite(PA2,HIGH);
   
 

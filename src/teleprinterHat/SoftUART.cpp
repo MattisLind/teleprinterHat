@@ -3,7 +3,8 @@
 #include <stdio.h>
 
 
-SoftUART::SoftUART(readFuncType readFunc, writeFuncType writeFunc, class RingBuffer * txB, class RingBuffer * rxB) {
+SoftUART::SoftUART(readFuncType readFunc, writeFuncType writeFunc, class RingBuffer * txB, class RingBuffer * rxB, debugFuncType dbf) {
+  debug = dbf;
   rxBit=readFunc;
   txBit=writeFunc;
   txBuffer = txB;
@@ -22,12 +23,14 @@ void SoftUART::baudotReceiveStateMachine () {
     case 0:   // Searching fo start bit 
       if (rxBit() == 0) {
 	rxState = 1;
+  sampleCounter=0;
       }
       break;
     case 1:  // Qualify start bit has to be 7 in a row.
       if (rxBit() == 0) {
 	// Still a statbit. Need to count to 7 to find the middle of the start bit!
 	if (sampleCounter >= 6) {
+    debug();
 	  rxState = 2;
 	  sampleCounter = 0;
 	  rxDataByte = 0;
@@ -42,6 +45,7 @@ void SoftUART::baudotReceiveStateMachine () {
     case 2: // Sampling in the middle of the bit - first bit!
       bit = rxBit();
       if (sampleCounter >= 15) {
+        debug();
 	rxDataByte = rxDataByte >> 1;
 	rxDataByte |= (1 & bit) << 4;
 	bitCnt++;
@@ -58,6 +62,7 @@ void SoftUART::baudotReceiveStateMachine () {
       if (sampleCounter < 22) {
 	sampleCounter++;
       } else {
+        debug();
 	rxState = 0;
 	rxBuffer->writeBuffer(rxDataByte);
       }

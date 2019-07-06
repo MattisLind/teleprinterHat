@@ -12,7 +12,7 @@ BaudotCodec::BaudotCodec(int lC) {
 const char BaudotCodec::lettersTable[] =  {3, 25, 14, 9, 1, 13, 26, 20, 6, 11, 15, 18, 28, 12, 24, 22, 23, 10, 5, 16, 7, 30, 19, 29, 21, 17};
 const char BaudotCodec::figuresTable[] =  {22, 23, 19, 1, 11, 16, 21, 7, 6, 24};
 const char BaudotCodec::rxLettersTable[] = {'\0', 'E', '\n', 'A', ' ', 'S', 'I', 'U', '\r', 'D', 'R', 'J', 'N', 'F', 'C', 'K', 'T', 'Z', 'L', 'W', 'H', 'Y', 'P', 'Q', 'O', 'B', 'G', '\0', 'M', 'X', 'V', '\0'};
-const char BaudotCodec::rxFiguresTable[] = {'\0', '3', '\n', '-', ' ', '\007', '8', '7', '\r', '$', '\'', '4', ',', '!', ':', '(', '5', '\"', ')', '2', '#', '6', '0', '1', '9', '?', '&', '\0', '.', '/', ';', '\0'};
+const char BaudotCodec::rxFiguresTable[] = {'\0', '3', '\n', '-', ' ', '\'', '8', '7', '\r', '$', '4', '\007', ',', '!', ':', '(', '5', '+', ')', '2', '#', '6', '0', '1', '9', '?', '&', '\0', '.', '/', '=', '\0'};
 
 
 char BaudotCodec::handleLetterFigure(char out, int requestedState, int * doAgain) {
