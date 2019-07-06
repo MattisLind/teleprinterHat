@@ -75,14 +75,14 @@ void setup() {
   maxduty = pwmtimer.setPeriod(period);
   pwmtimer.refresh();
   pwmtimer.resume();
- // pinMode(pwmOutPin, PWM);
+  pinMode(pwmOutPin, PWM);
   pinMode(PA1, PWM);
   pwmWrite(PA1, 1800); // 1000 = 21mA 1900 = 43 mA 
   pinMode(PA2, OUTPUT);
   pinMode(PA6, INPUT);
   pinMode(PA4, INPUT_ANALOG);
   pinMode(PA5, INPUT_ANALOG);
-  Serial1.begin(115200);
+  Serial1.begin(1200);
   digitalWrite(PA2,HIGH);
   
 
@@ -120,7 +120,7 @@ void handler_led(void) {
 
 
 void loop() {
-  char out, rxChar;
+  int out, rxChar;
   duty += 1 * (2700-analogRead(PA5));
   if (duty > 2400) {
     duty=2400;
