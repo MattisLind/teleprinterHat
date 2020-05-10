@@ -1,3 +1,12 @@
+// Use environment: 
+// Board: STM32F1 boards (STM32DUINO.COM) Generic STM32F103C series
+// Variant: STM32F103CB (20k RAM 128k FLASH)
+// Upload Method: STLink
+// CPU Speed: 72 MHz (Normal)
+// Optimize: Smallest (default)
+
+// Code size when compiled 40248 bytes. Global variables use 12688 bytes.
+
 #define LED_RATE 1250    // in microseconds; should give 0.5Hz toggles
 #include "RingBuffer.h"
 #include "SoftUART.h"
