@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/home/mattis/TeleprinterHat/TeleprinterHat/TeleprinterHat.sch</source>
-    <date>ons  3 apr 2019 20:00:10</date>
+    <source>/home/mattis/teleprinterHat/hardware/TeleprinterHat/TeleprinterHat.sch</source>
+    <date>lör  8 jan 2022 20:07:01</date>
     <tool>Eeschema 5.0.2-bee76a0~70~ubuntu16.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -21,604 +21,361 @@
   <components>
     <comp ref="L1">
       <value>100u</value>
+      <footprint>General:Wurth TIF Radial 1018</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="L" description="Inductor"/>
+      <libsource lib="TeleprinterHat-rescue" part="L-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68330FF4</tstamp>
     </comp>
-    <comp ref="Q1">
-      <value>Q_NMOS_DGS</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="Q_NMOS_DGS" description="N-MOSFET transistor, drain/gate/source"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68331207</tstamp>
-    </comp>
     <comp ref="D2">
-      <value>D</value>
+      <value>ES2D</value>
+      <footprint>Diode_SMD:D_SMB_Handsoldering</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="TeleprinterHat-rescue" part="D_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>683312E2</tstamp>
     </comp>
-    <comp ref="C3">
-      <value>CP</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68331385</tstamp>
-    </comp>
-    <comp ref="C4">
-      <value>CP</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68331411</tstamp>
-    </comp>
-    <comp ref="C5">
-      <value>C</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>6833152B</tstamp>
-    </comp>
-    <comp ref="U2">
-      <value>74ACT04</value>
-      <datasheet>http://www.nxp.com/documents/data_sheet/74HC_HCT04.pdf</datasheet>
-      <libsource lib="74xx" part="74HCT04" description="hex inverter"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>683317A2</tstamp>
-    </comp>
-    <comp ref="R4">
-      <value>15</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68331A9E</tstamp>
-    </comp>
-    <comp ref="R5">
-      <value>15</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68331B58</tstamp>
-    </comp>
-    <comp ref="R6">
-      <value>15</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68331B8A</tstamp>
-    </comp>
-    <comp ref="R7">
-      <value>15</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68331BBE</tstamp>
-    </comp>
-    <comp ref="R8">
-      <value>15</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68331BFC</tstamp>
-    </comp>
-    <comp ref="Q3">
-      <value>Q_PNP_BCE</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="Q_PNP_BCE" description="PNP transistor, base/collector/emitter"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68333AB5</tstamp>
-    </comp>
-    <comp ref="Q2">
-      <value>MMBT5551L</value>
-      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
-      <datasheet>www.onsemi.com/pub/Collateral/MMBT5550LT1-D.PDF</datasheet>
-      <libsource lib="Transistor_BJT" part="MMBT5551L" description="0.6A Ic, 160V Vce, NPN Transistor, SOT-23"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68333BD0</tstamp>
-    </comp>
-    <comp ref="R12">
-      <value>12k</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68333C3D</tstamp>
-    </comp>
-    <comp ref="R11">
-      <value>1k</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68335471</tstamp>
-    </comp>
-    <comp ref="J1">
-      <value>LOOP/SELECTOR</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Connector" part="AudioJack2" description="Audio Jack, 2 Poles (Mono / TS)"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68335C9A</tstamp>
-    </comp>
-    <comp ref="J2">
-      <value>KEYBOARD</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Connector" part="AudioJack2" description="Audio Jack, 2 Poles (Mono / TS)"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68335DD4</tstamp>
-    </comp>
-    <comp ref="K1">
-      <value>FINDER-30.22</value>
-      <footprint>Relay_THT:Relay_DPDT_Finder_30.22</footprint>
-      <datasheet>http://gfinder.findernet.com/assets/Series/354/S30EN.pdf</datasheet>
-      <libsource lib="Relay" part="FINDER-30.22" description="FINDER 30.52, Dual Pole Relay, Subminiature 5mm Pitch, 2A"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68335F15</tstamp>
-    </comp>
-    <comp ref="R2">
-      <value>20</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>6833757E</tstamp>
-    </comp>
-    <comp ref="D4">
-      <value>D</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="D" description="Diode"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68337E1B</tstamp>
-    </comp>
-    <comp ref="RV1">
-      <value>MOV 140VDC</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="Varistor" description="Voltage dependent resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>6833B80C</tstamp>
-    </comp>
-    <comp ref="D1">
-      <value>3.6V</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="D_Zener" description="Zener diode"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>6833FEFE</tstamp>
-    </comp>
-    <comp ref="F1">
-      <value>100mA</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="Fuse" description="Fuse"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68344673</tstamp>
-    </comp>
     <comp ref="R1">
-      <value>1k</value>
+      <value>330</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="TeleprinterHat-rescue" part="R-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6834A71A</tstamp>
     </comp>
-    <comp ref="R9">
-      <value>30k</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>6835153F</tstamp>
-    </comp>
-    <comp ref="R10">
-      <value>470</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>683515C3</tstamp>
-    </comp>
-    <comp ref="Q4">
-      <value>MMBT5551L</value>
-      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
-      <datasheet>www.onsemi.com/pub/Collateral/MMBT5550LT1-D.PDF</datasheet>
-      <libsource lib="Transistor_BJT" part="MMBT5551L" description="0.6A Ic, 160V Vce, NPN Transistor, SOT-23"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68359744</tstamp>
-    </comp>
-    <comp ref="R15">
-      <value>R</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>6835CC2E</tstamp>
-    </comp>
-    <comp ref="D3">
-      <value>D</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="D" description="Diode"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>6835E80D</tstamp>
-    </comp>
-    <comp ref="R13">
-      <value>R</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>683604D9</tstamp>
-    </comp>
     <comp ref="R3">
-      <value>1k</value>
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="TeleprinterHat-rescue" part="R-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6836489E</tstamp>
-    </comp>
-    <comp ref="J3">
-      <value>ON_SSR</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>683686C1</tstamp>
     </comp>
     <comp ref="U3">
       <value>FT232RL</value>
       <footprint>Package_SO:SSOP-28_5.3x10.2mm_P0.65mm</footprint>
       <datasheet>http://www.ftdichip.com/Products/ICs/FT232RL.htm</datasheet>
-      <libsource lib="Interface_USB" part="FT232RL" description="USB to Serial Interface, SSOP-28"/>
+      <libsource lib="TeleprinterHat-rescue" part="FT232RL-Interface_USB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6836F50D</tstamp>
     </comp>
     <comp ref="U4">
       <value>MAX3232</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
       <datasheet>http://www.ti.com/lit/ds/symlink/max232.pdf</datasheet>
-      <libsource lib="Interface_UART" part="MAX232" description="Dual RS232 driver/receiver, 5V supply, 120kb/s, 0C-70C"/>
+      <libsource lib="TeleprinterHat-rescue" part="MAX232-Interface_UART" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6836F72D</tstamp>
     </comp>
     <comp ref="U7">
-      <value>LTV-355T</value>
+      <value>SFH690BT</value>
       <footprint>Package_SO:SO-4_4.4x3.6mm_P2.54mm</footprint>
       <datasheet>http://optoelectronics.liteon.com/upload/download/DS70-2001-006/S_110_LTV-355T%2020140520.pdf</datasheet>
-      <libsource lib="Isolator" part="LTV-355T" description="DC Darlington Optocoupler, Vce 35V, CTR 600%, SO-4"/>
+      <libsource lib="TeleprinterHat-rescue" part="LTV-355T-Isolator" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6836FD69</tstamp>
     </comp>
     <comp ref="U8">
-      <value>LTV-355T</value>
+      <value>SFH690BT</value>
       <footprint>Package_SO:SO-4_4.4x3.6mm_P2.54mm</footprint>
       <datasheet>http://optoelectronics.liteon.com/upload/download/DS70-2001-006/S_110_LTV-355T%2020140520.pdf</datasheet>
-      <libsource lib="Isolator" part="LTV-355T" description="DC Darlington Optocoupler, Vce 35V, CTR 600%, SO-4"/>
+      <libsource lib="TeleprinterHat-rescue" part="LTV-355T-Isolator" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6836FE0D</tstamp>
     </comp>
     <comp ref="J4">
       <value>USB_B_Micro</value>
+      <footprint>Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="USB_B_Micro" description="USB Micro Type B connector"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68372253</tstamp>
     </comp>
-    <comp ref="J7">
-      <value>RasPi GPIO</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Connector_Generic" part="Conn_02x20_Odd_Even" description="Generic connector, double row, 02x20, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>683729D4</tstamp>
-    </comp>
     <comp ref="J6">
       <value>JTAG</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="Conn_01x04_Male" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68373228</tstamp>
     </comp>
-    <comp ref="J8">
-      <value>CURRENT_LOOP</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Connector" part="Conn_01x04_Male" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>683755A7</tstamp>
-    </comp>
     <comp ref="J5">
       <value>RS232</value>
+      <footprint>Connector_Dsub:DSUB-9_Female_Horizontal_P2.77x2.84mm_EdgePinOffset9.90mm_Housed_MountingHolesOffset11.32mm</footprint>
       <datasheet> ~</datasheet>
       <libsource lib="Connector" part="DB9_Female" description="9-pin female D-SUB connector"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>683758EE</tstamp>
     </comp>
-    <comp ref="D6">
-      <value>LED_BARG</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="LED_BARG" description="RGB LED, blue/anode/red/green"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68375B4C</tstamp>
-    </comp>
     <comp ref="D8">
       <value>TX</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Castellated</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <libsource lib="TeleprinterHat-rescue" part="LED-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68375D3D</tstamp>
     </comp>
-    <comp ref="U6">
-      <value>24LC32</value>
-      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/21072G.pdf</datasheet>
-      <libsource lib="Memory_EEPROM" part="24LC32" description="I2C Serial EEPROM, 32Kb, DIP-8/SOIC-8/TSSOP-8/DFN-8"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68376860</tstamp>
-    </comp>
     <comp ref="D7">
       <value>RX</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Castellated</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <libsource lib="TeleprinterHat-rescue" part="LED-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68376CF2</tstamp>
     </comp>
     <comp ref="Y1">
       <value>8MHz</value>
+      <footprint>Crystal:Crystal_SMD_HC49-SD</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="Crystal_Small" description="Two pin crystal, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="Crystal_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>683775A9</tstamp>
     </comp>
     <comp ref="C11">
-      <value>22p</value>
+      <value>18p</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>683779F2</tstamp>
     </comp>
     <comp ref="C10">
-      <value>22p</value>
+      <value>18p</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68377A7C</tstamp>
     </comp>
-    <comp ref="U1">
-      <value>AMS1117-3.3</value>
-      <footprint>Package_TO_SOT_SMD:SOT-223-3_TabPin2</footprint>
-      <datasheet>http://www.advanced-monolithic.com/pdf/ds1117.pdf</datasheet>
-      <libsource lib="Regulator_Linear" part="AMS1117-3.3" description="1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68397C44</tstamp>
-    </comp>
     <comp ref="C1">
       <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68397EDE</tstamp>
     </comp>
     <comp ref="C2">
-      <value>1u</value>
+      <value>4.7u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68397FDC</tstamp>
     </comp>
     <comp ref="JP1">
       <value>USBPOWERED</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68398176</tstamp>
     </comp>
     <comp ref="JP11">
       <value>RS232</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>684277C0</tstamp>
     </comp>
     <comp ref="JP13">
       <value>CL</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68427B11</tstamp>
     </comp>
     <comp ref="JP12">
       <value>USB</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6842D050</tstamp>
     </comp>
-    <comp ref="D5">
-      <value>LED_CRGB</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="LED_CRGB" description="RGB LED, cathode/red/green/blue"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>6845523D</tstamp>
-    </comp>
-    <comp ref="R14">
-      <value>470</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68455377</tstamp>
-    </comp>
     <comp ref="R19">
       <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="TeleprinterHat-rescue" part="R-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>684D856C</tstamp>
     </comp>
     <comp ref="R20">
       <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="TeleprinterHat-rescue" part="R-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>684D8682</tstamp>
     </comp>
-    <comp ref="JP3">
-      <value>TPBAUD1</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68522D9B</tstamp>
-    </comp>
-    <comp ref="JP2">
-      <value>TPBAUD0</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>68522E33</tstamp>
-    </comp>
     <comp ref="JP7">
       <value>HBAUD0</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6861E77E</tstamp>
     </comp>
     <comp ref="JP8">
       <value>HBAUD1</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6861E99A</tstamp>
     </comp>
     <comp ref="JP9">
       <value>CURR0</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6861EA44</tstamp>
     </comp>
     <comp ref="JP10">
       <value>CURR1</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6861EAE4</tstamp>
     </comp>
-    <comp ref="U5">
-      <value>STM32F030K6Tx</value>
-      <footprint>Package_QFP:LQFP-32_7x7mm_P0.8mm</footprint>
-      <datasheet>http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00088500.pdf</datasheet>
-      <libsource lib="MCU_ST_STM32F0" part="STM32F030K6Tx" description="ARM Cortex-M0 MCU, 32KB flash, 4KB RAM, 48MHz, 2.4-3.6V, 25 GPIO, LQFP-32"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>683DCE9D</tstamp>
-    </comp>
     <comp ref="C6">
       <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6881999A</tstamp>
     </comp>
     <comp ref="C7">
       <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68819B4A</tstamp>
     </comp>
     <comp ref="JP4">
       <value>CONF0</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6885ACCB</tstamp>
     </comp>
     <comp ref="R16">
-      <value>1k</value>
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6886882B</tstamp>
     </comp>
     <comp ref="R17">
-      <value>1k</value>
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68868923</tstamp>
     </comp>
     <comp ref="R18">
-      <value>1k</value>
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>688689D3</tstamp>
     </comp>
     <comp ref="JP5">
       <value>CONF1</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68868A81</tstamp>
     </comp>
     <comp ref="JP6">
       <value>CONF2</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68868B33</tstamp>
     </comp>
     <comp ref="C8">
       <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>688FC4C0</tstamp>
     </comp>
     <comp ref="C9">
       <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6890C536</tstamp>
     </comp>
-    <comp ref="R21">
-      <value>470</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>689A2C40</tstamp>
-    </comp>
     <comp ref="C12">
-      <value>100u</value>
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="CP_Small" description="Polarized capacitor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="CP_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68A24FBB</tstamp>
     </comp>
     <comp ref="C13">
       <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68D0C555</tstamp>
     </comp>
     <comp ref="R27">
       <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68E34CEE</tstamp>
     </comp>
     <comp ref="R24">
-      <value>10k</value>
+      <value>680</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68EA76F1</tstamp>
     </comp>
     <comp ref="R26">
-      <value>1k</value>
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68EA77C1</tstamp>
     </comp>
     <comp ref="D9">
       <value>D_Small</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="D_Small" description="Diode, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="D_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68EC52B6</tstamp>
     </comp>
     <comp ref="D10">
       <value>D_Small</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="D_Small" description="Diode, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="D_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68EC54C9</tstamp>
     </comp>
@@ -626,121 +383,791 @@
       <value>MMBT5551L</value>
       <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
       <datasheet>www.onsemi.com/pub/Collateral/MMBT5550LT1-D.PDF</datasheet>
-      <libsource lib="Transistor_BJT" part="MMBT5551L" description="0.6A Ic, 160V Vce, NPN Transistor, SOT-23"/>
+      <libsource lib="TeleprinterHat-rescue" part="MMBT5551L-Transistor_BJT" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68F1E810</tstamp>
     </comp>
     <comp ref="R28">
       <value>33</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>68F1E974</tstamp>
     </comp>
     <comp ref="R22">
       <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>69053991</tstamp>
     </comp>
     <comp ref="R23">
-      <value>1k</value>
+      <value>150</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>69053A8D</tstamp>
     </comp>
-    <comp ref="C14">
-      <value>1u</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>6933D964</tstamp>
-    </comp>
-    <comp ref="R25">
-      <value>10k</value>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>693604AF</tstamp>
-    </comp>
     <comp ref="JP14">
       <value>WP</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>69696934</tstamp>
     </comp>
     <comp ref="R29">
-      <value>1k</value>
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>69696C40</tstamp>
     </comp>
+    <comp ref="U9">
+      <value>IR44273</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5_HandSoldering</footprint>
+      <libsource lib="TeleprinterHat-rescue" part="IRS44273-irs44273" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D3D943D</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>MC34063</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <libsource lib="TeleprinterHat-rescue" part="MC34063-MC34063" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D443CA4</tstamp>
+    </comp>
+    <comp ref="L2">
+      <value>10uH</value>
+      <footprint>Inductor_THT:L_Radial_D7.0mm_P3.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="L-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D443E72</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>1000u</value>
+      <footprint>Capacitor_SMD:CP_Elec_10x7.7</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="CP_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6080C5</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>1.8 nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D65781F</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7203BD</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>MMBT3904</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="MMBT3904-Transistor_BJT" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D720557</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D815C6C</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>STD25NF20</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-3_TabPin2</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Q_NMOS_GDS-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>68331207</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>120k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DB6865A</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>10u</value>
+      <footprint>Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="CP_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DBBF53C</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>1n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DBBF61E</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>120k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DBBF712</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>3k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DBBF80E</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DBBF914</tstamp>
+    </comp>
+    <comp ref="C19">
+      <value>4.7u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DCFA724</tstamp>
+    </comp>
+    <comp ref="R38">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DCFA810</tstamp>
+    </comp>
+    <comp ref="R39">
+      <value>30k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DCFA908</tstamp>
+    </comp>
+    <comp ref="F1">
+      <value>100m</value>
+      <footprint>Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Fuse_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DE47E72</tstamp>
+    </comp>
+    <comp ref="Q8">
+      <value>SQ2325ES</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Q_PMOS_GDS-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DF708B8</tstamp>
+    </comp>
+    <comp ref="Q4">
+      <value>FMMT625</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Q_NPN_BEC-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E1CCDAE</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>1.8k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E1F5021</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>BAS21</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="D_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E26EE16</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>FMMT625</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Q_NPN_BEC-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E2C21DD</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>1.8k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E2EC20D</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E2EC3D5</tstamp>
+    </comp>
+    <comp ref="C16">
+      <value>1n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E2EC4CD</tstamp>
+    </comp>
+    <comp ref="L4">
+      <value>33m</value>
+      <footprint>Inductor_THT:L_Radial_D12.0mm_P6.00mm_MuRATA_1900R</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="L_Core_Ferrite_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E445AB2</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>BAS21</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="D_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E445BC8</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>TVS</value>
+      <footprint>Diode_SMD:D_SMB_Handsoldering</footprint>
+      <libsource lib="TeleprinterHat-rescue" part="TVS-tinkerforge" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E4CB0FD</tstamp>
+    </comp>
+    <comp ref="R37">
+      <value>1.8k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E4CB6DF</tstamp>
+    </comp>
+    <comp ref="C20">
+      <value>1n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E4CB857</tstamp>
+    </comp>
+    <comp ref="Q9">
+      <value>FMMT597</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Q_PNP_BEC-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E671232</tstamp>
+    </comp>
+    <comp ref="Q7">
+      <value>MMBTA42L</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Q_NPN_BEC-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E6A1E47</tstamp>
+    </comp>
+    <comp ref="R33">
+      <value>3.3k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E6A203E</tstamp>
+    </comp>
+    <comp ref="R32">
+      <value>33k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E703E3C</tstamp>
+    </comp>
+    <comp ref="R34">
+      <value>51</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E767628</tstamp>
+    </comp>
+    <comp ref="R25">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E7FF089</tstamp>
+    </comp>
+    <comp ref="U10">
+      <value>TLV3502</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-8_Handsoldering</footprint>
+      <libsource lib="TeleprinterHat-rescue" part="TLV3502-tlv3502" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E83383B</tstamp>
+    </comp>
+    <comp ref="U11">
+      <value>MCP6004</value>
+      <footprint>Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="MCP6004-Amplifier_Operational" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EB69F34</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EC3EA3C</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>30k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5ECAC0EB</tstamp>
+    </comp>
+    <comp ref="R35">
+      <value>1.2k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EDC6819</tstamp>
+    </comp>
+    <comp ref="C18">
+      <value>4.7u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EEAD0A8</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EEAD0AE</tstamp>
+    </comp>
+    <comp ref="R30">
+      <value>30k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EEAD0B4</tstamp>
+    </comp>
+    <comp ref="R36">
+      <value>2.4k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F2B5E24</tstamp>
+    </comp>
+    <comp ref="Q6">
+      <value>MMBT5551L</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>www.onsemi.com/pub/Collateral/MMBT5550LT1-D.PDF</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="MMBT5551L-Transistor_BJT" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EBEAE5C</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EC6B932</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>3.3V</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="D_Zener_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EF419C2</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>120k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EFC29AE</tstamp>
+    </comp>
+    <comp ref="C21">
+      <value>1n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F32B7B6</tstamp>
+    </comp>
+    <comp ref="U13">
+      <value>74LVC1G04</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5_HandSoldering</footprint>
+      <datasheet>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="74LVC1G04-74xGxx" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F48FD1D</tstamp>
+    </comp>
+    <comp ref="U14">
+      <value>STM32F103C8Tx</value>
+      <footprint>Package_QFP:LQFP-48_7x7mm_P0.5mm</footprint>
+      <datasheet>http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="STM32F103C8Tx-MCU_ST_STM32F1" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EBF8F1E</tstamp>
+    </comp>
+    <comp ref="R46">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5ECAB136</tstamp>
+    </comp>
+    <comp ref="C22">
+      <value>1u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5ECAB3A2</tstamp>
+    </comp>
+    <comp ref="JP17">
+      <value>CL</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EF0E6A8</tstamp>
+    </comp>
+    <comp ref="Q10">
+      <value>FMMT625</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Q_NPN_BEC-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F16533B</tstamp>
+    </comp>
+    <comp ref="D12">
+      <value>BAS21</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="D_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F21FDC0</tstamp>
+    </comp>
+    <comp ref="R45">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F29DA90</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>74LVC1G04</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5_HandSoldering</footprint>
+      <datasheet>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="74LVC1G04-74xGxx" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F431C61</tstamp>
+    </comp>
+    <comp ref="JP16">
+      <value>TPBAUD1</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5C2AD2</tstamp>
+    </comp>
+    <comp ref="JP15">
+      <value>TPBAUD0</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5C2D8B</tstamp>
+    </comp>
+    <comp ref="JP2">
+      <value>VOLT0</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F74F69E</tstamp>
+    </comp>
+    <comp ref="JP3">
+      <value>VOLT1</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F74FB1D</tstamp>
+    </comp>
+    <comp ref="R44">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9FA31C</tstamp>
+    </comp>
+    <comp ref="R43">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9FC197</tstamp>
+    </comp>
+    <comp ref="R42">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9FC2BB</tstamp>
+    </comp>
+    <comp ref="R41">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9FC3E9</tstamp>
+    </comp>
+    <comp ref="R40">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9FC51B</tstamp>
+    </comp>
+    <comp ref="R31">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9FC645</tstamp>
+    </comp>
+    <comp ref="R47">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6013EE5C</tstamp>
+    </comp>
+    <comp ref="JP18">
+      <value>RESET</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604DFDC4</tstamp>
+    </comp>
+    <comp ref="JP19">
+      <value>BOOT</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6057C3B2</tstamp>
+    </comp>
+    <comp ref="R48">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="R_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60619F06</tstamp>
+    </comp>
+    <comp ref="JP21">
+      <value>TEST2</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C1921A</tstamp>
+    </comp>
+    <comp ref="JP20">
+      <value>TEST1</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C19362</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>NCP1117-3.3_TO252</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-2</footprint>
+      <datasheet>http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="NCP1117-3.3_TO252-Regulator_Linear" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>610A32D2</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>LED_RGB</value>
+      <footprint>LED_SMD:LED_Avago_PLCC6_3x2.8mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="LED_RGB-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61147F80</tstamp>
+    </comp>
+    <comp ref="D11">
+      <value>LED_RGB</value>
+      <footprint>LED_SMD:LED_Avago_PLCC6_3x2.8mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="LED_RGB-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>611483D9</tstamp>
+    </comp>
+    <comp ref="C17">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6128E1EE</tstamp>
+    </comp>
+    <comp ref="C23">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61527C14</tstamp>
+    </comp>
+    <comp ref="C15">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6157B870</tstamp>
+    </comp>
+    <comp ref="C24">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6167701D</tstamp>
+    </comp>
+    <comp ref="C25">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="C_Small-Device" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6167702A</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>RJ12</value>
+      <footprint>Connector_RJ:RJ12_Amphenol_54601</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="RJ12" description="RJ connector, 6P6C (6 positions 6 connected)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6057D43D</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>RJ12</value>
+      <footprint>Connector_RJ:RJ12_Amphenol_54601</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="RJ12" description="RJ connector, 6P6C (6 positions 6 connected)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CAE3FA</tstamp>
+    </comp>
+    <comp ref="U6">
+      <value>24LC32AT-IOT</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5_HandSoldering</footprint>
+      <libsource lib="TeleprinterHat-rescue" part="24LC32AT-IOT-24LC32AT-SOT-23-5" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609564A3</tstamp>
+    </comp>
+    <comp ref="K1">
+      <value>EA2-5NU</value>
+      <footprint>Package_DIP:DIP-10_W7.62mm</footprint>
+      <libsource lib="TeleprinterHat-rescue" part="EA2-5NU-EA2-5NU" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C17E60</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>RasPi GPIO</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="TeleprinterHat-rescue" part="Conn_02x20_Odd_Even-Connector_Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>683729D4</tstamp>
+    </comp>
   </components>
   <libparts>
-    <libpart lib="74xx" part="74HCT04">
+    <libpart lib="Connector" part="6P6C">
       <aliases>
-        <alias>74HC14</alias>
-        <alias>74HC04</alias>
-        <alias>74LS14</alias>
+        <alias>RJ12</alias>
+        <alias>RJ18</alias>
+        <alias>RJ25</alias>
       </aliases>
-      <description>hex inverter</description>
-      <docs>http://www.nxp.com/documents/data_sheet/74HC_HCT04.pdf</docs>
-      <footprints>
-        <fp>DIP?14*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">74HCT04</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="input"/>
-        <pin num="2" name="~" type="output"/>
-        <pin num="3" name="~" type="input"/>
-        <pin num="4" name="~" type="output"/>
-        <pin num="5" name="~" type="input"/>
-        <pin num="6" name="~" type="output"/>
-        <pin num="7" name="GND" type="power_in"/>
-        <pin num="8" name="~" type="output"/>
-        <pin num="9" name="~" type="input"/>
-        <pin num="10" name="~" type="output"/>
-        <pin num="11" name="~" type="input"/>
-        <pin num="12" name="~" type="output"/>
-        <pin num="13" name="~" type="input"/>
-        <pin num="14" name="VCC" type="power_in"/>
-      </pins>
-    </libpart>
-    <libpart lib="Connector" part="AudioJack2">
-      <description>Audio Jack, 2 Poles (Mono / TS)</description>
+      <description>RJ connector, 6P6C (6 positions 6 connected), RJ12/RJ18/RJ25</description>
       <docs>~</docs>
       <footprints>
-        <fp>Jack*</fp>
+        <fp>6P6C*</fp>
+        <fp>RJ12*</fp>
+        <fp>RJ18*</fp>
+        <fp>RJ25*</fp>
       </footprints>
       <fields>
         <field name="Reference">J</field>
-        <field name="Value">AudioJack2</field>
+        <field name="Value">6P6C</field>
       </fields>
       <pins>
-        <pin num="S" name="~" type="passive"/>
-        <pin num="T" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Connector" part="Conn_01x02_Male">
-      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>Connector*:*_1x??_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">Conn_01x02_Male</field>
-      </fields>
-      <pins>
-        <pin num="1" name="Pin_1" type="passive"/>
-        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Connector" part="Conn_01x04_Male">
@@ -797,22 +1224,76 @@
       </fields>
       <pins>
         <pin num="1" name="VBUS" type="power_out"/>
-        <pin num="2" name="D-" type="passive"/>
-        <pin num="3" name="D+" type="passive"/>
+        <pin num="2" name="D-" type="BiDi"/>
+        <pin num="3" name="D+" type="BiDi"/>
         <pin num="4" name="ID" type="passive"/>
         <pin num="5" name="GND" type="power_out"/>
         <pin num="6" name="Shield" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Connector_Generic" part="Conn_02x20_Odd_Even">
-      <description>Generic connector, double row, 02x20, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
-      <docs>~</docs>
+    <libpart lib="TeleprinterHat-rescue" part="24LC32AT-IOT-24LC32AT-SOT-23-5">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">24LC32AT-IOT-24LC32AT-SOT-23-5</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5_HandSoldering</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SCL" type="input"/>
+        <pin num="2" name="VSS" type="power_in"/>
+        <pin num="3" name="SDA" type="input"/>
+        <pin num="4" name="VCC" type="power_in"/>
+        <pin num="5" name="WP" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="74LVC1G04-74xGxx">
+      <footprints>
+        <fp>SOT*</fp>
+        <fp>SG-*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LVC1G04-74xGxx</field>
+      </fields>
+      <pins>
+        <pin num="2" name="~" type="input"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="~" type="output"/>
+        <pin num="5" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="CP_Small-Device">
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP_Small-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="C_Small-Device">
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="Conn_02x20_Odd_Even-Connector_Generic">
       <footprints>
         <fp>Connector*:*_2x??_*</fp>
       </footprints>
       <fields>
         <field name="Reference">J</field>
-        <field name="Value">Conn_02x20_Odd_Even</field>
+        <field name="Value">Conn_02x20_Odd_Even-Connector_Generic</field>
       </fields>
       <pins>
         <pin num="1" name="Pin_1" type="passive"/>
@@ -857,84 +1338,20 @@
         <pin num="40" name="Pin_40" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Device" part="C">
-      <description>Unpolarized capacitor</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>C_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">C</field>
-        <field name="Value">C</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="CP">
-      <description>Polarized capacitor</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>CP_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">C</field>
-        <field name="Value">CP</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="CP_Small">
-      <description>Polarized capacitor, small symbol</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>CP_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">C</field>
-        <field name="Value">CP_Small</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="C_Small">
-      <description>Unpolarized capacitor, small symbol</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>C_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">C</field>
-        <field name="Value">C_Small</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="Crystal_Small">
-      <description>Two pin crystal, small symbol</description>
-      <docs>~</docs>
+    <libpart lib="TeleprinterHat-rescue" part="Crystal_Small-Device">
       <footprints>
         <fp>Crystal*</fp>
       </footprints>
       <fields>
         <field name="Reference">Y</field>
-        <field name="Value">Crystal_Small</field>
+        <field name="Value">Crystal_Small-Device</field>
       </fields>
       <pins>
         <pin num="1" name="1" type="passive"/>
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Device" part="D">
-      <description>Diode</description>
-      <docs>~</docs>
+    <libpart lib="TeleprinterHat-rescue" part="D_Small-Device">
       <footprints>
         <fp>TO-???*</fp>
         <fp>*_Diode_*</fp>
@@ -943,16 +1360,14 @@
       </footprints>
       <fields>
         <field name="Reference">D</field>
-        <field name="Value">D</field>
+        <field name="Value">D_Small-Device</field>
       </fields>
       <pins>
         <pin num="1" name="K" type="passive"/>
         <pin num="2" name="A" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Device" part="D_Small">
-      <description>Diode, small symbol</description>
-      <docs>~</docs>
+    <libpart lib="TeleprinterHat-rescue" part="D_Zener_Small-Device">
       <footprints>
         <fp>TO-???*</fp>
         <fp>*_Diode_*</fp>
@@ -961,250 +1376,40 @@
       </footprints>
       <fields>
         <field name="Reference">D</field>
-        <field name="Value">D_Small</field>
+        <field name="Value">D_Zener_Small-Device</field>
       </fields>
       <pins>
         <pin num="1" name="K" type="passive"/>
         <pin num="2" name="A" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Device" part="D_Zener">
-      <description>Zener diode</description>
-      <docs>~</docs>
+    <libpart lib="TeleprinterHat-rescue" part="EA2-5NU-EA2-5NU">
       <footprints>
-        <fp>TO-???*</fp>
-        <fp>*_Diode_*</fp>
-        <fp>*SingleDiode*</fp>
-        <fp>D_*</fp>
+        <fp>DIP10</fp>
       </footprints>
       <fields>
-        <field name="Reference">D</field>
-        <field name="Value">D_Zener</field>
-      </fields>
-      <pins>
-        <pin num="1" name="K" type="passive"/>
-        <pin num="2" name="A" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="Fuse">
-      <description>Fuse</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>*Fuse*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">F</field>
-        <field name="Value">Fuse</field>
+        <field name="Reference">K</field>
+        <field name="Value">EA2-5NU-EA2-5NU</field>
+        <field name="Footprint">Relay_THT:Relay_DPDT_Finder_30.22</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="passive"/>
         <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="7" name="~" type="passive"/>
+        <pin num="8" name="~" type="passive"/>
+        <pin num="9" name="~" type="passive"/>
+        <pin num="10" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Device" part="Jumper_NC_Small">
-      <description>Jumper, normally closed, small symbol</description>
-      <docs>~</docs>
-      <fields>
-        <field name="Reference">JP</field>
-        <field name="Value">Jumper_NC_Small</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="L">
-      <description>Inductor</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>Choke_*</fp>
-        <fp>*Coil*</fp>
-        <fp>Inductor_*</fp>
-        <fp>L_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">L</field>
-        <field name="Value">L</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="LED">
-      <description>Light emitting diode</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>LED*</fp>
-        <fp>LED_SMD:*</fp>
-        <fp>LED_THT:*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">LED</field>
-      </fields>
-      <pins>
-        <pin num="1" name="K" type="passive"/>
-        <pin num="2" name="A" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="LED_BARG">
-      <description>RGB LED, blue/anode/red/green</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>LED*</fp>
-        <fp>LED_SMD:*</fp>
-        <fp>LED_THT:*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">LED_BARG</field>
-      </fields>
-      <pins>
-        <pin num="1" name="BK" type="passive"/>
-        <pin num="2" name="A" type="passive"/>
-        <pin num="3" name="RK" type="passive"/>
-        <pin num="4" name="GK" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="LED_CRGB">
-      <description>RGB LED, cathode/red/green/blue</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>LED*</fp>
-        <fp>LED_SMD:*</fp>
-        <fp>LED_THT:*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">LED_CRGB</field>
-      </fields>
-      <pins>
-        <pin num="1" name="K" type="passive"/>
-        <pin num="2" name="RA" type="passive"/>
-        <pin num="3" name="GA" type="passive"/>
-        <pin num="4" name="BA" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="Q_NMOS_DGS">
-      <description>N-MOSFET transistor, drain/gate/source</description>
-      <docs>~</docs>
-      <fields>
-        <field name="Reference">Q</field>
-        <field name="Value">Q_NMOS_DGS</field>
-      </fields>
-      <pins>
-        <pin num="1" name="D" type="passive"/>
-        <pin num="2" name="G" type="input"/>
-        <pin num="3" name="S" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="Q_PNP_BCE">
-      <description>PNP transistor, base/collector/emitter</description>
-      <docs>~</docs>
-      <fields>
-        <field name="Reference">Q</field>
-        <field name="Value">Q_PNP_BCE</field>
-      </fields>
-      <pins>
-        <pin num="1" name="B" type="input"/>
-        <pin num="2" name="C" type="passive"/>
-        <pin num="3" name="E" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="R">
-      <description>Resistor</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>R_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">R</field>
-        <field name="Value">R</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="R_Small">
-      <description>Resistor, small symbol</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>R_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">R</field>
-        <field name="Value">R_Small</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="Varistor">
-      <description>Voltage dependent resistor</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>RV_*</fp>
-        <fp>Varistor*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">RV</field>
-        <field name="Value">Varistor</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Interface_UART" part="MAX232">
-      <aliases>
-        <alias>MAX232I</alias>
-        <alias>MAX202</alias>
-        <alias>ADM232A</alias>
-        <alias>MAX3232</alias>
-        <alias>ICL3232</alias>
-      </aliases>
-      <description>Dual RS232 driver/receiver, 5V supply, 120kb/s, 0C-70C</description>
-      <docs>http://www.ti.com/lit/ds/symlink/max232.pdf</docs>
-      <footprints>
-        <fp>SOIC*P1.27mm*</fp>
-        <fp>DIP*W7.62mm*</fp>
-        <fp>TSSOP*4.4x5mm*P0.65mm*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">MAX232</field>
-      </fields>
-      <pins>
-        <pin num="1" name="C1+" type="passive"/>
-        <pin num="2" name="VS+" type="power_out"/>
-        <pin num="3" name="C1-" type="passive"/>
-        <pin num="4" name="C2+" type="passive"/>
-        <pin num="5" name="C2-" type="passive"/>
-        <pin num="6" name="VS-" type="power_out"/>
-        <pin num="7" name="T2OUT" type="output"/>
-        <pin num="8" name="R2IN" type="input"/>
-        <pin num="9" name="R2OUT" type="output"/>
-        <pin num="10" name="T2IN" type="input"/>
-        <pin num="11" name="T1IN" type="input"/>
-        <pin num="12" name="R1OUT" type="output"/>
-        <pin num="13" name="R1IN" type="input"/>
-        <pin num="14" name="T1OUT" type="output"/>
-        <pin num="15" name="GND" type="power_in"/>
-        <pin num="16" name="VCC" type="power_in"/>
-      </pins>
-    </libpart>
-    <libpart lib="Interface_USB" part="FT232RL">
-      <description>USB to Serial Interface, SSOP-28</description>
-      <docs>http://www.ftdichip.com/Products/ICs/FT232RL.htm</docs>
+    <libpart lib="TeleprinterHat-rescue" part="FT232RL-Interface_USB">
       <footprints>
         <fp>SSOP*5.3x10.2mm*P0.65mm*</fp>
       </footprints>
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">FT232RL</field>
+        <field name="Value">FT232RL-Interface_USB</field>
         <field name="Footprint">Package_SO:SSOP-28_5.3x10.2mm_P0.65mm</field>
       </fields>
       <pins>
@@ -1236,15 +1441,99 @@
         <pin num="28" name="OSCO" type="output"/>
       </pins>
     </libpart>
-    <libpart lib="Isolator" part="LTV-355T">
-      <description>DC Darlington Optocoupler, Vce 35V, CTR 600%, SO-4</description>
-      <docs>http://optoelectronics.liteon.com/upload/download/DS70-2001-006/S_110_LTV-355T%2020140520.pdf</docs>
+    <libpart lib="TeleprinterHat-rescue" part="Fuse_Small-Device">
+      <footprints>
+        <fp>SM*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Fuse_Small-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="IRS44273-irs44273">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">IRS44273-irs44273</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="input"/>
+        <pin num="2" name="COM" type="input"/>
+        <pin num="3" name="OUT" type="output"/>
+        <pin num="4" name="OUT" type="passive"/>
+        <pin num="5" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="Jumper_NC_Small-Device">
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">Jumper_NC_Small-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="L-Device">
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="LED-Device">
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="LED_RGB-Device">
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED_RGB-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="RK" type="passive"/>
+        <pin num="2" name="GK" type="passive"/>
+        <pin num="3" name="BK" type="passive"/>
+        <pin num="4" name="BA" type="passive"/>
+        <pin num="5" name="GA" type="passive"/>
+        <pin num="6" name="RA" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="LTV-355T-Isolator">
       <footprints>
         <fp>SO*4.4x3.6mm*P2.54mm*</fp>
       </footprints>
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">LTV-355T</field>
+        <field name="Value">LTV-355T-Isolator</field>
         <field name="Footprint">Package_SO:SO-4_4.4x3.6mm_P2.54mm</field>
       </fields>
       <pins>
@@ -1254,173 +1543,103 @@
         <pin num="4" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="MCU_ST_STM32F0" part="STM32F030K6Tx">
-      <description>ARM Cortex-M0 MCU, 32KB flash, 4KB RAM, 48MHz, 2.4-3.6V, 25 GPIO, LQFP-32</description>
-      <docs>http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00088500.pdf</docs>
+    <libpart lib="TeleprinterHat-rescue" part="L_Core_Ferrite_Small-Device">
       <footprints>
-        <fp>LQFP*7x7mm*P0.8mm*</fp>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
       </footprints>
       <fields>
-        <field name="Reference">U</field>
-        <field name="Value">STM32F030K6Tx</field>
-        <field name="Footprint">Package_QFP:LQFP-32_7x7mm_P0.8mm</field>
+        <field name="Reference">L</field>
+        <field name="Value">L_Core_Ferrite_Small-Device</field>
       </fields>
       <pins>
-        <pin num="1" name="VDD" type="power_in"/>
-        <pin num="2" name="PF0" type="input"/>
-        <pin num="3" name="PF1" type="input"/>
-        <pin num="4" name="NRST" type="input"/>
-        <pin num="5" name="VDDA" type="power_in"/>
-        <pin num="6" name="PA0" type="BiDi"/>
-        <pin num="7" name="PA1" type="BiDi"/>
-        <pin num="8" name="PA2" type="BiDi"/>
-        <pin num="9" name="PA3" type="BiDi"/>
-        <pin num="10" name="PA4" type="BiDi"/>
-        <pin num="11" name="PA5" type="BiDi"/>
-        <pin num="12" name="PA6" type="BiDi"/>
-        <pin num="13" name="PA7" type="BiDi"/>
-        <pin num="14" name="PB0" type="BiDi"/>
-        <pin num="15" name="PB1" type="BiDi"/>
-        <pin num="16" name="VSS" type="power_in"/>
-        <pin num="17" name="VDD" type="power_in"/>
-        <pin num="18" name="PA8" type="BiDi"/>
-        <pin num="19" name="PA9" type="BiDi"/>
-        <pin num="20" name="PA10" type="BiDi"/>
-        <pin num="21" name="PA11" type="BiDi"/>
-        <pin num="22" name="PA12" type="BiDi"/>
-        <pin num="23" name="PA13" type="BiDi"/>
-        <pin num="24" name="PA14" type="BiDi"/>
-        <pin num="25" name="PA15" type="BiDi"/>
-        <pin num="26" name="PB3" type="BiDi"/>
-        <pin num="27" name="PB4" type="BiDi"/>
-        <pin num="28" name="PB5" type="BiDi"/>
-        <pin num="29" name="PB6" type="BiDi"/>
-        <pin num="30" name="PB7" type="BiDi"/>
-        <pin num="31" name="BOOT0" type="input"/>
-        <pin num="32" name="VSS" type="power_in"/>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Memory_EEPROM" part="24LC16">
-      <aliases>
-        <alias>24LC02</alias>
-        <alias>24LC00</alias>
-        <alias>24LC04</alias>
-        <alias>24LC08</alias>
-        <alias>24LC01</alias>
-        <alias>24LC512</alias>
-        <alias>24LC64</alias>
-        <alias>24LC1025</alias>
-        <alias>24LC32</alias>
-        <alias>24LC256</alias>
-        <alias>24LC128</alias>
-        <alias>CAT24C256</alias>
-      </aliases>
-      <description>I2C Serial EEPROM, 16Kb, DIP-8/SOIC-8/TSSOP-8/DFN-8</description>
-      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/21703d.pdf</docs>
+    <libpart lib="TeleprinterHat-rescue" part="MAX232-Interface_UART">
       <footprints>
+        <fp>SOIC*P1.27mm*</fp>
         <fp>DIP*W7.62mm*</fp>
-        <fp>SOIC*3.9x4.9mm*</fp>
-        <fp>TSSOP*4.4x3mm*P0.65mm*</fp>
-        <fp>DFN*3x2mm*P0.5mm*</fp>
+        <fp>TSSOP*4.4x5mm*P0.65mm*</fp>
       </footprints>
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">24LC16</field>
+        <field name="Value">MAX232-Interface_UART</field>
       </fields>
       <pins>
-        <pin num="1" name="A0" type="input"/>
-        <pin num="2" name="A1" type="input"/>
-        <pin num="3" name="A2" type="input"/>
+        <pin num="1" name="C1+" type="passive"/>
+        <pin num="2" name="VS+" type="power_out"/>
+        <pin num="3" name="C1-" type="passive"/>
+        <pin num="4" name="C2+" type="passive"/>
+        <pin num="5" name="C2-" type="passive"/>
+        <pin num="6" name="VS-" type="power_out"/>
+        <pin num="7" name="T2OUT" type="output"/>
+        <pin num="8" name="R2IN" type="input"/>
+        <pin num="9" name="R2OUT" type="output"/>
+        <pin num="10" name="T2IN" type="input"/>
+        <pin num="11" name="T1IN" type="input"/>
+        <pin num="12" name="R1OUT" type="output"/>
+        <pin num="13" name="R1IN" type="input"/>
+        <pin num="14" name="T1OUT" type="output"/>
+        <pin num="15" name="GND" type="power_in"/>
+        <pin num="16" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="MC34063-MC34063">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MC34063-MC34063</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SWC" type="passive"/>
+        <pin num="2" name="SWE" type="openEm"/>
+        <pin num="3" name="TC" type="passive"/>
         <pin num="4" name="GND" type="power_in"/>
-        <pin num="5" name="SDA" type="BiDi"/>
-        <pin num="6" name="SCL" type="input"/>
-        <pin num="7" name="WP" type="input"/>
-        <pin num="8" name="VCC" type="power_in"/>
+        <pin num="5" name="CII" type="input"/>
+        <pin num="6" name="Vcc" type="power_in"/>
+        <pin num="7" name="Ipk" type="input"/>
+        <pin num="8" name="DRC" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Regulator_Linear" part="AP1117-15">
-      <aliases>
-        <alias>AP1117-18</alias>
-        <alias>AP1117-25</alias>
-        <alias>AP1117-33</alias>
-        <alias>AP1117-50</alias>
-        <alias>LD1117S33TR_SOT223</alias>
-        <alias>LD1117S12TR_SOT223</alias>
-        <alias>LD1117S18TR_SOT223</alias>
-        <alias>LD1117S25TR_SOT223</alias>
-        <alias>LD1117S50TR_SOT223</alias>
-        <alias>NCP1117-12_SOT223</alias>
-        <alias>NCP1117-1.5_SOT223</alias>
-        <alias>NCP1117-1.8_SOT223</alias>
-        <alias>NCP1117-2.0_SOT223</alias>
-        <alias>NCP1117-2.5_SOT223</alias>
-        <alias>NCP1117-2.85_SOT223</alias>
-        <alias>NCP1117-3.3_SOT223</alias>
-        <alias>NCP1117-5.0_SOT223</alias>
-        <alias>AMS1117-1.5</alias>
-        <alias>AMS1117-1.8</alias>
-        <alias>AMS1117-2.5</alias>
-        <alias>AMS1117-2.85</alias>
-        <alias>AMS1117-3.3</alias>
-        <alias>AMS1117-5.0</alias>
-      </aliases>
-      <description>1A Low Dropout regulator, positive, 1.5V fixed output, SOT-223</description>
-      <docs>http://www.diodes.com/datasheets/AP1117.pdf</docs>
+    <libpart lib="TeleprinterHat-rescue" part="MCP6004-Amplifier_Operational">
       <footprints>
-        <fp>SOT?223*TabPin2*</fp>
+        <fp>SOIC*3.9x8.7mm*P1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>TSSOP*4.4x5mm*P0.65mm*</fp>
+        <fp>SSOP*5.3x6.2mm*P0.65mm*</fp>
+        <fp>MSOP*3x3mm*P0.5mm*</fp>
       </footprints>
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">AP1117-15</field>
-        <field name="Footprint">Package_TO_SOT_SMD:SOT-223-3_TabPin2</field>
+        <field name="Value">MCP6004-Amplifier_Operational</field>
       </fields>
       <pins>
-        <pin num="1" name="GND" type="power_in"/>
-        <pin num="2" name="VO" type="power_out"/>
-        <pin num="3" name="VI" type="power_in"/>
+        <pin num="1" name="~" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V+" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="~" type="output"/>
+        <pin num="8" name="~" type="output"/>
+        <pin num="9" name="-" type="input"/>
+        <pin num="10" name="+" type="input"/>
+        <pin num="11" name="V-" type="power_in"/>
+        <pin num="12" name="+" type="input"/>
+        <pin num="13" name="-" type="input"/>
+        <pin num="14" name="~" type="output"/>
       </pins>
     </libpart>
-    <libpart lib="Relay" part="FINDER-30.22">
-      <description>FINDER 30.52, Dual Pole Relay, Subminiature 5mm Pitch, 2A</description>
-      <docs>http://gfinder.findernet.com/assets/Series/354/S30EN.pdf</docs>
-      <footprints>
-        <fp>Relay*DPDT*Finder*30.22*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">K</field>
-        <field name="Value">FINDER-30.22</field>
-        <field name="Footprint">Relay_THT:Relay_DPDT_Finder_30.22</field>
-      </fields>
-      <pins>
-        <pin num="11" name="~" type="passive"/>
-        <pin num="12" name="~" type="passive"/>
-        <pin num="14" name="~" type="passive"/>
-        <pin num="21" name="~" type="passive"/>
-        <pin num="22" name="~" type="passive"/>
-        <pin num="24" name="~" type="passive"/>
-        <pin num="A1" name="~" type="passive"/>
-        <pin num="A2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Transistor_BJT" part="BC817">
-      <aliases>
-        <alias>BC818</alias>
-        <alias>BC847</alias>
-        <alias>BC848</alias>
-        <alias>BC849</alias>
-        <alias>BC850</alias>
-        <alias>MMBT3904</alias>
-        <alias>MMBT5550L</alias>
-        <alias>MMBT5551L</alias>
-      </aliases>
-      <description>0.8A Ic, 45V Vce, NPN Transistor, SOT-23</description>
-      <docs>http://www.fairchildsemi.com/ds/BC/BC817.pdf</docs>
+    <libpart lib="TeleprinterHat-rescue" part="MMBT3904-Transistor_BJT">
       <footprints>
         <fp>SOT?23*</fp>
       </footprints>
       <fields>
         <field name="Reference">Q</field>
-        <field name="Value">BC817</field>
+        <field name="Value">MMBT3904-Transistor_BJT</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
       </fields>
       <pins>
@@ -1429,638 +1648,1029 @@
         <pin num="3" name="C" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="MMBT5551L-Transistor_BJT">
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">MMBT5551L-Transistor_BJT</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="NCP1117-3.3_TO252-Regulator_Linear">
+      <footprints>
+        <fp>TO?252*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">NCP1117-3.3_TO252-Regulator_Linear</field>
+        <field name="Footprint">Package_TO_SOT_SMD:TO-252-2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VO" type="power_out"/>
+        <pin num="3" name="VI" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="Q_NMOS_GDS-Device">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NMOS_GDS-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="Q_NPN_BEC-Device">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NPN_BEC-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="Q_PMOS_GDS-Device">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_PMOS_GDS-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="Q_PNP_BEC-Device">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_PNP_BEC-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="R-Device">
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="R_Small-Device">
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="STM32F103C8Tx-MCU_ST_STM32F1">
+      <footprints>
+        <fp>LQFP*7x7mm*P0.5mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">STM32F103C8Tx-MCU_ST_STM32F1</field>
+        <field name="Footprint">Package_QFP:LQFP-48_7x7mm_P0.5mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBAT" type="power_in"/>
+        <pin num="2" name="PC13" type="BiDi"/>
+        <pin num="3" name="PC14" type="BiDi"/>
+        <pin num="4" name="PC15" type="BiDi"/>
+        <pin num="5" name="PD0" type="input"/>
+        <pin num="6" name="PD1" type="input"/>
+        <pin num="7" name="NRST" type="input"/>
+        <pin num="8" name="VSSA" type="power_in"/>
+        <pin num="9" name="VDDA" type="power_in"/>
+        <pin num="10" name="PA0" type="BiDi"/>
+        <pin num="11" name="PA1" type="BiDi"/>
+        <pin num="12" name="PA2" type="BiDi"/>
+        <pin num="13" name="PA3" type="BiDi"/>
+        <pin num="14" name="PA4" type="BiDi"/>
+        <pin num="15" name="PA5" type="BiDi"/>
+        <pin num="16" name="PA6" type="BiDi"/>
+        <pin num="17" name="PA7" type="BiDi"/>
+        <pin num="18" name="PB0" type="BiDi"/>
+        <pin num="19" name="PB1" type="BiDi"/>
+        <pin num="20" name="PB2" type="BiDi"/>
+        <pin num="21" name="PB10" type="BiDi"/>
+        <pin num="22" name="PB11" type="BiDi"/>
+        <pin num="23" name="VSS" type="power_in"/>
+        <pin num="24" name="VDD" type="power_in"/>
+        <pin num="25" name="PB12" type="BiDi"/>
+        <pin num="26" name="PB13" type="BiDi"/>
+        <pin num="27" name="PB14" type="BiDi"/>
+        <pin num="28" name="PB15" type="BiDi"/>
+        <pin num="29" name="PA8" type="BiDi"/>
+        <pin num="30" name="PA9" type="BiDi"/>
+        <pin num="31" name="PA10" type="BiDi"/>
+        <pin num="32" name="PA11" type="BiDi"/>
+        <pin num="33" name="PA12" type="BiDi"/>
+        <pin num="34" name="PA13" type="BiDi"/>
+        <pin num="35" name="VSS" type="power_in"/>
+        <pin num="36" name="VDD" type="power_in"/>
+        <pin num="37" name="PA14" type="BiDi"/>
+        <pin num="38" name="PA15" type="BiDi"/>
+        <pin num="39" name="PB3" type="BiDi"/>
+        <pin num="40" name="PB4" type="BiDi"/>
+        <pin num="41" name="PB5" type="BiDi"/>
+        <pin num="42" name="PB6" type="BiDi"/>
+        <pin num="43" name="PB7" type="BiDi"/>
+        <pin num="44" name="BOOT0" type="input"/>
+        <pin num="45" name="PB8" type="BiDi"/>
+        <pin num="46" name="PB9" type="BiDi"/>
+        <pin num="47" name="VSS" type="power_in"/>
+        <pin num="48" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="TLV3502-tlv3502">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TLV3502-tlv3502</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="input"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="-" type="input"/>
+        <pin num="5" name="V-" type="power_in"/>
+        <pin num="6" name="~" type="output"/>
+        <pin num="7" name="~" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="TeleprinterHat-rescue" part="TVS-tinkerforge">
+      <footprints>
+        <fp>D?</fp>
+        <fp>S*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">TVS-tinkerforge</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
-    <library logical="74xx">
-      <uri>/usr/share/kicad/library/74xx.lib</uri>
-    </library>
     <library logical="Connector">
-      <uri>/usr/share/kicad/library/Connector.lib</uri>
+      <uri>/home/mattis/kicadlibs/Connector.lib</uri>
     </library>
-    <library logical="Connector_Generic">
-      <uri>/usr/share/kicad/library/Connector_Generic.lib</uri>
-    </library>
-    <library logical="Device">
-      <uri>/usr/share/kicad/library/Device.lib</uri>
-    </library>
-    <library logical="Interface_UART">
-      <uri>/usr/share/kicad/library/Interface_UART.lib</uri>
-    </library>
-    <library logical="Interface_USB">
-      <uri>/usr/share/kicad/library/Interface_USB.lib</uri>
-    </library>
-    <library logical="Isolator">
-      <uri>/usr/share/kicad/library/Isolator.lib</uri>
-    </library>
-    <library logical="MCU_ST_STM32F0">
-      <uri>/usr/share/kicad/library/MCU_ST_STM32F0.lib</uri>
-    </library>
-    <library logical="Memory_EEPROM">
-      <uri>/usr/share/kicad/library/Memory_EEPROM.lib</uri>
-    </library>
-    <library logical="Regulator_Linear">
-      <uri>/usr/share/kicad/library/Regulator_Linear.lib</uri>
-    </library>
-    <library logical="Relay">
-      <uri>/usr/share/kicad/library/Relay.lib</uri>
-    </library>
-    <library logical="Transistor_BJT">
-      <uri>/usr/share/kicad/library/Transistor_BJT.lib</uri>
+    <library logical="TeleprinterHat-rescue">
+      <uri>/home/mattis/teleprinterHat/hardware/TeleprinterHat/TeleprinterHat-rescue.lib</uri>
     </library>
   </libraries>
   <nets>
-    <net code="1" name="SCK">
+    <net code="1" name="Net-(R41-Pad1)">
+      <node ref="U14" pin="45"/>
+      <node ref="R41" pin="1"/>
+    </net>
+    <net code="2" name="Net-(R31-Pad1)">
+      <node ref="R31" pin="1"/>
+      <node ref="U14" pin="42"/>
+    </net>
+    <net code="3" name="/SCK">
+      <node ref="U14" pin="41"/>
       <node ref="J7" pin="23"/>
-      <node ref="U5" pin="11"/>
     </net>
-    <net code="2" name="+3V3">
-      <node ref="J7" pin="17"/>
-      <node ref="R3" pin="1"/>
-      <node ref="J7" pin="1"/>
-      <node ref="R16" pin="1"/>
-      <node ref="R23" pin="2"/>
-      <node ref="R18" pin="1"/>
-      <node ref="R21" pin="2"/>
-      <node ref="R17" pin="1"/>
-      <node ref="R22" pin="2"/>
-      <node ref="C2" pin="1"/>
-      <node ref="J6" pin="4"/>
-      <node ref="R29" pin="1"/>
-      <node ref="R25" pin="1"/>
-      <node ref="U1" pin="2"/>
-      <node ref="U4" pin="16"/>
-      <node ref="U5" pin="5"/>
-      <node ref="U5" pin="17"/>
-      <node ref="U6" pin="8"/>
-      <node ref="U5" pin="1"/>
-    </net>
-    <net code="3" name="MOSI">
-      <node ref="U5" pin="13"/>
+    <net code="4" name="/MOSI">
+      <node ref="U14" pin="40"/>
       <node ref="J7" pin="19"/>
     </net>
-    <net code="4" name="MISO">
-      <node ref="U5" pin="12"/>
+    <net code="5" name="Net-(U14-Pad4)">
+      <node ref="U14" pin="4"/>
+    </net>
+    <net code="6" name="/MISO">
       <node ref="J7" pin="21"/>
+      <node ref="U14" pin="39"/>
     </net>
-    <net code="5" name="Net-(C6-Pad1)">
-      <node ref="U4" pin="1"/>
-      <node ref="C6" pin="1"/>
+    <net code="7" name="Net-(JP10-Pad1)">
+      <node ref="JP10" pin="1"/>
+      <node ref="U14" pin="38"/>
     </net>
-    <net code="6" name="Net-(C6-Pad2)">
-      <node ref="U4" pin="3"/>
-      <node ref="C6" pin="2"/>
+    <net code="8" name="Net-(J6-Pad3)">
+      <node ref="J6" pin="3"/>
+      <node ref="U14" pin="37"/>
     </net>
-    <net code="7" name="Net-(C7-Pad2)">
-      <node ref="U4" pin="5"/>
-      <node ref="C7" pin="2"/>
+    <net code="9" name="Net-(U14-Pad3)">
+      <node ref="U14" pin="3"/>
     </net>
-    <net code="8" name="Net-(C7-Pad1)">
-      <node ref="C7" pin="1"/>
-      <node ref="U4" pin="4"/>
+    <net code="10" name="Net-(JP3-Pad2)">
+      <node ref="JP3" pin="2"/>
+      <node ref="U14" pin="28"/>
     </net>
-    <net code="9" name="TPON">
-      <node ref="U2" pin="13"/>
-      <node ref="R3" pin="2"/>
-      <node ref="U5" pin="26"/>
+    <net code="11" name="Net-(JP2-Pad2)">
+      <node ref="U14" pin="27"/>
+      <node ref="JP2" pin="2"/>
     </net>
-    <net code="10" name="Net-(C10-Pad1)">
-      <node ref="Y1" pin="2"/>
-      <node ref="U5" pin="3"/>
-      <node ref="C10" pin="1"/>
+    <net code="12" name="Net-(U14-Pad26)">
+      <node ref="U14" pin="26"/>
     </net>
-    <net code="11" name="RX">
-      <node ref="U5" pin="20"/>
-      <node ref="U3" pin="5"/>
-      <node ref="J7" pin="8"/>
-      <node ref="JP12" pin="1"/>
-      <node ref="JP13" pin="1"/>
-      <node ref="JP11" pin="1"/>
-      <node ref="R19" pin="2"/>
-    </net>
-    <net code="12" name="TX">
-      <node ref="J7" pin="10"/>
-      <node ref="U7" pin="1"/>
-      <node ref="U4" pin="10"/>
-      <node ref="U5" pin="19"/>
-      <node ref="R23" pin="1"/>
-      <node ref="R20" pin="2"/>
-    </net>
-    <net code="13" name="Net-(J7-Pad3)">
-      <node ref="U6" pin="5"/>
-      <node ref="J7" pin="3"/>
-    </net>
-    <net code="14" name="Net-(J7-Pad5)">
-      <node ref="J7" pin="5"/>
-      <node ref="U6" pin="6"/>
-    </net>
-    <net code="15" name="GND">
-      <node ref="D8" pin="1"/>
-      <node ref="U6" pin="2"/>
-      <node ref="U6" pin="3"/>
-      <node ref="U6" pin="4"/>
-      <node ref="J5" pin="5"/>
-      <node ref="C14" pin="2"/>
-      <node ref="J7" pin="30"/>
-      <node ref="C11" pin="2"/>
-      <node ref="D7" pin="1"/>
-      <node ref="C12" pin="2"/>
+    <net code="13" name="GND">
+      <node ref="J7" pin="25"/>
       <node ref="J7" pin="34"/>
-      <node ref="C4" pin="2"/>
-      <node ref="C5" pin="2"/>
-      <node ref="C3" pin="2"/>
-      <node ref="Q1" pin="3"/>
+      <node ref="J7" pin="30"/>
+      <node ref="J7" pin="14"/>
+      <node ref="C18" pin="2"/>
+      <node ref="C12" pin="2"/>
+      <node ref="C19" pin="2"/>
+      <node ref="U6" pin="2"/>
+      <node ref="R4" pin="2"/>
       <node ref="Q2" pin="2"/>
+      <node ref="JP18" pin="2"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="R9" pin="2"/>
+      <node ref="C14" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="J7" pin="20"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C17" pin="2"/>
+      <node ref="D11" pin="3"/>
+      <node ref="D11" pin="2"/>
+      <node ref="D11" pin="1"/>
+      <node ref="J1" pin="2"/>
+      <node ref="J1" pin="4"/>
+      <node ref="C25" pin="2"/>
+      <node ref="J7" pin="6"/>
+      <node ref="J7" pin="39"/>
       <node ref="D4" pin="2"/>
-      <node ref="R2" pin="2"/>
+      <node ref="R13" pin="2"/>
+      <node ref="C16" pin="2"/>
+      <node ref="C24" pin="2"/>
+      <node ref="C15" pin="2"/>
+      <node ref="C23" pin="2"/>
+      <node ref="J7" pin="9"/>
+      <node ref="R39" pin="2"/>
+      <node ref="JP8" pin="2"/>
+      <node ref="JP7" pin="2"/>
+      <node ref="JP4" pin="1"/>
+      <node ref="JP9" pin="2"/>
+      <node ref="U3" pin="7"/>
+      <node ref="U4" pin="15"/>
+      <node ref="C8" pin="1"/>
+      <node ref="C9" pin="1"/>
+      <node ref="JP6" pin="1"/>
+      <node ref="JP5" pin="1"/>
+      <node ref="JP10" pin="2"/>
+      <node ref="J6" pin="1"/>
+      <node ref="D7" pin="1"/>
+      <node ref="C11" pin="2"/>
+      <node ref="D8" pin="1"/>
+      <node ref="C10" pin="2"/>
+      <node ref="JP20" pin="2"/>
+      <node ref="JP21" pin="2"/>
+      <node ref="D6" pin="3"/>
+      <node ref="D6" pin="2"/>
+      <node ref="J5" pin="5"/>
+      <node ref="U3" pin="25"/>
+      <node ref="U3" pin="26"/>
+      <node ref="U3" pin="21"/>
+      <node ref="JP19" pin="2"/>
+      <node ref="J4" pin="5"/>
+      <node ref="J4" pin="6"/>
+      <node ref="D6" pin="1"/>
       <node ref="U1" pin="1"/>
       <node ref="C1" pin="2"/>
       <node ref="C2" pin="2"/>
-      <node ref="J2" pin="T"/>
-      <node ref="J7" pin="25"/>
-      <node ref="D1" pin="2"/>
-      <node ref="J4" pin="5"/>
-      <node ref="J4" pin="6"/>
-      <node ref="U7" pin="2"/>
-      <node ref="J7" pin="14"/>
-      <node ref="J7" pin="20"/>
-      <node ref="R10" pin="1"/>
-      <node ref="U3" pin="25"/>
-      <node ref="U3" pin="26"/>
-      <node ref="U3" pin="7"/>
-      <node ref="U4" pin="15"/>
-      <node ref="C13" pin="2"/>
-      <node ref="Q4" pin="2"/>
-      <node ref="U6" pin="1"/>
-      <node ref="C10" pin="2"/>
       <node ref="U3" pin="18"/>
-      <node ref="U3" pin="21"/>
-      <node ref="U8" pin="3"/>
-      <node ref="U5" pin="16"/>
-      <node ref="JP10" pin="2"/>
-      <node ref="JP9" pin="2"/>
-      <node ref="JP8" pin="2"/>
-      <node ref="JP7" pin="2"/>
-      <node ref="C8" pin="1"/>
-      <node ref="C9" pin="1"/>
-      <node ref="JP14" pin="2"/>
-      <node ref="J7" pin="39"/>
-      <node ref="JP4" pin="1"/>
       <node ref="JP2" pin="1"/>
       <node ref="JP3" pin="1"/>
-      <node ref="JP5" pin="1"/>
-      <node ref="JP6" pin="1"/>
-      <node ref="U5" pin="31"/>
-      <node ref="J7" pin="9"/>
-      <node ref="J6" pin="1"/>
-      <node ref="J7" pin="6"/>
-      <node ref="U5" pin="32"/>
-    </net>
-    <net code="16" name="Net-(C9-Pad2)">
-      <node ref="U4" pin="6"/>
-      <node ref="C9" pin="2"/>
-    </net>
-    <net code="17" name="Net-(C8-Pad2)">
-      <node ref="C8" pin="2"/>
-      <node ref="U4" pin="2"/>
-    </net>
-    <net code="18" name="Net-(U4-Pad14)">
-      <node ref="U4" pin="14"/>
-    </net>
-    <net code="19" name="Net-(U4-Pad8)">
-      <node ref="U4" pin="8"/>
-    </net>
-    <net code="20" name="Net-(U4-Pad11)">
-      <node ref="U4" pin="11"/>
-    </net>
-    <net code="21" name="Net-(U4-Pad9)">
-      <node ref="U4" pin="9"/>
-    </net>
-    <net code="22" name="Net-(J7-Pad27)">
-      <node ref="J7" pin="27"/>
-      <node ref="R16" pin="2"/>
-      <node ref="JP4" pin="2"/>
-    </net>
-    <net code="23" name="Net-(J7-Pad31)">
-      <node ref="JP6" pin="2"/>
-      <node ref="R18" pin="2"/>
-      <node ref="J7" pin="31"/>
-    </net>
-    <net code="24" name="Net-(J7-Pad29)">
-      <node ref="JP5" pin="2"/>
-      <node ref="J7" pin="29"/>
-      <node ref="R17" pin="2"/>
-    </net>
-    <net code="25" name="Net-(D8-Pad2)">
-      <node ref="D8" pin="2"/>
-      <node ref="R20" pin="1"/>
-    </net>
-    <net code="26" name="Net-(D7-Pad2)">
-      <node ref="R19" pin="1"/>
-      <node ref="D7" pin="2"/>
-    </net>
-    <net code="27" name="Net-(JP3-Pad2)">
-      <node ref="JP3" pin="2"/>
-      <node ref="U5" pin="15"/>
-    </net>
-    <net code="28" name="Net-(JP2-Pad2)">
-      <node ref="JP2" pin="2"/>
-      <node ref="U5" pin="14"/>
-    </net>
-    <net code="29" name="Net-(D5-Pad4)">
-      <node ref="D6" pin="1"/>
-      <node ref="D5" pin="4"/>
-      <node ref="U5" pin="30"/>
-    </net>
-    <net code="30" name="Net-(R14-Pad1)">
-      <node ref="R14" pin="1"/>
-      <node ref="U5" pin="27"/>
-    </net>
-    <net code="31" name="Net-(D5-Pad1)">
-      <node ref="R14" pin="2"/>
-      <node ref="D5" pin="1"/>
-      <node ref="D6" pin="2"/>
-    </net>
-    <net code="32" name="Net-(D5-Pad2)">
-      <node ref="D6" pin="3"/>
-      <node ref="D5" pin="2"/>
-      <node ref="U5" pin="28"/>
-    </net>
-    <net code="33" name="Net-(D5-Pad3)">
-      <node ref="D6" pin="4"/>
-      <node ref="D5" pin="3"/>
-      <node ref="U5" pin="29"/>
-    </net>
-    <net code="34" name="Net-(JP8-Pad1)">
-      <node ref="JP8" pin="1"/>
-      <node ref="U5" pin="21"/>
-    </net>
-    <net code="35" name="Net-(JP7-Pad1)">
-      <node ref="JP7" pin="1"/>
-      <node ref="U5" pin="18"/>
-    </net>
-    <net code="36" name="Net-(JP9-Pad1)">
-      <node ref="U5" pin="22"/>
-      <node ref="JP9" pin="1"/>
-    </net>
-    <net code="37" name="Net-(JP10-Pad1)">
-      <node ref="U5" pin="25"/>
-      <node ref="JP10" pin="1"/>
-    </net>
-    <net code="38" name="CLRX">
-      <node ref="U8" pin="4"/>
+      <node ref="JP16" pin="2"/>
+      <node ref="JP15" pin="2"/>
+      <node ref="U14" pin="8"/>
       <node ref="R22" pin="1"/>
-      <node ref="JP13" pin="2"/>
+      <node ref="U9" pin="2"/>
+      <node ref="Q6" pin="2"/>
+      <node ref="U10" pin="5"/>
+      <node ref="U11" pin="11"/>
+      <node ref="U2" pin="5"/>
+      <node ref="Q10" pin="2"/>
+      <node ref="U14" pin="47"/>
+      <node ref="U14" pin="35"/>
+      <node ref="U5" pin="4"/>
+      <node ref="Q7" pin="2"/>
+      <node ref="U14" pin="23"/>
+      <node ref="R34" pin="2"/>
+      <node ref="U13" pin="3"/>
+      <node ref="U13" pin="5"/>
+      <node ref="C22" pin="2"/>
+      <node ref="C13" pin="2"/>
+      <node ref="U2" pin="3"/>
+      <node ref="R30" pin="2"/>
+      <node ref="JP14" pin="2"/>
     </net>
-    <net code="39" name="Net-(R24-Pad2)">
-      <node ref="U8" pin="1"/>
-      <node ref="R24" pin="2"/>
+    <net code="14" name="Net-(U14-Pad25)">
+      <node ref="U14" pin="25"/>
     </net>
-    <net code="40" name="Net-(J8-Pad1)">
-      <node ref="Q5" pin="3"/>
-      <node ref="R26" pin="1"/>
-      <node ref="J8" pin="1"/>
+    <net code="15" name="Net-(C21-Pad1)">
+      <node ref="R10" pin="1"/>
+      <node ref="C21" pin="1"/>
+      <node ref="Q3" pin="1"/>
     </net>
-    <net code="41" name="Net-(R26-Pad2)">
-      <node ref="R26" pin="2"/>
-      <node ref="U7" pin="4"/>
+    <net code="16" name="Net-(JP21-Pad1)">
+      <node ref="JP21" pin="1"/>
+      <node ref="U14" pin="15"/>
     </net>
-    <net code="42" name="Net-(D9-Pad2)">
-      <node ref="D9" pin="2"/>
-      <node ref="Q5" pin="1"/>
-      <node ref="U7" pin="3"/>
+    <net code="17" name="Net-(R43-Pad1)">
+      <node ref="R43" pin="1"/>
+      <node ref="U14" pin="21"/>
     </net>
-    <net code="43" name="Net-(D10-Pad1)">
-      <node ref="J8" pin="2"/>
+    <net code="18" name="/TPON">
+      <node ref="U2" pin="2"/>
+      <node ref="R3" pin="2"/>
+      <node ref="U14" pin="20"/>
+    </net>
+    <net code="19" name="Net-(U14-Pad2)">
+      <node ref="U14" pin="2"/>
+    </net>
+    <net code="20" name="/KEYBOARD">
+      <node ref="R1" pin="1"/>
+      <node ref="U14" pin="19"/>
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="21" name="/REVERSE">
+      <node ref="U14" pin="18"/>
+      <node ref="R45" pin="2"/>
+    </net>
+    <net code="22" name="Net-(JP16-Pad1)">
+      <node ref="U14" pin="17"/>
+      <node ref="JP16" pin="1"/>
+    </net>
+    <net code="23" name="Net-(JP15-Pad1)">
+      <node ref="JP15" pin="1"/>
+      <node ref="U14" pin="16"/>
+    </net>
+    <net code="24" name="Net-(JP20-Pad1)">
+      <node ref="JP20" pin="1"/>
+      <node ref="U14" pin="14"/>
+    </net>
+    <net code="25" name="Net-(R15-Pad2)">
+      <node ref="R15" pin="2"/>
+      <node ref="U10" pin="6"/>
+      <node ref="U13" pin="2"/>
+    </net>
+    <net code="26" name="Net-(D12-Pad2)">
+      <node ref="Q10" pin="3"/>
+      <node ref="K1" pin="1"/>
+      <node ref="D12" pin="2"/>
+    </net>
+    <net code="27" name="Net-(Q10-Pad1)">
+      <node ref="R45" pin="1"/>
+      <node ref="Q10" pin="1"/>
+    </net>
+    <net code="28" name="Net-(R6-Pad1)">
+      <node ref="R7" pin="2"/>
+      <node ref="R6" pin="1"/>
+      <node ref="U10" pin="1"/>
+    </net>
+    <net code="29" name="Net-(Q7-Pad1)">
+      <node ref="Q7" pin="1"/>
+      <node ref="R25" pin="1"/>
+    </net>
+    <net code="30" name="Net-(U10-Pad4)">
+      <node ref="U10" pin="4"/>
+      <node ref="U11" pin="7"/>
+      <node ref="U11" pin="6"/>
+    </net>
+    <net code="31" name="Net-(R15-Pad1)">
+      <node ref="R35" pin="2"/>
+      <node ref="U10" pin="3"/>
+      <node ref="R15" pin="1"/>
+    </net>
+    <net code="32" name="Net-(C21-Pad2)">
+      <node ref="R10" pin="2"/>
+      <node ref="U13" pin="4"/>
+      <node ref="C21" pin="2"/>
+    </net>
+    <net code="33" name="Net-(C19-Pad1)">
+      <node ref="C19" pin="1"/>
+      <node ref="U11" pin="5"/>
+      <node ref="R38" pin="2"/>
+    </net>
+    <net code="34" name="Net-(K1-Pad2)">
+      <node ref="R32" pin="1"/>
+      <node ref="Q9" pin="2"/>
+      <node ref="K1" pin="7"/>
+      <node ref="K1" pin="2"/>
+    </net>
+    <net code="35" name="Net-(C20-Pad2)">
+      <node ref="C20" pin="2"/>
+      <node ref="R37" pin="1"/>
+    </net>
+    <net code="36" name="Net-(Q7-Pad3)">
+      <node ref="R32" pin="2"/>
+      <node ref="Q7" pin="3"/>
+      <node ref="R33" pin="2"/>
+    </net>
+    <net code="37" name="Net-(Q9-Pad1)">
+      <node ref="R33" pin="1"/>
+      <node ref="Q9" pin="1"/>
+    </net>
+    <net code="38" name="Net-(Q9-Pad3)">
+      <node ref="R35" pin="1"/>
+      <node ref="R36" pin="2"/>
+      <node ref="Q9" pin="3"/>
+      <node ref="R34" pin="1"/>
+    </net>
+    <net code="39" name="Net-(Q6-Pad1)">
+      <node ref="Q6" pin="1"/>
+      <node ref="R14" pin="2"/>
+    </net>
+    <net code="40" name="Net-(R36-Pad1)">
+      <node ref="U11" pin="10"/>
+      <node ref="R36" pin="1"/>
+    </net>
+    <net code="41" name="Net-(Q2-Pad1)">
+      <node ref="R5" pin="2"/>
+      <node ref="Q2" pin="1"/>
+    </net>
+    <net code="42" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2"/>
+      <node ref="R5" pin="1"/>
+    </net>
+    <net code="43" name="Net-(C18-Pad1)">
+      <node ref="U11" pin="3"/>
+      <node ref="C18" pin="1"/>
+      <node ref="R21" pin="2"/>
+    </net>
+    <net code="44" name="Net-(U10-Pad2)">
+      <node ref="U10" pin="2"/>
+      <node ref="U11" pin="1"/>
+      <node ref="U11" pin="2"/>
+    </net>
+    <net code="45" name="Net-(R44-Pad1)">
+      <node ref="U14" pin="22"/>
+      <node ref="R44" pin="1"/>
+    </net>
+    <net code="46" name="Net-(J1-Pad3)">
+      <node ref="J1" pin="3"/>
+      <node ref="U2" pin="4"/>
+    </net>
+    <net code="47" name="/PRINTER-">
+      <node ref="R37" pin="2"/>
+      <node ref="D5" pin="2"/>
+      <node ref="J1" pin="6"/>
+      <node ref="K1" pin="3"/>
+    </net>
+    <net code="48" name="Net-(J2-Pad6)">
+      <node ref="J2" pin="6"/>
+    </net>
+    <net code="49" name="Net-(J2-Pad1)">
+      <node ref="J2" pin="1"/>
+    </net>
+    <net code="50" name="Net-(J2-Pad5)">
+      <node ref="R27" pin="1"/>
+      <node ref="U8" pin="2"/>
+      <node ref="J2" pin="5"/>
+    </net>
+    <net code="51" name="Net-(D10-Pad1)">
       <node ref="D10" pin="1"/>
+      <node ref="J2" pin="3"/>
       <node ref="R28" pin="1"/>
     </net>
-    <net code="44" name="Net-(D10-Pad2)">
-      <node ref="D10" pin="2"/>
-      <node ref="D9" pin="1"/>
+    <net code="52" name="Net-(J2-Pad2)">
+      <node ref="Q5" pin="3"/>
+      <node ref="J2" pin="2"/>
+      <node ref="R26" pin="1"/>
     </net>
-    <net code="45" name="Net-(Q5-Pad2)">
-      <node ref="R28" pin="2"/>
-      <node ref="Q5" pin="2"/>
+    <net code="53" name="/PRINTER+">
+      <node ref="D5" pin="1"/>
+      <node ref="D5" pin="1"/>
+      <node ref="J1" pin="5"/>
+      <node ref="C20" pin="1"/>
+      <node ref="K1" pin="8"/>
     </net>
-    <net code="46" name="Net-(J7-Pad7)">
+    <net code="54" name="Net-(D11-Pad6)">
+      <node ref="R42" pin="2"/>
+      <node ref="D11" pin="6"/>
+    </net>
+    <net code="55" name="Net-(D11-Pad5)">
+      <node ref="D11" pin="5"/>
+      <node ref="R43" pin="2"/>
+    </net>
+    <net code="56" name="Net-(D11-Pad4)">
+      <node ref="D11" pin="4"/>
+      <node ref="R44" pin="2"/>
+    </net>
+    <net code="57" name="Net-(J7-Pad5)">
+      <node ref="U6" pin="1"/>
+      <node ref="J7" pin="5"/>
+    </net>
+    <net code="58" name="+3V3">
+      <node ref="U14" pin="48"/>
+      <node ref="U14" pin="9"/>
+      <node ref="R46" pin="1"/>
+      <node ref="R18" pin="1"/>
+      <node ref="U14" pin="36"/>
+      <node ref="R29" pin="1"/>
+      <node ref="R17" pin="1"/>
+      <node ref="R16" pin="1"/>
+      <node ref="U14" pin="24"/>
+      <node ref="U6" pin="4"/>
+      <node ref="C23" pin="1"/>
+      <node ref="R23" pin="2"/>
+      <node ref="C24" pin="1"/>
+      <node ref="C25" pin="1"/>
+      <node ref="C15" pin="1"/>
+      <node ref="C17" pin="1"/>
+      <node ref="R48" pin="1"/>
+      <node ref="R1" pin="2"/>
+      <node ref="R3" pin="1"/>
+      <node ref="U8" pin="4"/>
+      <node ref="J6" pin="4"/>
+      <node ref="U14" pin="1"/>
+      <node ref="U4" pin="16"/>
+      <node ref="U1" pin="2"/>
+      <node ref="C2" pin="1"/>
+    </net>
+    <net code="59" name="Net-(J7-Pad17)">
+      <node ref="J7" pin="17"/>
+    </net>
+    <net code="60" name="Net-(J7-Pad1)">
+      <node ref="J7" pin="1"/>
+    </net>
+    <net code="61" name="Net-(J7-Pad7)">
       <node ref="J7" pin="7"/>
     </net>
-    <net code="47" name="Net-(J7-Pad33)">
-      <node ref="J7" pin="33"/>
-    </net>
-    <net code="48" name="Net-(J7-Pad15)">
-      <node ref="J7" pin="15"/>
-    </net>
-    <net code="49" name="Net-(J7-Pad13)">
-      <node ref="J7" pin="13"/>
-    </net>
-    <net code="50" name="Net-(J7-Pad11)">
-      <node ref="J7" pin="11"/>
-    </net>
-    <net code="51" name="Net-(J7-Pad12)">
-      <node ref="J7" pin="12"/>
-    </net>
-    <net code="52" name="Net-(J7-Pad16)">
-      <node ref="J7" pin="16"/>
-    </net>
-    <net code="53" name="Net-(J7-Pad18)">
-      <node ref="J7" pin="18"/>
-    </net>
-    <net code="54" name="Net-(J7-Pad22)">
-      <node ref="J7" pin="22"/>
-    </net>
-    <net code="55" name="Net-(J7-Pad24)">
-      <node ref="J7" pin="24"/>
-    </net>
-    <net code="56" name="Net-(J7-Pad26)">
-      <node ref="J7" pin="26"/>
-    </net>
-    <net code="57" name="Net-(J7-Pad28)">
-      <node ref="J7" pin="28"/>
-    </net>
-    <net code="58" name="Net-(J7-Pad32)">
-      <node ref="J7" pin="32"/>
-    </net>
-    <net code="59" name="Net-(J7-Pad36)">
-      <node ref="J7" pin="36"/>
-    </net>
-    <net code="60" name="Net-(J7-Pad38)">
-      <node ref="J7" pin="38"/>
-    </net>
-    <net code="61" name="Net-(J7-Pad40)">
+    <net code="62" name="Net-(J7-Pad40)">
       <node ref="J7" pin="40"/>
     </net>
-    <net code="62" name="Net-(J7-Pad35)">
-      <node ref="J7" pin="35"/>
+    <net code="63" name="Net-(J7-Pad38)">
+      <node ref="J7" pin="38"/>
     </net>
-    <net code="63" name="Net-(JP14-Pad1)">
-      <node ref="U6" pin="7"/>
-      <node ref="JP14" pin="1"/>
-      <node ref="R29" pin="2"/>
-    </net>
-    <net code="64" name="Net-(J5-Pad1)">
-      <node ref="J5" pin="1"/>
-    </net>
-    <net code="65" name="Net-(J5-Pad6)">
-      <node ref="J5" pin="6"/>
-    </net>
-    <net code="66" name="Net-(J5-Pad7)">
-      <node ref="J5" pin="7"/>
-    </net>
-    <net code="67" name="Net-(J5-Pad8)">
-      <node ref="J5" pin="8"/>
-    </net>
-    <net code="68" name="Net-(J5-Pad4)">
-      <node ref="J5" pin="4"/>
-    </net>
-    <net code="69" name="Net-(J5-Pad9)">
-      <node ref="J5" pin="9"/>
-    </net>
-    <net code="70" name="Net-(C14-Pad1)">
-      <node ref="R25" pin="2"/>
-      <node ref="C14" pin="1"/>
-      <node ref="U5" pin="4"/>
-    </net>
-    <net code="71" name="Net-(J7-Pad37)">
+    <net code="64" name="Net-(J7-Pad37)">
       <node ref="J7" pin="37"/>
     </net>
-    <net code="72" name="Net-(C11-Pad1)">
-      <node ref="C11" pin="1"/>
-      <node ref="Y1" pin="1"/>
-      <node ref="U5" pin="2"/>
+    <net code="65" name="Net-(J7-Pad36)">
+      <node ref="J7" pin="36"/>
     </net>
-    <net code="73" name="Net-(J4-Pad3)">
-      <node ref="U3" pin="15"/>
-      <node ref="J4" pin="3"/>
+    <net code="66" name="Net-(J7-Pad35)">
+      <node ref="J7" pin="35"/>
     </net>
-    <net code="74" name="Net-(J4-Pad2)">
-      <node ref="U3" pin="16"/>
-      <node ref="J4" pin="2"/>
+    <net code="67" name="Net-(J7-Pad13)">
+      <node ref="J7" pin="13"/>
     </net>
-    <net code="75" name="Net-(J5-Pad2)">
-      <node ref="U4" pin="7"/>
-      <node ref="J5" pin="2"/>
+    <net code="68" name="Net-(J7-Pad12)">
+      <node ref="J7" pin="12"/>
     </net>
-    <net code="76" name="Net-(J4-Pad1)">
-      <node ref="JP1" pin="1"/>
-      <node ref="J4" pin="1"/>
-      <node ref="U3" pin="20"/>
+    <net code="69" name="Net-(J7-Pad11)">
+      <node ref="J7" pin="11"/>
     </net>
-    <net code="77" name="+5V">
-      <node ref="C12" pin="1"/>
-      <node ref="JP1" pin="2"/>
-      <node ref="C1" pin="1"/>
-      <node ref="U1" pin="3"/>
-      <node ref="D3" pin="1"/>
-      <node ref="R15" pin="1"/>
-      <node ref="C3" pin="1"/>
-      <node ref="J7" pin="4"/>
-      <node ref="R1" pin="2"/>
-      <node ref="L1" pin="1"/>
-      <node ref="J7" pin="2"/>
+    <net code="70" name="Net-(J7-Pad15)">
+      <node ref="J7" pin="15"/>
     </net>
-    <net code="78" name="Net-(J8-Pad4)">
-      <node ref="U8" pin="2"/>
-      <node ref="J8" pin="4"/>
-      <node ref="R27" pin="1"/>
+    <net code="71" name="Net-(J7-Pad33)">
+      <node ref="J7" pin="33"/>
     </net>
-    <net code="79" name="Net-(J8-Pad3)">
-      <node ref="J8" pin="3"/>
-      <node ref="R27" pin="2"/>
-      <node ref="R24" pin="1"/>
+    <net code="72" name="Net-(J7-Pad32)">
+      <node ref="J7" pin="32"/>
     </net>
-    <net code="80" name="Net-(U3-Pad11)">
-      <node ref="U3" pin="11"/>
+    <net code="73" name="Net-(J7-Pad3)">
+      <node ref="U6" pin="3"/>
+      <node ref="J7" pin="3"/>
     </net>
-    <net code="81" name="Net-(J5-Pad3)">
-      <node ref="J5" pin="3"/>
-      <node ref="U4" pin="13"/>
+    <net code="74" name="Net-(J7-Pad28)">
+      <node ref="J7" pin="28"/>
     </net>
-    <net code="82" name="RS232RX">
-      <node ref="U4" pin="12"/>
-      <node ref="JP11" pin="2"/>
+    <net code="75" name="Net-(J7-Pad27)">
+      <node ref="JP4" pin="2"/>
+      <node ref="R16" pin="2"/>
+      <node ref="J7" pin="27"/>
     </net>
-    <net code="83" name="USBRX">
+    <net code="76" name="Net-(J7-Pad26)">
+      <node ref="J7" pin="26"/>
+    </net>
+    <net code="77" name="Net-(J7-Pad24)">
+      <node ref="J7" pin="24"/>
+    </net>
+    <net code="78" name="Net-(J7-Pad22)">
+      <node ref="J7" pin="22"/>
+    </net>
+    <net code="79" name="Net-(J7-Pad18)">
+      <node ref="J7" pin="18"/>
+    </net>
+    <net code="80" name="Net-(J7-Pad16)">
+      <node ref="J7" pin="16"/>
+    </net>
+    <net code="81" name="/TTX">
+      <node ref="R25" pin="2"/>
+      <node ref="U14" pin="13"/>
+    </net>
+    <net code="82" name="Net-(C10-Pad1)">
+      <node ref="R47" pin="2"/>
+      <node ref="C10" pin="1"/>
+      <node ref="Y1" pin="2"/>
+      <node ref="U14" pin="6"/>
+    </net>
+    <net code="83" name="/CURRENTSENSE">
+      <node ref="U14" pin="10"/>
+      <node ref="U11" pin="9"/>
+      <node ref="U11" pin="8"/>
+      <node ref="D1" pin="1"/>
+    </net>
+    <net code="84" name="/LINEVOLTAGE">
+      <node ref="U14" pin="12"/>
+      <node ref="U14" pin="11"/>
+      <node ref="R21" pin="1"/>
+      <node ref="R30" pin="1"/>
+    </net>
+    <net code="85" name="Net-(C22-Pad1)">
+      <node ref="JP18" pin="1"/>
+      <node ref="C22" pin="1"/>
+      <node ref="R46" pin="2"/>
+      <node ref="U14" pin="7"/>
+    </net>
+    <net code="86" name="Net-(D6-Pad6)">
+      <node ref="R31" pin="2"/>
+      <node ref="D6" pin="6"/>
+    </net>
+    <net code="87" name="Net-(D6-Pad4)">
+      <node ref="R41" pin="2"/>
+      <node ref="D6" pin="4"/>
+    </net>
+    <net code="88" name="Net-(D6-Pad5)">
+      <node ref="D6" pin="5"/>
+      <node ref="R40" pin="2"/>
+    </net>
+    <net code="89" name="Net-(R40-Pad1)">
+      <node ref="U14" pin="43"/>
+      <node ref="R40" pin="1"/>
+    </net>
+    <net code="90" name="Net-(R42-Pad1)">
+      <node ref="U14" pin="46"/>
+      <node ref="R42" pin="1"/>
+    </net>
+    <net code="91" name="/TX">
+      <node ref="R14" pin="1"/>
+      <node ref="R20" pin="2"/>
+      <node ref="U14" pin="30"/>
+      <node ref="U4" pin="10"/>
+      <node ref="U3" pin="5"/>
+      <node ref="J7" pin="10"/>
+    </net>
+    <net code="92" name="/USBRX">
       <node ref="U3" pin="1"/>
       <node ref="JP12" pin="2"/>
     </net>
-    <net code="84" name="Net-(U3-Pad3)">
-      <node ref="U3" pin="3"/>
+    <net code="93" name="/RS232RX">
+      <node ref="JP11" pin="2"/>
+      <node ref="U4" pin="12"/>
     </net>
-    <net code="85" name="Net-(U3-Pad2)">
-      <node ref="U3" pin="2"/>
+    <net code="94" name="/CLRX">
+      <node ref="U8" pin="3"/>
+      <node ref="JP13" pin="2"/>
+      <node ref="R22" pin="2"/>
     </net>
-    <net code="86" name="Net-(U3-Pad9)">
+    <net code="95" name="Net-(JP19-Pad1)">
+      <node ref="U14" pin="44"/>
+      <node ref="R48" pin="2"/>
+      <node ref="JP19" pin="1"/>
+    </net>
+    <net code="96" name="/RASPIRX">
+      <node ref="JP17" pin="2"/>
+      <node ref="J7" pin="8"/>
+    </net>
+    <net code="97" name="/LINECURRENT">
+      <node ref="R38" pin="1"/>
+      <node ref="R39" pin="1"/>
+    </net>
+    <net code="98" name="Net-(C7-Pad2)">
+      <node ref="U4" pin="5"/>
+      <node ref="C7" pin="2"/>
+    </net>
+    <net code="99" name="Net-(C7-Pad1)">
+      <node ref="U4" pin="4"/>
+      <node ref="C7" pin="1"/>
+    </net>
+    <net code="100" name="Net-(C6-Pad2)">
+      <node ref="C6" pin="2"/>
+      <node ref="U4" pin="3"/>
+    </net>
+    <net code="101" name="Net-(C6-Pad1)">
+      <node ref="C6" pin="1"/>
+      <node ref="U4" pin="1"/>
+    </net>
+    <net code="102" name="Net-(J7-Pad29)">
+      <node ref="J7" pin="29"/>
+      <node ref="JP5" pin="2"/>
+      <node ref="R17" pin="2"/>
+    </net>
+    <net code="103" name="Net-(J7-Pad31)">
+      <node ref="J7" pin="31"/>
+      <node ref="R18" pin="2"/>
+      <node ref="JP6" pin="2"/>
+    </net>
+    <net code="104" name="Net-(JP9-Pad1)">
+      <node ref="U14" pin="33"/>
+      <node ref="JP9" pin="1"/>
+    </net>
+    <net code="105" name="Net-(JP8-Pad1)">
+      <node ref="JP8" pin="1"/>
+      <node ref="U14" pin="32"/>
+    </net>
+    <net code="106" name="Net-(JP7-Pad1)">
+      <node ref="JP7" pin="1"/>
+      <node ref="U14" pin="29"/>
+    </net>
+    <net code="107" name="Net-(D7-Pad2)">
+      <node ref="R19" pin="1"/>
+      <node ref="D7" pin="2"/>
+    </net>
+    <net code="108" name="Net-(D8-Pad2)">
+      <node ref="D8" pin="2"/>
+      <node ref="R20" pin="1"/>
+    </net>
+    <net code="109" name="Net-(J4-Pad1)">
+      <node ref="J4" pin="1"/>
+      <node ref="U3" pin="20"/>
+      <node ref="JP1" pin="1"/>
+    </net>
+    <net code="110" name="Net-(J4-Pad2)">
+      <node ref="U3" pin="16"/>
+      <node ref="J4" pin="2"/>
+    </net>
+    <net code="111" name="Net-(J5-Pad3)">
+      <node ref="J5" pin="3"/>
+      <node ref="U4" pin="13"/>
+    </net>
+    <net code="112" name="Net-(J5-Pad2)">
+      <node ref="U4" pin="7"/>
+      <node ref="J5" pin="2"/>
+    </net>
+    <net code="113" name="Net-(J4-Pad3)">
+      <node ref="U3" pin="15"/>
+      <node ref="J4" pin="3"/>
+    </net>
+    <net code="114" name="Net-(U4-Pad9)">
+      <node ref="U4" pin="9"/>
+    </net>
+    <net code="115" name="Net-(U4-Pad11)">
+      <node ref="U4" pin="11"/>
+    </net>
+    <net code="116" name="Net-(U4-Pad8)">
+      <node ref="U4" pin="8"/>
+    </net>
+    <net code="117" name="Net-(U4-Pad14)">
+      <node ref="U4" pin="14"/>
+    </net>
+    <net code="118" name="Net-(C8-Pad2)">
+      <node ref="C8" pin="2"/>
+      <node ref="U4" pin="2"/>
+    </net>
+    <net code="119" name="Net-(C9-Pad2)">
+      <node ref="U4" pin="6"/>
+      <node ref="C9" pin="2"/>
+    </net>
+    <net code="120" name="Net-(U3-Pad9)">
       <node ref="U3" pin="9"/>
     </net>
-    <net code="87" name="Net-(U3-Pad10)">
-      <node ref="U3" pin="10"/>
-    </net>
-    <net code="88" name="Net-(U3-Pad6)">
+    <net code="121" name="Net-(U3-Pad6)">
       <node ref="U3" pin="6"/>
     </net>
-    <net code="89" name="Net-(U3-Pad23)">
-      <node ref="U3" pin="23"/>
+    <net code="122" name="Net-(U3-Pad3)">
+      <node ref="U3" pin="3"/>
     </net>
-    <net code="90" name="Net-(U3-Pad22)">
-      <node ref="U3" pin="22"/>
+    <net code="123" name="Net-(J5-Pad1)">
+      <node ref="J5" pin="1"/>
     </net>
-    <net code="91" name="Net-(U3-Pad13)">
-      <node ref="U3" pin="13"/>
-    </net>
-    <net code="92" name="Net-(U3-Pad14)">
-      <node ref="U3" pin="14"/>
-    </net>
-    <net code="93" name="Net-(U3-Pad12)">
-      <node ref="U3" pin="12"/>
-    </net>
-    <net code="94" name="Net-(C13-Pad1)">
-      <node ref="U3" pin="4"/>
-      <node ref="C13" pin="1"/>
-      <node ref="U3" pin="17"/>
-      <node ref="U3" pin="19"/>
-    </net>
-    <net code="95" name="Net-(F1-Pad2)">
-      <node ref="Q3" pin="2"/>
-      <node ref="F1" pin="2"/>
-    </net>
-    <net code="96" name="KEYBOARD">
-      <node ref="J2" pin="S"/>
-      <node ref="U5" pin="9"/>
-      <node ref="R1" pin="1"/>
-    </net>
-    <net code="97" name="Net-(J1-PadS)">
-      <node ref="J1" pin="S"/>
-      <node ref="RV1" pin="1"/>
-      <node ref="K1" pin="11"/>
-    </net>
-    <net code="98" name="Net-(J1-PadT)">
-      <node ref="J1" pin="T"/>
-      <node ref="K1" pin="21"/>
-      <node ref="RV1" pin="2"/>
-    </net>
-    <net code="99" name="REVERSE">
-      <node ref="U5" pin="10"/>
-      <node ref="R13" pin="1"/>
-    </net>
-    <net code="100" name="Net-(J3-Pad1)">
-      <node ref="J3" pin="1"/>
-    </net>
-    <net code="101" name="Net-(J3-Pad2)">
-      <node ref="J3" pin="2"/>
-      <node ref="U2" pin="12"/>
-    </net>
-    <net code="102" name="Net-(D3-Pad2)">
-      <node ref="Q4" pin="3"/>
-      <node ref="K1" pin="A1"/>
-      <node ref="D3" pin="2"/>
-    </net>
-    <net code="103" name="SENSE">
-      <node ref="R9" pin="1"/>
-      <node ref="R10" pin="2"/>
-      <node ref="U5" pin="7"/>
-    </net>
-    <net code="104" name="Net-(K1-PadA2)">
-      <node ref="K1" pin="A2"/>
-      <node ref="R15" pin="2"/>
-    </net>
-    <net code="105" name="Net-(Q4-Pad1)">
-      <node ref="Q4" pin="1"/>
-      <node ref="R13" pin="2"/>
-    </net>
-    <net code="106" name="LINEPWM">
-      <node ref="U5" pin="8"/>
-      <node ref="R21" pin="1"/>
-      <node ref="U2" pin="5"/>
-      <node ref="U2" pin="11"/>
-      <node ref="U2" pin="9"/>
-      <node ref="U2" pin="3"/>
-      <node ref="U2" pin="1"/>
-    </net>
-    <net code="107" name="Net-(R4-Pad1)">
-      <node ref="R4" pin="1"/>
-      <node ref="U2" pin="2"/>
-    </net>
-    <net code="108" name="Net-(R5-Pad1)">
-      <node ref="U2" pin="4"/>
-      <node ref="R5" pin="1"/>
-    </net>
-    <net code="109" name="Net-(R6-Pad1)">
-      <node ref="U2" pin="6"/>
-      <node ref="R6" pin="1"/>
-    </net>
-    <net code="110" name="Net-(R7-Pad1)">
-      <node ref="U2" pin="8"/>
-      <node ref="R7" pin="1"/>
-    </net>
-    <net code="111" name="Net-(R8-Pad1)">
-      <node ref="U2" pin="10"/>
-      <node ref="R8" pin="1"/>
-    </net>
-    <net code="112" name="Net-(Q1-Pad2)">
-      <node ref="R7" pin="2"/>
-      <node ref="R6" pin="2"/>
-      <node ref="R8" pin="2"/>
-      <node ref="Q1" pin="2"/>
-      <node ref="R5" pin="2"/>
-      <node ref="R4" pin="2"/>
-    </net>
-    <net code="113" name="Net-(D2-Pad2)">
-      <node ref="L1" pin="2"/>
-      <node ref="Q1" pin="1"/>
-      <node ref="D2" pin="2"/>
-    </net>
-    <net code="114" name="Net-(C4-Pad1)">
-      <node ref="Q3" pin="3"/>
-      <node ref="C5" pin="1"/>
-      <node ref="D2" pin="1"/>
-      <node ref="R9" pin="2"/>
-      <node ref="C4" pin="1"/>
-    </net>
-    <net code="115" name="Net-(Q2-Pad1)">
-      <node ref="Q2" pin="1"/>
-      <node ref="R11" pin="2"/>
-    </net>
-    <net code="116" name="LINEKEY">
-      <node ref="R11" pin="1"/>
-    </net>
-    <net code="117" name="Net-(D4-Pad1)">
-      <node ref="F1" pin="1"/>
-      <node ref="D4" pin="1"/>
-      <node ref="K1" pin="24"/>
-      <node ref="K1" pin="12"/>
-    </net>
-    <net code="118" name="LINECURRENT">
-      <node ref="D1" pin="1"/>
-      <node ref="U5" pin="6"/>
-      <node ref="R2" pin="1"/>
-      <node ref="K1" pin="14"/>
-      <node ref="K1" pin="22"/>
-    </net>
-    <net code="119" name="Net-(Q2-Pad3)">
-      <node ref="R12" pin="1"/>
-      <node ref="Q2" pin="3"/>
-    </net>
-    <net code="120" name="Net-(Q3-Pad1)">
-      <node ref="Q3" pin="1"/>
-      <node ref="R12" pin="2"/>
-    </net>
-    <net code="121" name="Net-(J6-Pad3)">
-      <node ref="U5" pin="24"/>
-      <node ref="J6" pin="3"/>
-    </net>
-    <net code="122" name="Net-(J6-Pad2)">
-      <node ref="U5" pin="23"/>
+    <net code="124" name="Net-(J6-Pad2)">
+      <node ref="U14" pin="34"/>
       <node ref="J6" pin="2"/>
     </net>
-    <net code="123" name="Net-(J4-Pad4)">
+    <net code="125" name="Net-(J4-Pad4)">
       <node ref="J4" pin="4"/>
     </net>
-    <net code="124" name="Net-(U3-Pad27)">
+    <net code="126" name="Net-(U3-Pad28)">
+      <node ref="U3" pin="28"/>
+    </net>
+    <net code="127" name="Net-(R26-Pad2)">
+      <node ref="U7" pin="4"/>
+      <node ref="R26" pin="2"/>
+    </net>
+    <net code="128" name="Net-(D9-Pad2)">
+      <node ref="D9" pin="2"/>
+      <node ref="U7" pin="3"/>
+      <node ref="Q5" pin="1"/>
+    </net>
+    <net code="129" name="Net-(Q6-Pad3)">
+      <node ref="Q6" pin="3"/>
+      <node ref="U7" pin="2"/>
+    </net>
+    <net code="130" name="Net-(R23-Pad1)">
+      <node ref="R23" pin="1"/>
+      <node ref="U7" pin="1"/>
+    </net>
+    <net code="131" name="Net-(D2-Pad2)">
+      <node ref="D2" pin="2"/>
+      <node ref="L1" pin="2"/>
+      <node ref="Q1" pin="2"/>
+    </net>
+    <net code="132" name="Net-(U3-Pad27)">
       <node ref="U3" pin="27"/>
     </net>
-    <net code="125" name="Net-(U3-Pad28)">
-      <node ref="U3" pin="28"/>
+    <net code="133" name="Net-(U3-Pad23)">
+      <node ref="U3" pin="23"/>
+    </net>
+    <net code="134" name="Net-(U3-Pad22)">
+      <node ref="U3" pin="22"/>
+    </net>
+    <net code="135" name="Net-(U3-Pad2)">
+      <node ref="U3" pin="2"/>
+    </net>
+    <net code="136" name="Net-(J5-Pad4)">
+      <node ref="J5" pin="4"/>
+    </net>
+    <net code="137" name="Net-(U3-Pad14)">
+      <node ref="U3" pin="14"/>
+    </net>
+    <net code="138" name="Net-(U3-Pad13)">
+      <node ref="U3" pin="13"/>
+    </net>
+    <net code="139" name="Net-(U3-Pad12)">
+      <node ref="U3" pin="12"/>
+    </net>
+    <net code="140" name="Net-(U3-Pad11)">
+      <node ref="U3" pin="11"/>
+    </net>
+    <net code="141" name="Net-(U3-Pad10)">
+      <node ref="U3" pin="10"/>
+    </net>
+    <net code="142" name="Net-(C11-Pad1)">
+      <node ref="R47" pin="1"/>
+      <node ref="Y1" pin="1"/>
+      <node ref="U14" pin="5"/>
+      <node ref="C11" pin="1"/>
+    </net>
+    <net code="143" name="Net-(JP11-Pad1)">
+      <node ref="JP17" pin="1"/>
+      <node ref="U14" pin="31"/>
+      <node ref="JP11" pin="1"/>
+      <node ref="JP13" pin="1"/>
+      <node ref="JP12" pin="1"/>
+      <node ref="R19" pin="2"/>
+    </net>
+    <net code="144" name="Net-(J5-Pad9)">
+      <node ref="J5" pin="9"/>
+    </net>
+    <net code="145" name="Net-(J5-Pad8)">
+      <node ref="J5" pin="8"/>
+    </net>
+    <net code="146" name="Net-(J5-Pad7)">
+      <node ref="J5" pin="7"/>
+    </net>
+    <net code="147" name="Net-(J5-Pad6)">
+      <node ref="J5" pin="6"/>
+    </net>
+    <net code="148" name="Net-(R6-Pad2)">
+      <node ref="U10" pin="7"/>
+      <node ref="U5" pin="5"/>
+      <node ref="R6" pin="2"/>
+    </net>
+    <net code="149" name="Net-(R7-Pad1)">
+      <node ref="R8" pin="2"/>
+      <node ref="R9" pin="1"/>
+      <node ref="R7" pin="1"/>
+    </net>
+    <net code="150" name="Net-(C14-Pad1)">
+      <node ref="C14" pin="1"/>
+      <node ref="R8" pin="1"/>
+      <node ref="F1" pin="1"/>
+      <node ref="C5" pin="1"/>
+      <node ref="D2" pin="1"/>
+    </net>
+    <net code="151" name="Net-(C3-Pad1)">
+      <node ref="U5" pin="3"/>
+      <node ref="C3" pin="1"/>
+    </net>
+    <net code="152" name="Net-(C4-Pad1)">
+      <node ref="C4" pin="1"/>
+      <node ref="L2" pin="2"/>
+      <node ref="L1" pin="1"/>
+      <node ref="U9" pin="5"/>
+    </net>
+    <net code="153" name="Net-(Q2-Pad3)">
+      <node ref="Q2" pin="3"/>
+      <node ref="R2" pin="2"/>
+      <node ref="U9" pin="1"/>
+    </net>
+    <net code="154" name="Net-(R2-Pad1)">
+      <node ref="U5" pin="2"/>
+      <node ref="R4" pin="1"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="155" name="Net-(C16-Pad1)">
+      <node ref="C16" pin="1"/>
+      <node ref="R11" pin="2"/>
+    </net>
+    <net code="156" name="Net-(Q3-Pad2)">
+      <node ref="Q3" pin="2"/>
+      <node ref="R13" pin="1"/>
+      <node ref="R11" pin="1"/>
+    </net>
+    <net code="157" name="Net-(D3-Pad2)">
+      <node ref="Q4" pin="1"/>
+      <node ref="D3" pin="2"/>
+      <node ref="Q3" pin="3"/>
+      <node ref="R12" pin="2"/>
+    </net>
+    <net code="158" name="Net-(D4-Pad1)">
+      <node ref="L4" pin="2"/>
+      <node ref="D4" pin="1"/>
+      <node ref="K1" pin="4"/>
+      <node ref="K1" pin="9"/>
+    </net>
+    <net code="159" name="Net-(L4-Pad1)">
+      <node ref="Q8" pin="3"/>
+      <node ref="L4" pin="1"/>
+    </net>
+    <net code="160" name="Net-(D3-Pad1)">
+      <node ref="D3" pin="1"/>
+      <node ref="Q8" pin="1"/>
+      <node ref="Q4" pin="2"/>
+    </net>
+    <net code="161" name="Net-(F1-Pad2)">
+      <node ref="F1" pin="2"/>
+      <node ref="Q8" pin="2"/>
+      <node ref="Q4" pin="3"/>
+      <node ref="R12" pin="1"/>
+    </net>
+    <net code="162" name="Net-(D10-Pad2)">
+      <node ref="D9" pin="1"/>
+      <node ref="D10" pin="2"/>
+    </net>
+    <net code="163" name="Net-(Q5-Pad2)">
+      <node ref="Q5" pin="2"/>
+      <node ref="R28" pin="2"/>
+    </net>
+    <net code="164" name="Net-(R24-Pad2)">
+      <node ref="U8" pin="1"/>
+      <node ref="R24" pin="2"/>
+    </net>
+    <net code="165" name="Net-(J2-Pad4)">
+      <node ref="R27" pin="2"/>
+      <node ref="J2" pin="4"/>
+      <node ref="R24" pin="1"/>
+    </net>
+    <net code="166" name="Net-(C13-Pad1)">
+      <node ref="U3" pin="17"/>
+      <node ref="C13" pin="1"/>
+      <node ref="U3" pin="19"/>
+      <node ref="U3" pin="4"/>
+    </net>
+    <net code="167" name="Net-(Q1-Pad1)">
+      <node ref="U9" pin="4"/>
+      <node ref="U9" pin="3"/>
+      <node ref="Q1" pin="1"/>
+    </net>
+    <net code="168" name="Net-(JP14-Pad1)">
+      <node ref="U6" pin="5"/>
+      <node ref="JP14" pin="1"/>
+      <node ref="R29" pin="2"/>
+    </net>
+    <net code="169" name="+5V">
+      <node ref="JP1" pin="2"/>
+      <node ref="C12" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="U1" pin="3"/>
+      <node ref="K1" pin="10"/>
+      <node ref="J7" pin="2"/>
+      <node ref="D12" pin="1"/>
+      <node ref="J7" pin="4"/>
+      <node ref="U10" pin="8"/>
+      <node ref="U11" pin="4"/>
+      <node ref="L2" pin="1"/>
+      <node ref="U5" pin="6"/>
+      <node ref="U5" pin="7"/>
+      <node ref="U5" pin="8"/>
+      <node ref="U5" pin="1"/>
     </net>
   </nets>
 </export>

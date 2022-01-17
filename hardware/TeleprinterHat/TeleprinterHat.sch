@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:L L1
+L TeleprinterHat-rescue:L-Device L1
 U 1 1 68330FF4
 P 2350 800
 F 0 "L1" V 2540 800 50  0000 C CNN
@@ -26,7 +26,7 @@ F 3 "~" H 2350 800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_Small D2
+L TeleprinterHat-rescue:D_Small-Device D2
 U 1 1 683312E2
 P 2800 800
 F 0 "D2" H 2800 584 50  0000 C CNN
@@ -37,7 +37,7 @@ F 3 "~" H 2800 800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR0101
+L TeleprinterHat-rescue:GND-power #PWR0101
 U 1 1 6833147F
 P 2150 1100
 F 0 "#PWR0101" H 2150 850 50  0001 C CNN
@@ -48,7 +48,7 @@ F 3 "" H 2150 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0102
+L TeleprinterHat-rescue:GND-power #PWR0102
 U 1 1 6833149B
 P 2650 1350
 F 0 "#PWR0102" H 2650 1100 50  0001 C CNN
@@ -59,7 +59,7 @@ F 3 "" H 2650 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R1
+L TeleprinterHat-rescue:R-Device R1
 U 1 1 6834A71A
 P 1750 6850
 F 0 "R1" V 1850 6950 50  0000 C CNN
@@ -70,7 +70,7 @@ F 3 "~" H 1750 6850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0110
+L TeleprinterHat-rescue:GND-power #PWR0110
 U 1 1 6834A7BC
 P 2050 7050
 F 0 "#PWR0110" H 2050 6800 50  0001 C CNN
@@ -90,7 +90,7 @@ Wire Wire Line
 	2100 6700 2100 6850
 Connection ~ 2100 6850
 $Comp
-L Device:R R3
+L TeleprinterHat-rescue:R-Device R3
 U 1 1 6836489E
 P 1250 7100
 F 0 "R3" H 1320 7146 50  0000 L CNN
@@ -101,7 +101,7 @@ F 3 "~" H 1250 7100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR0116
+L TeleprinterHat-rescue:+3V3-power #PWR0116
 U 1 1 68364B84
 P 1250 6850
 F 0 "#PWR0116" H 1250 6700 50  0001 C CNN
@@ -119,7 +119,7 @@ Connection ~ 1250 7400
 Wire Wire Line
 	2000 7550 2000 7500
 $Comp
-L Interface_USB:FT232RL U3
+L TeleprinterHat-rescue:FT232RL-Interface_USB U3
 U 1 1 6836F50D
 P 3700 9350
 F 0 "U3" H 3700 10528 50  0000 C CNN
@@ -130,7 +130,7 @@ F 3 "http://www.ftdichip.com/Products/ICs/FT232RL.htm" H 3700 9350 50  0001 C CN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Interface_UART:MAX232 U4
+L TeleprinterHat-rescue:MAX232-Interface_UART U4
 U 1 1 6836F72D
 P 5000 7150
 F 0 "U4" H 4650 8200 50  0000 C CNN
@@ -141,7 +141,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/max232.pdf" H 5000 7250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Isolator:LTV-355T U7
+L TeleprinterHat-rescue:LTV-355T-Isolator U7
 U 1 1 6836FD69
 P 6150 9550
 F 0 "U7" H 6150 9875 50  0000 C CNN
@@ -152,7 +152,7 @@ F 3 "http://optoelectronics.liteon.com/upload/download/DS70-2001-006/S_110_LTV-3
 	1    0    0    -1  
 $EndComp
 $Comp
-L Isolator:LTV-355T U8
+L TeleprinterHat-rescue:LTV-355T-Isolator U8
 U 1 1 6836FE0D
 P 5950 10550
 F 0 "U8" H 5950 10875 50  0000 C CNN
@@ -196,7 +196,7 @@ F 3 " ~" H 6450 7850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D8
+L TeleprinterHat-rescue:LED-Device D8
 U 1 1 68375D3D
 P 11900 8150
 F 0 "D8" V 12000 8250 50  0000 R CNN
@@ -207,7 +207,7 @@ F 3 "~" H 11900 8150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED D7
+L TeleprinterHat-rescue:LED-Device D7
 U 1 1 68376CF2
 P 11650 8150
 F 0 "D7" V 11750 8150 50  0000 R CNN
@@ -218,7 +218,7 @@ F 3 "~" H 11650 8150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:Crystal_Small Y1
+L TeleprinterHat-rescue:Crystal_Small-Device Y1
 U 1 1 683775A9
 P 7750 5500
 F 0 "Y1" V 7704 5588 50  0000 L CNN
@@ -229,7 +229,7 @@ F 3 "~" H 7750 5500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C_Small C11
+L TeleprinterHat-rescue:C_Small-Device C11
 U 1 1 683779F2
 P 7950 5750
 F 0 "C11" H 7950 5850 50  0000 L CNN
@@ -240,7 +240,7 @@ F 3 "~" H 7950 5750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C10
+L TeleprinterHat-rescue:C_Small-Device C10
 U 1 1 68377A7C
 P 7750 5750
 F 0 "C10" H 7750 5850 50  0000 L CNN
@@ -257,7 +257,7 @@ Wire Wire Line
 Wire Wire Line
 	11000 1150 11000 1250
 $Comp
-L power:GND #PWR0120
+L TeleprinterHat-rescue:GND-power #PWR0120
 U 1 1 683818E5
 P 11000 3150
 F 0 "#PWR0120" H 11000 2900 50  0001 C CNN
@@ -268,7 +268,7 @@ F 3 "" H 11000 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0121
+L TeleprinterHat-rescue:GND-power #PWR0121
 U 1 1 68381969
 P 10400 3150
 F 0 "#PWR0121" H 10400 2900 50  0001 C CNN
@@ -317,7 +317,7 @@ Wire Wire Line
 	11000 1350 10950 1350
 Connection ~ 11000 1750
 $Comp
-L Device:C_Small C1
+L TeleprinterHat-rescue:C_Small-Device C1
 U 1 1 68397EDE
 P 1350 10150
 F 0 "C1" H 1442 10196 50  0000 L CNN
@@ -328,7 +328,7 @@ F 3 "~" H 1350 10150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C2
+L TeleprinterHat-rescue:C_Small-Device C2
 U 1 1 68397FDC
 P 2150 10150
 F 0 "C2" H 2242 10196 50  0000 L CNN
@@ -339,12 +339,12 @@ F 3 "~" H 2150 10150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP1
+L TeleprinterHat-rescue:Jumper_NC_Small-Device JP1
 U 1 1 68398176
 P 1100 9850
 F 0 "JP1" V 1054 9924 50  0000 L CNN
 F 1 "USBPOWERED" V 1100 9300 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 1100 9850 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1100 9850 50  0001 C CNN
 F 3 "~" H 1100 9850 50  0001 C CNN
 	1    1100 9850
 	0    1    1    0   
@@ -364,7 +364,7 @@ Connection ~ 7950 5400
 Wire Wire Line
 	7950 5400 8050 5400
 $Comp
-L power:GND #PWR0122
+L TeleprinterHat-rescue:GND-power #PWR0122
 U 1 1 683A6949
 P 7750 5900
 F 0 "#PWR0122" H 7750 5650 50  0001 C CNN
@@ -377,7 +377,7 @@ $EndComp
 Wire Wire Line
 	11150 8750 11150 7850
 $Comp
-L power:GND #PWR0124
+L TeleprinterHat-rescue:GND-power #PWR0124
 U 1 1 683BD93C
 P 11550 8750
 F 0 "#PWR0124" H 11550 8500 50  0001 C CNN
@@ -394,7 +394,7 @@ Wire Wire Line
 Wire Wire Line
 	11550 8700 11550 8750
 $Comp
-L power:+3V3 #PWR0125
+L TeleprinterHat-rescue:+3V3-power #PWR0125
 U 1 1 683C1BC6
 P 10950 8700
 F 0 "#PWR0125" H 10950 8550 50  0001 C CNN
@@ -409,7 +409,7 @@ Wire Wire Line
 Wire Wire Line
 	12000 7450 11900 7450
 $Comp
-L Device:Jumper_NC_Small JP11
+L TeleprinterHat-rescue:Jumper_NC_Small-Device JP11
 U 1 1 684277C0
 P 12450 7550
 F 0 "JP11" H 12450 7762 50  0000 C CNN
@@ -420,7 +420,7 @@ F 3 "~" H 12450 7550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP13
+L TeleprinterHat-rescue:Jumper_NC_Small-Device JP13
 U 1 1 68427B11
 P 12450 8150
 F 0 "JP13" H 12450 8362 50  0000 C CNN
@@ -431,7 +431,7 @@ F 3 "~" H 12450 8150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP12
+L TeleprinterHat-rescue:Jumper_NC_Small-Device JP12
 U 1 1 6842D050
 P 12450 7850
 F 0 "JP12" H 12450 8062 50  0000 C CNN
@@ -461,7 +461,7 @@ Wire Wire Line
 	7750 5900 7750 5850
 Connection ~ 7750 5850
 $Comp
-L Device:R R19
+L TeleprinterHat-rescue:R-Device R19
 U 1 1 684D856C
 P 11650 7800
 F 0 "R19" H 11580 7754 50  0000 R CNN
@@ -472,7 +472,7 @@ F 3 "~" H 11650 7800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R20
+L TeleprinterHat-rescue:R-Device R20
 U 1 1 684D8682
 P 11900 7800
 F 0 "R20" H 11830 7754 50  0000 R CNN
@@ -493,7 +493,7 @@ Wire Wire Line
 	11900 7650 11900 7450
 Connection ~ 11900 7450
 $Comp
-L power:GND #PWR0127
+L TeleprinterHat-rescue:GND-power #PWR0127
 U 1 1 684F8309
 P 11650 8350
 F 0 "#PWR0127" H 11650 8100 50  0001 C CNN
@@ -512,50 +512,6 @@ Wire Wire Line
 	10700 7550 11650 7550
 Wire Wire Line
 	10700 7450 11900 7450
-$Comp
-L Device:Jumper_NC_Small JP7
-U 1 1 6861E77E
-P 11250 7350
-F 0 "JP7" H 11550 7400 50  0000 C CNN
-F 1 "HBAUD0" H 10950 7400 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 11250 7350 50  0001 C CNN
-F 3 "~" H 11250 7350 50  0001 C CNN
-	1    11250 7350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Jumper_NC_Small JP8
-U 1 1 6861E99A
-P 11250 7650
-F 0 "JP8" H 11150 7700 50  0000 C CNN
-F 1 "HBAUD1" H 10900 7700 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 11250 7650 50  0001 C CNN
-F 3 "~" H 11250 7650 50  0001 C CNN
-	1    11250 7650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Jumper_NC_Small JP9
-U 1 1 6861EA44
-P 11250 7750
-F 0 "JP9" H 11150 7800 50  0000 C CNN
-F 1 "CURR0" H 10900 7800 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 11250 7750 50  0001 C CNN
-F 3 "~" H 11250 7750 50  0001 C CNN
-	1    11250 7750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Jumper_NC_Small JP10
-U 1 1 6861EAE4
-P 11300 8050
-F 0 "JP10" H 11200 8100 50  0000 C CNN
-F 1 "CURR1" H 10900 8100 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 11300 8050 50  0001 C CNN
-F 3 "~" H 11300 8050 50  0001 C CNN
-	1    11300 8050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	11150 7750 10700 7750
 Wire Wire Line
@@ -563,35 +519,16 @@ Wire Wire Line
 Wire Wire Line
 	11150 7350 10700 7350
 $Comp
-L power:GND #PWR0130
+L TeleprinterHat-rescue:GND-power #PWR0130
 U 1 1 68644AF4
-P 11450 8150
-F 0 "#PWR0130" H 11450 7900 50  0001 C CNN
-F 1 "GND" H 11350 8150 50  0000 C CNN
-F 2 "" H 11450 8150 50  0001 C CNN
-F 3 "" H 11450 8150 50  0001 C CNN
-	1    11450 8150
+P 13750 7300
+F 0 "#PWR0130" H 13750 7050 50  0001 C CNN
+F 1 "GND" H 13650 7300 50  0000 C CNN
+F 2 "" H 13750 7300 50  0001 C CNN
+F 3 "" H 13750 7300 50  0001 C CNN
+	1    13750 7300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	11450 8150 11450 8050
-Wire Wire Line
-	11450 8050 11400 8050
-Wire Wire Line
-	11450 8050 11450 7750
-Wire Wire Line
-	11450 7750 11350 7750
-Connection ~ 11450 8050
-Wire Wire Line
-	11450 7750 11450 7650
-Wire Wire Line
-	11450 7650 11350 7650
-Connection ~ 11450 7750
-Wire Wire Line
-	11450 7650 11450 7350
-Wire Wire Line
-	11450 7350 11350 7350
-Connection ~ 11450 7650
 Wire Wire Line
 	1250 6850 1250 6950
 Wire Wire Line
@@ -607,7 +544,7 @@ Wire Wire Line
 Wire Wire Line
 	10200 1100 10050 1100
 $Comp
-L power:GND #PWR0132
+L TeleprinterHat-rescue:GND-power #PWR0132
 U 1 1 687DDA28
 P 9700 1500
 F 0 "#PWR0132" H 9700 1250 50  0001 C CNN
@@ -618,7 +555,7 @@ F 3 "" H 9700 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR0133
+L TeleprinterHat-rescue:+3V3-power #PWR0133
 U 1 1 687DDC9B
 P 9700 750
 F 0 "#PWR0133" H 9700 600 50  0001 C CNN
@@ -635,7 +572,7 @@ Wire Wire Line
 Wire Wire Line
 	10200 2250 10450 2250
 $Comp
-L Device:C_Small C6
+L TeleprinterHat-rescue:C_Small-Device C6
 U 1 1 6881999A
 P 4100 6400
 F 0 "C6" H 4192 6446 50  0000 L CNN
@@ -646,7 +583,7 @@ F 3 "~" H 4100 6400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C7
+L TeleprinterHat-rescue:C_Small-Device C7
 U 1 1 68819B4A
 P 5850 6400
 F 0 "C7" H 5942 6446 50  0000 L CNN
@@ -673,7 +610,7 @@ Wire Wire Line
 Wire Wire Line
 	5850 6550 5800 6550
 $Comp
-L power:GND #PWR0134
+L TeleprinterHat-rescue:GND-power #PWR0134
 U 1 1 6884D298
 P 5000 8450
 F 0 "#PWR0134" H 5000 8200 50  0001 C CNN
@@ -686,7 +623,7 @@ $EndComp
 Wire Wire Line
 	5000 8450 5000 8350
 $Comp
-L Device:Jumper_NC_Small JP4
+L TeleprinterHat-rescue:Jumper_NC_Small-Device JP4
 U 1 1 6885ACCB
 P 9500 2450
 F 0 "JP4" H 9400 2500 50  0000 C CNN
@@ -699,7 +636,7 @@ $EndComp
 Wire Wire Line
 	9600 2450 9650 2450
 $Comp
-L Device:R_Small R16
+L TeleprinterHat-rescue:R_Small-Device R16
 U 1 1 6886882B
 P 9650 2200
 F 0 "R16" H 9550 2300 50  0000 L CNN
@@ -710,7 +647,7 @@ F 3 "~" H 9650 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R17
+L TeleprinterHat-rescue:R_Small-Device R17
 U 1 1 68868923
 P 9800 2200
 F 0 "R17" H 9700 2300 50  0000 L CNN
@@ -721,7 +658,7 @@ F 3 "~" H 9800 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R18
+L TeleprinterHat-rescue:R_Small-Device R18
 U 1 1 688689D3
 P 9950 2200
 F 0 "R18" H 9850 2300 50  0000 L CNN
@@ -732,7 +669,7 @@ F 3 "~" H 9950 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP5
+L TeleprinterHat-rescue:Jumper_NC_Small-Device JP5
 U 1 1 68868A81
 P 9500 2550
 F 0 "JP5" H 9400 2600 50  0000 C CNN
@@ -743,7 +680,7 @@ F 3 "~" H 9500 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper_NC_Small JP6
+L TeleprinterHat-rescue:Jumper_NC_Small-Device JP6
 U 1 1 68868B33
 P 9500 2650
 F 0 "JP6" H 9400 2700 50  0000 C CNN
@@ -784,7 +721,7 @@ Wire Wire Line
 	9950 2050 9950 2100
 Connection ~ 9800 2050
 $Comp
-L power:+3V3 #PWR0135
+L TeleprinterHat-rescue:+3V3-power #PWR0135
 U 1 1 688CC159
 P 9800 2050
 F 0 "#PWR0135" H 9800 1900 50  0001 C CNN
@@ -795,7 +732,7 @@ F 3 "" H 9800 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0136
+L TeleprinterHat-rescue:GND-power #PWR0136
 U 1 1 688CC204
 P 9350 2700
 F 0 "#PWR0136" H 9350 2450 50  0001 C CNN
@@ -820,7 +757,7 @@ Wire Wire Line
 	9350 2450 9400 2450
 Connection ~ 9350 2550
 $Comp
-L Device:C_Small C8
+L TeleprinterHat-rescue:C_Small-Device C8
 U 1 1 688FC4C0
 P 6000 6750
 F 0 "C8" V 5771 6750 50  0000 C CNN
@@ -831,7 +768,7 @@ F 3 "~" H 6000 6750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C_Small C9
+L TeleprinterHat-rescue:C_Small-Device C9
 U 1 1 6890C536
 P 6000 7050
 F 0 "C9" V 5771 7050 50  0000 C CNN
@@ -842,7 +779,7 @@ F 3 "~" H 6000 7050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0137
+L TeleprinterHat-rescue:GND-power #PWR0137
 U 1 1 6890C5F4
 P 6150 7100
 F 0 "#PWR0137" H 6150 6850 50  0001 C CNN
@@ -890,7 +827,7 @@ Wire Wire Line
 Wire Wire Line
 	3800 8300 3800 8350
 $Comp
-L Device:CP_Small C12
+L TeleprinterHat-rescue:CP_Small-Device C12
 U 1 1 68A24FBB
 P 1100 10150
 F 0 "C12" H 950 10200 50  0000 L CNN
@@ -901,7 +838,7 @@ F 3 "~" H 1100 10150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR04
+L TeleprinterHat-rescue:GND-power #PWR04
 U 1 1 68A4CB11
 P 1350 10300
 F 0 "#PWR04" H 1350 10050 50  0001 C CNN
@@ -912,7 +849,7 @@ F 3 "" H 1350 10300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR02
+L TeleprinterHat-rescue:GND-power #PWR02
 U 1 1 68A4CBC4
 P 1100 10300
 F 0 "#PWR02" H 1100 10050 50  0001 C CNN
@@ -923,7 +860,7 @@ F 3 "" H 1100 10300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR06
+L TeleprinterHat-rescue:GND-power #PWR06
 U 1 1 68A4CC77
 P 2150 10300
 F 0 "#PWR06" H 2150 10050 50  0001 C CNN
@@ -944,7 +881,7 @@ Wire Wire Line
 Connection ~ 1700 8300
 Connection ~ 2150 10000
 $Comp
-L power:+3V3 #PWR05
+L TeleprinterHat-rescue:+3V3-power #PWR05
 U 1 1 68ADD28A
 P 2150 10000
 F 0 "#PWR05" H 2150 9850 50  0001 C CNN
@@ -959,7 +896,7 @@ Wire Wire Line
 Wire Wire Line
 	1100 10300 1100 10250
 $Comp
-L power:GND #PWR07
+L TeleprinterHat-rescue:GND-power #PWR07
 U 1 1 68B080C5
 P 3900 10450
 F 0 "#PWR07" H 3900 10200 50  0001 C CNN
@@ -1014,7 +951,7 @@ NoConn ~ 4500 9850
 NoConn ~ 4500 9950
 NoConn ~ 4500 10050
 $Comp
-L Device:C_Small C13
+L TeleprinterHat-rescue:C_Small-Device C13
 U 1 1 68D0C555
 P 2650 9250
 F 0 "C13" H 2742 9296 50  0000 L CNN
@@ -1025,7 +962,7 @@ F 3 "~" H 2650 9250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR09
+L TeleprinterHat-rescue:GND-power #PWR09
 U 1 1 68D0C65D
 P 2650 9400
 F 0 "#PWR09" H 2650 9150 50  0001 C CNN
@@ -1047,7 +984,7 @@ Connection ~ 2900 8650
 Wire Wire Line
 	2650 9400 2650 9350
 $Comp
-L power:GND #PWR010
+L TeleprinterHat-rescue:GND-power #PWR010
 U 1 1 68D407CB
 P 2850 10150
 F 0 "#PWR010" H 2850 9900 50  0001 C CNN
@@ -1071,7 +1008,7 @@ Connection ~ 2850 8650
 Wire Wire Line
 	2850 8650 2900 8650
 $Comp
-L power:GND #PWR08
+L TeleprinterHat-rescue:GND-power #PWR08
 U 1 1 68DFC432
 P 1100 9100
 F 0 "#PWR08" H 1100 8850 50  0001 C CNN
@@ -1087,7 +1024,7 @@ Wire Wire Line
 	1100 8900 1000 8900
 Connection ~ 1100 8900
 $Comp
-L Device:R_Small R27
+L TeleprinterHat-rescue:R_Small-Device R27
 U 1 1 68E34CEE
 P 6800 10550
 F 0 "R27" H 6600 10550 50  0000 L CNN
@@ -1118,7 +1055,7 @@ Wire Wire Line
 	7250 10500 7500 10500
 Connection ~ 6800 10650
 $Comp
-L Device:R_Small R24
+L TeleprinterHat-rescue:R_Small-Device R24
 U 1 1 68EA76F1
 P 6450 10450
 F 0 "R24" V 6350 10400 50  0000 L CNN
@@ -1129,7 +1066,7 @@ F 3 "~" H 6450 10450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R26
+L TeleprinterHat-rescue:R_Small-Device R26
 U 1 1 68EA77C1
 P 6650 9450
 F 0 "R26" V 6550 9350 50  0000 L CNN
@@ -1140,7 +1077,7 @@ F 3 "~" H 6650 9450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:D_Small D9
+L TeleprinterHat-rescue:D_Small-Device D9
 U 1 1 68EC52B6
 P 6500 9800
 F 0 "D9" V 6546 9732 50  0000 R CNN
@@ -1151,7 +1088,7 @@ F 3 "~" V 6500 9800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_Small D10
+L TeleprinterHat-rescue:D_Small-Device D10
 U 1 1 68EC54C9
 P 6500 10050
 F 0 "D10" V 6546 9982 50  0000 R CNN
@@ -1168,7 +1105,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 9950 6500 9900
 $Comp
-L Transistor_BJT:MMBT5551L Q5
+L TeleprinterHat-rescue:MMBT5551L-Transistor_BJT Q5
 U 1 1 68F1E810
 P 6900 9550
 F 0 "Q5" H 7091 9596 50  0000 L CNN
@@ -1179,7 +1116,7 @@ F 3 "www.onsemi.com/pub/Collateral/MMBT5550LT1-D.PDF" H 6900 9550 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R28
+L TeleprinterHat-rescue:R_Small-Device R28
 U 1 1 68F1E974
 P 7000 9900
 F 0 "R28" H 6900 10000 50  0000 L CNN
@@ -1209,7 +1146,7 @@ Wire Wire Line
 Wire Wire Line
 	7350 10200 7500 10200
 $Comp
-L power:GND #PWR015
+L TeleprinterHat-rescue:GND-power #PWR015
 U 1 1 69033899
 P 5350 10100
 F 0 "#PWR015" H 5350 9850 50  0001 C CNN
@@ -1220,7 +1157,7 @@ F 3 "" H 5350 10100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR013
+L TeleprinterHat-rescue:GND-power #PWR013
 U 1 1 6903395E
 P 4900 10700
 F 0 "#PWR013" H 4900 10450 50  0001 C CNN
@@ -1231,7 +1168,7 @@ F 3 "" H 4900 10700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R22
+L TeleprinterHat-rescue:R_Small-Device R22
 U 1 1 69053991
 P 5050 10650
 F 0 "R22" V 4950 10550 50  0000 L CNN
@@ -1242,7 +1179,7 @@ F 3 "~" H 5050 10650 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_Small R23
+L TeleprinterHat-rescue:R_Small-Device R23
 U 1 1 69053A8D
 P 5800 9300
 F 0 "R23" H 5850 9400 50  0000 L CNN
@@ -1259,7 +1196,7 @@ Wire Wire Line
 Wire Wire Line
 	5350 9650 5850 9650
 $Comp
-L power:+3V3 #PWR014
+L TeleprinterHat-rescue:+3V3-power #PWR014
 U 1 1 690FA0F2
 P 5800 9100
 F 0 "#PWR014" H 5800 8950 50  0001 C CNN
@@ -1280,7 +1217,7 @@ Wire Wire Line
 Wire Wire Line
 	7000 10000 7000 10150
 $Comp
-L power:+3V3 #PWR012
+L TeleprinterHat-rescue:+3V3-power #PWR012
 U 1 1 69228433
 P 5600 10200
 F 0 "#PWR012" H 5600 10050 50  0001 C CNN
@@ -1291,7 +1228,7 @@ F 3 "" H 5600 10200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR011
+L TeleprinterHat-rescue:GND-power #PWR011
 U 1 1 6924C6D5
 P 6100 8300
 F 0 "#PWR011" H 6100 8050 50  0001 C CNN
@@ -1330,7 +1267,7 @@ NoConn ~ 10950 2950
 NoConn ~ 10950 3050
 NoConn ~ 10450 1450
 $Comp
-L Device:Jumper_NC_Small JP14
+L TeleprinterHat-rescue:Jumper_NC_Small-Device JP14
 U 1 1 69696934
 P 10100 1400
 F 0 "JP14" V 10100 1300 50  0000 C CNN
@@ -1341,7 +1278,7 @@ F 3 "~" H 10100 1400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR020
+L TeleprinterHat-rescue:GND-power #PWR020
 U 1 1 69696B73
 P 10100 1550
 F 0 "#PWR020" H 10100 1300 50  0001 C CNN
@@ -1352,7 +1289,7 @@ F 3 "" H 10100 1550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R29
+L TeleprinterHat-rescue:R_Small-Device R29
 U 1 1 69696C40
 P 10100 850
 F 0 "R29" H 10000 950 50  0000 L CNN
@@ -1363,7 +1300,7 @@ F 3 "~" H 10100 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR019
+L TeleprinterHat-rescue:+3V3-power #PWR019
 U 1 1 69696D4C
 P 10100 700
 F 0 "#PWR019" H 10100 550 50  0001 C CNN
@@ -1386,7 +1323,7 @@ Wire Wire Line
 	10100 1550 10100 1500
 NoConn ~ 1400 8700
 $Comp
-L power:GND #PWR0139
+L TeleprinterHat-rescue:GND-power #PWR0139
 U 1 1 697E2F8D
 P 2000 7550
 F 0 "#PWR0139" H 2000 7300 50  0001 C CNN
@@ -1402,7 +1339,7 @@ Connection ~ 1100 10000
 Wire Wire Line
 	1100 10000 1100 9950
 $Comp
-L power:+3V3 #PWR0111
+L TeleprinterHat-rescue:+3V3-power #PWR0111
 U 1 1 69ABC567
 P 1450 6800
 F 0 "#PWR0111" H 1450 6650 50  0001 C CNN
@@ -1422,7 +1359,7 @@ Wire Wire Line
 NoConn ~ 2900 9550
 NoConn ~ 2900 9750
 $Comp
-L irs44273:IRS44273 U9
+L TeleprinterHat-rescue:IRS44273-irs44273 U9
 U 1 1 5D3D943D
 P 1300 2000
 F 0 "U9" H 1300 1778 50  0000 C CNN
@@ -1435,7 +1372,7 @@ $EndComp
 Wire Wire Line
 	1600 1900 1700 1900
 $Comp
-L MC34063:MC34063 U5
+L TeleprinterHat-rescue:MC34063-MC34063 U5
 U 1 1 5D443CA4
 P 1250 1300
 F 0 "U5" H 1225 1787 60  0000 C CNN
@@ -1446,7 +1383,7 @@ F 3 "" H 1150 1300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L2
+L TeleprinterHat-rescue:L-Device L2
 U 1 1 5D443E72
 P 1750 800
 F 0 "L2" V 1940 800 50  0000 C CNN
@@ -1479,7 +1416,7 @@ Wire Wire Line
 	600  700  600  800 
 Connection ~ 600  800 
 $Comp
-L power:GND #PWR017
+L TeleprinterHat-rescue:GND-power #PWR017
 U 1 1 5D56BA59
 P 1800 1450
 F 0 "#PWR017" H 1800 1200 50  0001 C CNN
@@ -1492,7 +1429,7 @@ $EndComp
 Wire Wire Line
 	1800 1450 1800 1400
 $Comp
-L power:GND #PWR016
+L TeleprinterHat-rescue:GND-power #PWR016
 U 1 1 5D5E0091
 P 1000 2150
 F 0 "#PWR016" H 1000 1900 50  0001 C CNN
@@ -1505,7 +1442,7 @@ $EndComp
 Wire Wire Line
 	1000 2150 1000 2050
 $Comp
-L Device:CP_Small C4
+L TeleprinterHat-rescue:CP_Small-Device C4
 U 1 1 5D6080C5
 P 2150 950
 F 0 "C4" H 2238 996 50  0000 L CNN
@@ -1518,7 +1455,7 @@ $EndComp
 Wire Wire Line
 	2150 1100 2150 1050
 $Comp
-L Device:C_Small C3
+L TeleprinterHat-rescue:C_Small-Device C3
 U 1 1 5D65781F
 P 2050 1450
 F 0 "C3" H 2100 1550 50  0000 L CNN
@@ -1529,7 +1466,7 @@ F 3 "~" H 2050 1450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR021
+L TeleprinterHat-rescue:GND-power #PWR021
 U 1 1 5D657909
 P 2050 1600
 F 0 "#PWR021" H 2050 1350 50  0001 C CNN
@@ -1546,7 +1483,7 @@ Wire Wire Line
 Wire Wire Line
 	2050 1600 2050 1550
 $Comp
-L Device:R_Small R2
+L TeleprinterHat-rescue:R_Small-Device R2
 U 1 1 5D7203BD
 P 1950 2250
 F 0 "R2" H 2009 2296 50  0000 L CNN
@@ -1557,7 +1494,7 @@ F 3 "~" H 1950 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_BJT:MMBT3904 Q2
+L TeleprinterHat-rescue:MMBT3904-Transistor_BJT Q2
 U 1 1 5D720557
 P 2050 2600
 F 0 "Q2" H 2240 2646 50  0000 L CNN
@@ -1568,7 +1505,7 @@ F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 2050 2600 50  000
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR018
+L TeleprinterHat-rescue:GND-power #PWR018
 U 1 1 5D771242
 P 1950 2850
 F 0 "#PWR018" H 1950 2600 50  0001 C CNN
@@ -1594,7 +1531,7 @@ Wire Wire Line
 	850  1950 1000 1950
 Connection ~ 1950 2400
 $Comp
-L Device:R_Small R4
+L TeleprinterHat-rescue:R_Small-Device R4
 U 1 1 5D815C6C
 P 2300 2250
 F 0 "R4" H 2359 2296 50  0000 L CNN
@@ -1605,7 +1542,7 @@ F 3 "~" H 2300 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR022
+L TeleprinterHat-rescue:GND-power #PWR022
 U 1 1 5D815D44
 P 2300 2400
 F 0 "#PWR022" H 2300 2150 50  0001 C CNN
@@ -1632,7 +1569,7 @@ Connection ~ 1700 1900
 Wire Wire Line
 	1700 1900 2350 1900
 $Comp
-L Device:Q_NMOS_GDS Q1
+L TeleprinterHat-rescue:Q_NMOS_GDS-Device Q1
 U 1 1 68331207
 P 2550 1100
 F 0 "Q1" H 2755 1146 50  0000 L CNN
@@ -1662,7 +1599,7 @@ Wire Wire Line
 Wire Wire Line
 	1800 2000 2500 2000
 $Comp
-L Device:R_Small R6
+L TeleprinterHat-rescue:R_Small-Device R6
 U 1 1 5DB6865A
 P 2950 1600
 F 0 "R6" V 2754 1600 50  0000 C CNN
@@ -1681,7 +1618,7 @@ Wire Wire Line
 Wire Wire Line
 	2500 1600 2500 2000
 $Comp
-L Device:CP_Small C5
+L TeleprinterHat-rescue:CP_Small-Device C5
 U 1 1 5DBBF53C
 P 2950 950
 F 0 "C5" H 3038 996 50  0000 L CNN
@@ -1692,7 +1629,7 @@ F 3 "~" H 2950 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C14
+L TeleprinterHat-rescue:C_Small-Device C14
 U 1 1 5DBBF61E
 P 3350 950
 F 0 "C14" H 3400 1050 50  0000 L CNN
@@ -1703,7 +1640,7 @@ F 3 "~" H 3350 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R8
+L TeleprinterHat-rescue:R_Small-Device R8
 U 1 1 5DBBF712
 P 3750 950
 F 0 "R8" H 3809 996 50  0000 L CNN
@@ -1714,7 +1651,7 @@ F 3 "~" H 3750 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R9
+L TeleprinterHat-rescue:R_Small-Device R9
 U 1 1 5DBBF80E
 P 3750 1300
 F 0 "R9" H 3809 1346 50  0000 L CNN
@@ -1725,7 +1662,7 @@ F 3 "~" H 3750 1300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R7
+L TeleprinterHat-rescue:R_Small-Device R7
 U 1 1 5DBBF914
 P 3650 1300
 F 0 "R7" H 3500 1350 50  0000 L CNN
@@ -1758,7 +1695,7 @@ Wire Wire Line
 	3650 1400 3650 1600
 Connection ~ 3650 1600
 $Comp
-L power:GND #PWR025
+L TeleprinterHat-rescue:GND-power #PWR025
 U 1 1 5DCCC66B
 P 3750 1600
 F 0 "#PWR025" H 3750 1350 50  0001 C CNN
@@ -1771,7 +1708,7 @@ $EndComp
 Wire Wire Line
 	3750 1600 3750 1400
 $Comp
-L Device:C_Small C19
+L TeleprinterHat-rescue:C_Small-Device C19
 U 1 1 5DCFA724
 P 7750 3250
 F 0 "C19" H 7550 3300 50  0000 L CNN
@@ -1782,7 +1719,7 @@ F 3 "~" H 7750 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R38
+L TeleprinterHat-rescue:R_Small-Device R38
 U 1 1 5DCFA810
 P 7900 3100
 F 0 "R38" V 7704 3100 50  0000 C CNN
@@ -1793,7 +1730,7 @@ F 3 "~" H 7900 3100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R39
+L TeleprinterHat-rescue:R_Small-Device R39
 U 1 1 5DCFA908
 P 8100 3250
 F 0 "R39" H 7950 3300 50  0000 L CNN
@@ -1813,7 +1750,7 @@ Wire Wire Line
 Wire Wire Line
 	8100 3100 8100 3150
 $Comp
-L power:GND #PWR035
+L TeleprinterHat-rescue:GND-power #PWR035
 U 1 1 5DD869B6
 P 7750 3400
 F 0 "#PWR035" H 7750 3150 50  0001 C CNN
@@ -1824,7 +1761,7 @@ F 3 "" H 7750 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR036
+L TeleprinterHat-rescue:GND-power #PWR036
 U 1 1 5DD86A81
 P 8100 3400
 F 0 "#PWR036" H 8100 3150 50  0001 C CNN
@@ -1839,7 +1776,7 @@ Wire Wire Line
 Wire Wire Line
 	8100 3400 8100 3350
 $Comp
-L power:GND #PWR023
+L TeleprinterHat-rescue:GND-power #PWR023
 U 1 1 5DDE675E
 P 2950 1100
 F 0 "#PWR023" H 2950 850 50  0001 C CNN
@@ -1850,7 +1787,7 @@ F 3 "" H 2950 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR024
+L TeleprinterHat-rescue:GND-power #PWR024
 U 1 1 5DDE6829
 P 3350 1100
 F 0 "#PWR024" H 3350 850 50  0001 C CNN
@@ -1865,7 +1802,7 @@ Wire Wire Line
 Wire Wire Line
 	2950 1100 2950 1050
 $Comp
-L Device:Fuse_Small F1
+L TeleprinterHat-rescue:Fuse_Small-Device F1
 U 1 1 5DE47E72
 P 4150 800
 F 0 "F1" H 4150 985 50  0000 C CNN
@@ -1877,7 +1814,7 @@ F 3 "~" H 4150 800 50  0001 C CNN
 $EndComp
 Connection ~ 3750 800 
 $Comp
-L Device:Q_PMOS_GDS Q8
+L TeleprinterHat-rescue:Q_PMOS_GDS-Device Q8
 U 1 1 5DF708B8
 P 5600 900
 F 0 "Q8" V 5943 900 50  0000 C CNN
@@ -1888,7 +1825,7 @@ F 3 "~" H 5600 900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:Q_NPN_BEC Q4
+L TeleprinterHat-rescue:Q_NPN_BEC-Device Q4
 U 1 1 5E1CCDAE
 P 5050 1100
 F 0 "Q4" H 5100 1600 50  0000 L CNN
@@ -1899,7 +1836,7 @@ F 3 "~" H 5050 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R12
+L TeleprinterHat-rescue:R_Small-Device R12
 U 1 1 5E1F5021
 P 4850 950
 F 0 "R12" H 4900 1050 50  0000 L CNN
@@ -1920,7 +1857,7 @@ Connection ~ 5150 800
 Wire Wire Line
 	4850 1100 4850 1050
 $Comp
-L Device:D_Small D3
+L TeleprinterHat-rescue:D_Small-Device D3
 U 1 1 5E26EE16
 P 5000 1400
 F 0 "D3" H 4750 1350 50  0000 C CNN
@@ -1940,7 +1877,7 @@ Wire Wire Line
 	4850 1400 4850 1100
 Connection ~ 4850 1100
 $Comp
-L Device:Q_NPN_BEC Q3
+L TeleprinterHat-rescue:Q_NPN_BEC-Device Q3
 U 1 1 5E2C21DD
 P 4750 1650
 F 0 "Q3" H 4941 1696 50  0000 L CNN
@@ -1954,7 +1891,7 @@ Wire Wire Line
 	4850 1450 4850 1400
 Connection ~ 4850 1400
 $Comp
-L Device:R_Small R13
+L TeleprinterHat-rescue:R_Small-Device R13
 U 1 1 5E2EC20D
 P 4850 2000
 F 0 "R13" H 4650 2050 50  0000 L CNN
@@ -1965,7 +1902,7 @@ F 3 "~" H 4850 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R11
+L TeleprinterHat-rescue:R_Small-Device R11
 U 1 1 5E2EC3D5
 P 4650 1850
 F 0 "R11" V 4454 1850 50  0000 C CNN
@@ -1976,7 +1913,7 @@ F 3 "~" H 4650 1850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C_Small C16
+L TeleprinterHat-rescue:C_Small-Device C16
 U 1 1 5E2EC4CD
 P 4500 2000
 F 0 "C16" H 4250 2000 50  0000 L CNN
@@ -1987,7 +1924,7 @@ F 3 "~" H 4500 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR027
+L TeleprinterHat-rescue:GND-power #PWR027
 U 1 1 5E2EC5CF
 P 4500 2300
 F 0 "#PWR027" H 4500 2050 50  0001 C CNN
@@ -1998,7 +1935,7 @@ F 3 "" H 4500 2300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR029
+L TeleprinterHat-rescue:GND-power #PWR029
 U 1 1 5E2EC6A2
 P 4850 2200
 F 0 "#PWR029" H 4850 1950 50  0001 C CNN
@@ -2025,7 +1962,7 @@ Wire Wire Line
 	5600 1400 5600 1100
 Connection ~ 5150 1400
 $Comp
-L Device:L_Core_Ferrite_Small L4
+L TeleprinterHat-rescue:L_Core_Ferrite_Small-Device L4
 U 1 1 5E445AB2
 P 6000 800
 F 0 "L4" V 6205 800 50  0000 C CNN
@@ -2036,7 +1973,7 @@ F 3 "~" H 6000 800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_Small D4
+L TeleprinterHat-rescue:D_Small-Device D4
 U 1 1 5E445BC8
 P 6200 1000
 F 0 "D4" H 6200 784 50  0000 C CNN
@@ -2053,7 +1990,7 @@ Wire Wire Line
 Wire Wire Line
 	5900 800  5800 800 
 $Comp
-L power:GND #PWR033
+L TeleprinterHat-rescue:GND-power #PWR033
 U 1 1 5E49E2F9
 P 6200 1150
 F 0 "#PWR033" H 6200 900 50  0001 C CNN
@@ -2066,7 +2003,7 @@ $EndComp
 Wire Wire Line
 	6200 1150 6200 1100
 $Comp
-L tinkerforge:TVS D5
+L TeleprinterHat-rescue:TVS-tinkerforge D5
 U 1 1 5E4CB0FD
 P 7500 1550
 F 0 "D5" V 7462 1628 40  0000 L CNN
@@ -2077,7 +2014,7 @@ F 3 "" H 7500 1550 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R37
+L TeleprinterHat-rescue:R_Small-Device R37
 U 1 1 5E4CB6DF
 P 7850 1700
 F 0 "R37" H 7700 1750 50  0000 L CNN
@@ -2088,12 +2025,12 @@ F 3 "~" H 7850 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C20
+L TeleprinterHat-rescue:C_Small-Device C20
 U 1 1 5E4CB857
 P 7850 1400
 F 0 "C20" H 7650 1450 50  0000 L CNN
 F 1 "1n" H 7650 1300 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 7850 1400 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 7850 1400 50  0001 C CNN
 F 3 "~" H 7850 1400 50  0001 C CNN
 	1    7850 1400
 	1    0    0    -1  
@@ -2136,7 +2073,7 @@ Connection ~ 6600 1250
 Wire Wire Line
 	6650 1650 6650 1450
 $Comp
-L Device:Q_PNP_BEC Q9
+L TeleprinterHat-rescue:Q_PNP_BEC-Device Q9
 U 1 1 5E671232
 P 6150 1650
 F 0 "Q9" H 6341 1604 50  0000 L CNN
@@ -2149,7 +2086,7 @@ $EndComp
 Wire Wire Line
 	6250 1450 6650 1450
 $Comp
-L Device:Q_NPN_BEC Q7
+L TeleprinterHat-rescue:Q_NPN_BEC-Device Q7
 U 1 1 5E6A1E47
 P 5550 1850
 F 0 "Q7" H 5741 1896 50  0000 L CNN
@@ -2160,7 +2097,7 @@ F 3 "~" H 5550 1850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R33
+L TeleprinterHat-rescue:R_Small-Device R33
 U 1 1 5E6A203E
 P 5800 1650
 F 0 "R33" V 5604 1650 50  0000 C CNN
@@ -2175,7 +2112,7 @@ Wire Wire Line
 Wire Wire Line
 	5900 1650 5950 1650
 $Comp
-L Device:R_Small R32
+L TeleprinterHat-rescue:R_Small-Device R32
 U 1 1 5E703E3C
 P 5800 1350
 F 0 "R32" V 5604 1350 50  0000 C CNN
@@ -2198,7 +2135,7 @@ Wire Wire Line
 	6050 1450 6250 1450
 Connection ~ 6250 1450
 $Comp
-L Device:R_Small R34
+L TeleprinterHat-rescue:R_Small-Device R34
 U 1 1 5E767628
 P 6250 2050
 F 0 "R34" H 6100 2100 50  0000 L CNN
@@ -2209,7 +2146,7 @@ F 3 "~" H 6250 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR032
+L TeleprinterHat-rescue:GND-power #PWR032
 U 1 1 5E7678A1
 P 5650 2100
 F 0 "#PWR032" H 5650 1850 50  0001 C CNN
@@ -2220,7 +2157,7 @@ F 3 "" H 5650 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR034
+L TeleprinterHat-rescue:GND-power #PWR034
 U 1 1 5E767988
 P 6250 2200
 F 0 "#PWR034" H 6250 1950 50  0001 C CNN
@@ -2237,7 +2174,7 @@ Wire Wire Line
 Wire Wire Line
 	5650 2100 5650 2050
 $Comp
-L Device:R_Small R25
+L TeleprinterHat-rescue:R_Small-Device R25
 U 1 1 5E7FF089
 P 5300 1700
 F 0 "R25" V 5104 1700 50  0000 C CNN
@@ -2250,7 +2187,7 @@ $EndComp
 Wire Wire Line
 	5300 1850 5350 1850
 $Comp
-L tlv3502:TLV3502 U10
+L TeleprinterHat-rescue:TLV3502-tlv3502 U10
 U 1 1 5E83383B
 P 3000 2000
 F 0 "U10" H 3200 1750 60  0000 C CNN
@@ -2261,7 +2198,7 @@ F 3 "" H 3000 2000 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L tlv3502:TLV3502 U10
+L TeleprinterHat-rescue:TLV3502-tlv3502 U10
 U 2 1 5E8CCB36
 P 4900 2600
 F 0 "U10" H 5100 2350 60  0000 C CNN
@@ -2288,7 +2225,7 @@ Connection ~ 1900 800
 Wire Wire Line
 	1900 800  2150 800 
 $Comp
-L Amplifier_Operational:MCP6004 U11
+L TeleprinterHat-rescue:MCP6004-Amplifier_Operational U11
 U 2 1 5EB69F34
 P 7200 3200
 F 0 "U11" H 7200 3567 50  0000 C CNN
@@ -2311,7 +2248,7 @@ Wire Wire Line
 Wire Wire Line
 	7500 3100 7750 3100
 $Comp
-L Device:R_Small R10
+L TeleprinterHat-rescue:R_Small-Device R10
 U 1 1 5EC3EA3C
 P 4350 1650
 F 0 "R10" V 4154 1650 50  0000 C CNN
@@ -2326,7 +2263,7 @@ Wire Wire Line
 Wire Wire Line
 	4450 1650 4500 1650
 $Comp
-L Device:R_Small R15
+L TeleprinterHat-rescue:R_Small-Device R15
 U 1 1 5ECAC0EB
 P 5150 2150
 F 0 "R15" V 4954 2150 50  0000 C CNN
@@ -2350,7 +2287,7 @@ Connection ~ 6250 1900
 Wire Wire Line
 	6250 1900 6250 1850
 $Comp
-L Device:R_Small R35
+L TeleprinterHat-rescue:R_Small-Device R35
 U 1 1 5EDC6819
 P 5750 2450
 F 0 "R35" V 5550 2450 50  0000 C CNN
@@ -2367,7 +2304,7 @@ Wire Wire Line
 	5650 2450 5550 2450
 Connection ~ 5550 2450
 $Comp
-L Device:C_Small C18
+L TeleprinterHat-rescue:C_Small-Device C18
 U 1 1 5EEAD0A8
 P 5000 3400
 F 0 "C18" H 4800 3450 50  0000 L CNN
@@ -2378,7 +2315,7 @@ F 3 "~" H 5000 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R21
+L TeleprinterHat-rescue:R_Small-Device R21
 U 1 1 5EEAD0AE
 P 5150 3250
 F 0 "R21" V 4954 3250 50  0000 C CNN
@@ -2389,7 +2326,7 @@ F 3 "~" H 5150 3250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R30
+L TeleprinterHat-rescue:R_Small-Device R30
 U 1 1 5EEAD0B4
 P 5350 3400
 F 0 "R30" H 5200 3450 50  0000 L CNN
@@ -2409,7 +2346,7 @@ Wire Wire Line
 Wire Wire Line
 	5350 3250 5350 3300
 $Comp
-L power:GND #PWR030
+L TeleprinterHat-rescue:GND-power #PWR030
 U 1 1 5EEAD0BF
 P 5000 3550
 F 0 "#PWR030" H 5000 3300 50  0001 C CNN
@@ -2420,7 +2357,7 @@ F 3 "" H 5000 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR031
+L TeleprinterHat-rescue:GND-power #PWR031
 U 1 1 5EEAD0C5
 P 5350 3550
 F 0 "#PWR031" H 5350 3300 50  0001 C CNN
@@ -2435,7 +2372,7 @@ Wire Wire Line
 Wire Wire Line
 	5350 3550 5350 3500
 $Comp
-L Amplifier_Operational:MCP6004 U11
+L TeleprinterHat-rescue:MCP6004-Amplifier_Operational U11
 U 1 1 5EEAD0CD
 P 4450 3350
 F 0 "U11" H 4450 3717 50  0000 C CNN
@@ -2469,7 +2406,7 @@ Wire Wire Line
 Wire Wire Line
 	4500 2300 4500 2100
 $Comp
-L Amplifier_Operational:MCP6004 U11
+L TeleprinterHat-rescue:MCP6004-Amplifier_Operational U11
 U 3 1 5F1FB90A
 P 7550 2450
 F 0 "U11" H 7550 2817 50  0000 C CNN
@@ -2490,7 +2427,7 @@ Wire Wire Line
 Wire Wire Line
 	7900 2450 7900 2700
 $Comp
-L Device:R_Small R36
+L TeleprinterHat-rescue:R_Small-Device R36
 U 1 1 5F2B5E24
 P 6850 2350
 F 0 "R36" V 6654 2350 50  0000 C CNN
@@ -2508,7 +2445,7 @@ Connection ~ 6400 2350
 Wire Wire Line
 	6400 2350 6400 1900
 $Comp
-L Amplifier_Operational:MCP6004 U11
+L TeleprinterHat-rescue:MCP6004-Amplifier_Operational U11
 U 5 1 5F332B01
 P 6200 4150
 F 0 "U11" H 6012 4196 50  0000 R CNN
@@ -2519,7 +2456,7 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 6250 4350 50 
 	-1   0    0    -1  
 $EndComp
 $Comp
-L tlv3502:TLV3502 U10
+L TeleprinterHat-rescue:TLV3502-tlv3502 U10
 U 3 1 5F332DA8
 P 7150 4300
 F 0 "U10" H 7350 4050 60  0000 C CNN
@@ -2530,7 +2467,7 @@ F 3 "" H 7150 4300 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Transistor_BJT:MMBT5551L Q6
+L TeleprinterHat-rescue:MMBT5551L-Transistor_BJT Q6
 U 1 1 5EBEAE5C
 P 5250 9850
 F 0 "Q6" H 5441 9896 50  0000 L CNN
@@ -2543,7 +2480,7 @@ $EndComp
 Wire Wire Line
 	5350 10100 5350 10050
 $Comp
-L Device:R_Small R14
+L TeleprinterHat-rescue:R_Small-Device R14
 U 1 1 5EC6B932
 P 4900 9850
 F 0 "R14" V 4800 9800 50  0000 L CNN
@@ -2577,7 +2514,7 @@ Wire Wire Line
 Wire Wire Line
 	5300 1600 5300 1550
 $Comp
-L Device:D_Zener_Small D1
+L TeleprinterHat-rescue:D_Zener_Small-Device D1
 U 1 1 5EF419C2
 P 2750 2600
 F 0 "D1" H 2850 2700 50  0000 C CNN
@@ -2589,7 +2526,7 @@ F 3 "~" V 2750 2600 50  0001 C CNN
 $EndComp
 Connection ~ 2500 2000
 $Comp
-L Device:R_Small R5
+L TeleprinterHat-rescue:R_Small-Device R5
 U 1 1 5EFC29AE
 P 2400 2600
 F 0 "R5" V 2300 2600 50  0000 C CNN
@@ -2613,7 +2550,7 @@ Wire Wire Line
 Wire Wire Line
 	1400 8850 1400 9500
 $Comp
-L Device:C_Small C21
+L TeleprinterHat-rescue:C_Small-Device C21
 U 1 1 5F32B7B6
 P 4250 1800
 F 0 "C21" V 4200 1900 50  0000 L CNN
@@ -2638,7 +2575,7 @@ Wire Wire Line
 Wire Wire Line
 	5550 2750 6650 2750
 $Comp
-L 74xGxx:74LVC1G04 U13
+L TeleprinterHat-rescue:74LVC1G04-74xGxx U13
 U 1 1 5F48FD1D
 P 4050 2600
 F 0 "U13" H 4025 2333 50  0000 C CNN
@@ -2662,7 +2599,7 @@ Wire Wire Line
 	4400 2150 5050 2150
 Connection ~ 4400 2600
 $Comp
-L MCU_ST_STM32F1:STM32F103C8Tx U14
+L TeleprinterHat-rescue:STM32F103C8Tx-MCU_ST_STM32F1 U14
 U 1 1 5EBF8F1E
 P 10100 6750
 F 0 "U14" H 9250 5200 50  0000 C CNN
@@ -2673,7 +2610,7 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R46
+L TeleprinterHat-rescue:R_Small-Device R46
 U 1 1 5ECAB136
 P 8900 5250
 F 0 "R46" H 8700 5300 50  0000 L CNN
@@ -2684,7 +2621,7 @@ F 3 "~" H 8900 5250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C22
+L TeleprinterHat-rescue:C_Small-Device C22
 U 1 1 5ECAB3A2
 P 8900 5600
 F 0 "C22" H 8900 5700 50  0000 L CNN
@@ -2695,7 +2632,7 @@ F 3 "~" H 8900 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0103
+L TeleprinterHat-rescue:GND-power #PWR0103
 U 1 1 5ECAB4CE
 P 8900 6050
 F 0 "#PWR0103" H 8900 5800 50  0001 C CNN
@@ -2715,7 +2652,7 @@ Connection ~ 8900 5450
 Wire Wire Line
 	8900 5450 8900 5350
 $Comp
-L power:+3V3 #PWR0104
+L TeleprinterHat-rescue:+3V3-power #PWR0104
 U 1 1 5ED62D23
 P 5000 5650
 F 0 "#PWR0104" H 5000 5500 50  0001 C CNN
@@ -2726,7 +2663,7 @@ F 3 "" H 5000 5650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR0105
+L TeleprinterHat-rescue:+3V3-power #PWR0105
 U 1 1 5ED62F3D
 P 8900 5100
 F 0 "#PWR0105" H 8900 4950 50  0001 C CNN
@@ -2747,7 +2684,7 @@ Wire Wire Line
 Wire Wire Line
 	11200 8050 10700 8050
 $Comp
-L Device:Jumper_NC_Small JP17
+L TeleprinterHat-rescue:Jumper_NC_Small-Device JP17
 U 1 1 5EF0E6A8
 P 12450 8450
 F 0 "JP17" H 12450 8662 50  0000 C CNN
@@ -2769,13 +2706,11 @@ Wire Wire Line
 Wire Wire Line
 	11150 6650 10700 6650
 Wire Wire Line
-	11150 6750 10700 6750
-Wire Wire Line
 	6450 700  6450 950 
 Wire Wire Line
 	6450 950  6650 950 
 $Comp
-L Device:Q_NPN_BEC Q10
+L TeleprinterHat-rescue:Q_NPN_BEC-Device Q10
 U 1 1 5F16533B
 P 8150 800
 F 0 "Q10" V 8400 550 50  0000 L CNN
@@ -2790,7 +2725,7 @@ Wire Wire Line
 Wire Wire Line
 	7250 950  7550 950 
 $Comp
-L Device:D_Small D12
+L TeleprinterHat-rescue:D_Small-Device D12
 U 1 1 5F21FDC0
 P 7550 850
 F 0 "D12" H 7550 634 50  0000 C CNN
@@ -2806,7 +2741,7 @@ Wire Wire Line
 Wire Wire Line
 	7550 750  7550 700 
 $Comp
-L Device:R_Small R45
+L TeleprinterHat-rescue:R_Small-Device R45
 U 1 1 5F29DA90
 P 7950 1100
 F 0 "R45" V 8050 1250 50  0000 C CNN
@@ -2821,7 +2756,7 @@ Wire Wire Line
 Wire Wire Line
 	8150 1100 8150 1000
 $Comp
-L power:GND #PWR0108
+L TeleprinterHat-rescue:GND-power #PWR0108
 U 1 1 5F31D83A
 P 8400 900
 F 0 "#PWR0108" H 8400 650 50  0001 C CNN
@@ -2842,7 +2777,7 @@ Wire Wire Line
 Wire Wire Line
 	9000 6750 9400 6750
 $Comp
-L 74xGxx:74LVC1G04 U2
+L TeleprinterHat-rescue:74LVC1G04-74xGxx U2
 U 1 1 5F431C61
 P 1600 7400
 F 0 "U2" H 1500 7550 50  0000 C CNN
@@ -2858,44 +2793,10 @@ Wire Wire Line
 	9400 6950 9000 6950
 Wire Wire Line
 	9000 7050 9400 7050
-$Comp
-L Device:Jumper_NC_Small JP16
-U 1 1 5F5C2AD2
-P 11250 7250
-F 0 "JP16" H 11550 7300 50  0000 C CNN
-F 1 "TPBAUD1" H 10950 7300 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 11250 7250 50  0001 C CNN
-F 3 "~" H 11250 7250 50  0001 C CNN
-	1    11250 7250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Jumper_NC_Small JP15
-U 1 1 5F5C2D8B
-P 11250 7150
-F 0 "JP15" H 11550 7200 50  0000 C CNN
-F 1 "TPBAUD0" H 10950 7200 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 11250 7150 50  0001 C CNN
-F 3 "~" H 11250 7150 50  0001 C CNN
-	1    11250 7150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	11350 7250 11450 7250
-Wire Wire Line
-	11450 7250 11450 7350
-Connection ~ 11450 7350
-Wire Wire Line
-	11350 7150 11450 7150
-Wire Wire Line
-	11450 7150 11450 7250
-Connection ~ 11450 7250
-Wire Wire Line
-	11150 7150 10700 7150
 Wire Wire Line
 	11150 7250 10700 7250
 $Comp
-L power:GND #PWR0109
+L TeleprinterHat-rescue:GND-power #PWR0109
 U 1 1 5F6C97D5
 P 9900 8400
 F 0 "#PWR0109" H 9900 8150 50  0001 C CNN
@@ -2916,54 +2817,12 @@ Wire Wire Line
 Wire Wire Line
 	9900 8400 9900 8250
 Connection ~ 9900 8250
-$Comp
-L Device:Jumper_NC_Small JP2
-U 1 1 5F74F69E
-P 8800 7950
-F 0 "JP2" H 8700 8000 50  0000 C CNN
-F 1 "VOLT0" H 9000 8000 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8800 7950 50  0001 C CNN
-F 3 "~" H 8800 7950 50  0001 C CNN
-	1    8800 7950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Jumper_NC_Small JP3
-U 1 1 5F74FB1D
-P 8800 8050
-F 0 "JP3" H 8700 8100 50  0000 C CNN
-F 1 "VOLT1" H 9000 8100 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8800 8050 50  0001 C CNN
-F 3 "~" H 8800 8050 50  0001 C CNN
-	1    8800 8050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8900 7950 9400 7950
 Wire Wire Line
 	8900 8050 9400 8050
 $Comp
-L power:GND #PWR0112
-U 1 1 5F7D6471
-P 8550 8350
-F 0 "#PWR0112" H 8550 8100 50  0001 C CNN
-F 1 "GND" H 8450 8350 50  0000 C CNN
-F 2 "" H 8550 8350 50  0001 C CNN
-F 3 "" H 8550 8350 50  0001 C CNN
-	1    8550 8350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8550 7950 8700 7950
-Wire Wire Line
-	8700 8050 8550 8050
-Wire Wire Line
-	8550 7950 8550 8050
-Connection ~ 8550 8050
-Wire Wire Line
-	8550 8050 8550 8350
-$Comp
-L power:GND #PWR0113
+L TeleprinterHat-rescue:GND-power #PWR0113
 U 1 1 5F970C74
 P 7050 8450
 F 0 "#PWR0113" H 7050 8200 50  0001 C CNN
@@ -2983,7 +2842,7 @@ Connection ~ 7050 8150
 Wire Wire Line
 	7050 8150 7050 7950
 $Comp
-L Device:R R44
+L TeleprinterHat-rescue:R-Device R44
 U 1 1 5F9FA31C
 P 7850 8350
 F 0 "R44" V 7950 8450 50  0000 C CNN
@@ -2994,7 +2853,7 @@ F 3 "~" H 7850 8350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R43
+L TeleprinterHat-rescue:R-Device R43
 U 1 1 5F9FC197
 P 7850 8150
 F 0 "R43" V 7950 8250 50  0000 C CNN
@@ -3005,7 +2864,7 @@ F 3 "~" H 7850 8150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R42
+L TeleprinterHat-rescue:R-Device R42
 U 1 1 5F9FC2BB
 P 7850 7950
 F 0 "R42" V 7950 8050 50  0000 C CNN
@@ -3016,7 +2875,7 @@ F 3 "~" H 7850 7950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R41
+L TeleprinterHat-rescue:R-Device R41
 U 1 1 5F9FC3E9
 P 7850 7500
 F 0 "R41" V 7950 7600 50  0000 C CNN
@@ -3027,7 +2886,7 @@ F 3 "~" H 7850 7500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R40
+L TeleprinterHat-rescue:R-Device R40
 U 1 1 5F9FC51B
 P 7850 7300
 F 0 "R40" V 7950 7400 50  0000 C CNN
@@ -3038,7 +2897,7 @@ F 3 "~" H 7850 7300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R31
+L TeleprinterHat-rescue:R-Device R31
 U 1 1 5F9FC645
 P 7850 7100
 F 0 "R31" V 7950 7200 50  0000 C CNN
@@ -3061,29 +2920,21 @@ Wire Wire Line
 Wire Wire Line
 	7550 8350 7700 8350
 Wire Wire Line
-	8650 7100 8650 7150
+	8900 7150 9400 7150
 Wire Wire Line
-	8650 7150 9400 7150
+	8000 7100 8450 7100
 Wire Wire Line
-	8000 7100 8650 7100
+	9400 7250 8900 7250
 Wire Wire Line
-	9400 7250 8650 7250
+	8450 7300 8000 7300
 Wire Wire Line
-	8650 7250 8650 7300
+	8000 7500 8450 7500
 Wire Wire Line
-	8650 7300 8000 7300
+	8900 7350 9400 7350
 Wire Wire Line
-	8000 7500 8700 7500
+	9400 7450 8900 7450
 Wire Wire Line
-	8700 7500 8700 7350
-Wire Wire Line
-	8700 7350 9400 7350
-Wire Wire Line
-	9400 7450 8800 7450
-Wire Wire Line
-	8800 7450 8800 7600
-Wire Wire Line
-	8800 7600 8100 7600
+	8700 7600 8100 7600
 Wire Wire Line
 	8100 7600 8100 7950
 Wire Wire Line
@@ -3091,25 +2942,21 @@ Wire Wire Line
 Wire Wire Line
 	8000 8150 8200 8150
 Wire Wire Line
-	8200 8150 8200 7650
+	8200 8150 8200 7700
 Wire Wire Line
-	8200 7650 8900 7650
-Wire Wire Line
-	8900 7650 8900 7550
+	8200 7700 8700 7700
 Wire Wire Line
 	8900 7550 9400 7550
 Wire Wire Line
-	9400 7650 9000 7650
+	9400 7650 8900 7650
 Wire Wire Line
-	9000 7650 9000 7700
+	8700 7800 8300 7800
 Wire Wire Line
-	9000 7700 8300 7700
-Wire Wire Line
-	8300 7700 8300 8350
+	8300 7800 8300 8350
 Wire Wire Line
 	8300 8350 8000 8350
 $Comp
-L power:+3V3 #PWR0114
+L TeleprinterHat-rescue:+3V3-power #PWR0114
 U 1 1 5FD4DCDF
 P 10000 5050
 F 0 "#PWR0114" H 10000 4900 50  0001 C CNN
@@ -3132,22 +2979,20 @@ Wire Wire Line
 	10200 5250 10300 5250
 Wire Wire Line
 	10700 6850 11150 6850
-Text Label 10750 6750 0    50   ~ 0
+Text Label 10800 6550 0    50   ~ 0
 LINEVOLTAGE
 Text Label 10750 6650 0    50   ~ 0
-LINEVOLTAGE
-Text Label 10750 6550 0    50   ~ 0
 CURRENTSENSE
-Text Label 10800 6850 0    50   ~ 0
+Text Label 10850 6950 0    50   ~ 0
 TTX
 NoConn ~ 9400 6350
 NoConn ~ 9400 6250
 NoConn ~ 9400 6150
-Text Label 9000 6650 0    50   ~ 0
+Text Label 10800 7250 0    50   ~ 0
 KEYBOARD
-Text Label 9000 6550 0    50   ~ 0
+Text Label 10800 6850 0    50   ~ 0
 REVERSE
-Text Label 9000 6750 0    50   ~ 0
+Text Label 9000 6550 0    50   ~ 0
 TPON
 Text Label 9000 6850 0    50   ~ 0
 MISO
@@ -3156,7 +3001,7 @@ MOSI
 Text Label 9000 7050 0    50   ~ 0
 SCK
 $Comp
-L Device:R_Small R47
+L TeleprinterHat-rescue:R_Small-Device R47
 U 1 1 6013EE5C
 P 7250 5500
 F 0 "R47" H 7309 5546 50  0000 L CNN
@@ -3178,7 +3023,7 @@ MISO
 Text Label 10200 2250 0    50   ~ 0
 SCK
 $Comp
-L power:GND #PWR0115
+L TeleprinterHat-rescue:GND-power #PWR0115
 U 1 1 602C02BD
 P 7350 4850
 F 0 "#PWR0115" H 7350 4600 50  0001 C CNN
@@ -3189,7 +3034,7 @@ F 3 "" H 7350 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0123
+L TeleprinterHat-rescue:GND-power #PWR0123
 U 1 1 602C03E4
 P 6300 4500
 F 0 "#PWR0123" H 6300 4250 50  0001 C CNN
@@ -3212,7 +3057,7 @@ Wire Wire Line
 Wire Wire Line
 	8300 5950 9400 5950
 $Comp
-L Device:Jumper_NC_Small JP18
+L TeleprinterHat-rescue:Jumper_NC_Small-Device JP18
 U 1 1 604DFDC4
 P 8500 6200
 F 0 "JP18" V 8550 6350 50  0000 C CNN
@@ -3223,7 +3068,7 @@ F 3 "~" H 8500 6200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR037
+L TeleprinterHat-rescue:GND-power #PWR037
 U 1 1 604E005B
 P 8500 6350
 F 0 "#PWR037" H 8500 6100 50  0001 C CNN
@@ -3240,7 +3085,7 @@ Wire Wire Line
 Wire Wire Line
 	8500 5450 8900 5450
 $Comp
-L Device:Jumper_NC_Small JP19
+L TeleprinterHat-rescue:Jumper_NC_Small-Device JP19
 U 1 1 6057C3B2
 P 9150 6200
 F 0 "JP19" V 9200 6050 50  0000 C CNN
@@ -3251,7 +3096,7 @@ F 3 "~" H 9150 6200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR039
+L TeleprinterHat-rescue:GND-power #PWR039
 U 1 1 6057C50E
 P 9150 6350
 F 0 "#PWR039" H 9150 6100 50  0001 C CNN
@@ -3268,7 +3113,7 @@ Wire Wire Line
 Wire Wire Line
 	9150 5650 9400 5650
 $Comp
-L Device:R_Small R48
+L TeleprinterHat-rescue:R_Small-Device R48
 U 1 1 60619F06
 P 9150 5250
 F 0 "R48" H 8950 5300 50  0000 L CNN
@@ -3282,7 +3127,7 @@ Wire Wire Line
 	9150 5650 9150 5350
 Connection ~ 9150 5650
 $Comp
-L power:+3V3 #PWR038
+L TeleprinterHat-rescue:+3V3-power #PWR038
 U 1 1 60669076
 P 9150 5100
 F 0 "#PWR038" H 9150 4950 50  0001 C CNN
@@ -3296,8 +3141,6 @@ Wire Wire Line
 	9150 5150 9150 5100
 Text Label 11750 7450 0    50   ~ 0
 TX
-NoConn ~ 9400 7750
-NoConn ~ 9400 7850
 Wire Wire Line
 	5350 3250 5950 3250
 Text Label 5450 3250 0    50   ~ 0
@@ -3333,7 +3176,7 @@ TPON
 Wire Wire Line
 	9900 5250 10000 5250
 $Comp
-L power:GND #PWR0129
+L TeleprinterHat-rescue:GND-power #PWR0129
 U 1 1 60A2EA07
 P 4050 2700
 F 0 "#PWR0129" H 4050 2450 50  0001 C CNN
@@ -3365,42 +3208,8 @@ Wire Wire Line
 	4500 8650 4900 8650
 Text Label 4600 8650 0    50   ~ 0
 USBRX
-$Comp
-L Device:Jumper_NC_Small JP21
-U 1 1 60C1921A
-P 11250 7050
-F 0 "JP21" H 11550 7100 50  0000 C CNN
-F 1 "TEST2" H 10950 7100 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 11250 7050 50  0001 C CNN
-F 3 "~" H 11250 7050 50  0001 C CNN
-	1    11250 7050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Jumper_NC_Small JP20
-U 1 1 60C19362
-P 11250 6950
-F 0 "JP20" H 11550 7000 50  0000 C CNN
-F 1 "TEST1" H 10950 7000 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 11250 6950 50  0001 C CNN
-F 3 "~" H 11250 6950 50  0001 C CNN
-	1    11250 6950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10700 7050 11150 7050
 Wire Wire Line
 	11150 6950 10700 6950
-Wire Wire Line
-	11350 7050 11450 7050
-Connection ~ 11450 7150
-Wire Wire Line
-	11350 6950 11450 6950
-Wire Wire Line
-	11450 6950 11450 7050
-Connection ~ 11450 7050
-Wire Wire Line
-	11450 7050 11450 7150
 Wire Wire Line
 	4050 2500 4050 2250
 Wire Wire Line
@@ -3447,7 +3256,7 @@ Text Notes 7600 1300 0    50   ~ 0
 Text Notes 650  8000 0    50   ~ 0
 Mouser: 649-10118193-0001LF
 $Comp
-L Regulator_Linear:NCP1117-3.3_TO252 U1
+L TeleprinterHat-rescue:NCP1117-3.3_TO252-Regulator_Linear U1
 U 1 1 610A32D2
 P 1750 10000
 F 0 "U1" H 1750 10242 50  0000 C CNN
@@ -3468,7 +3277,7 @@ Mouser: 579-24LC32AT-I/OT
 Text Notes 650  10800 0    50   ~ 0
 Mouser:80-EDK107M016A9GAA\n100uF 16V
 $Comp
-L Device:LED_RGB D6
+L TeleprinterHat-rescue:LED_RGB-Device D6
 U 1 1 61147F80
 P 7350 7300
 F 0 "D6" H 7350 7797 50  0000 C CNN
@@ -3479,7 +3288,7 @@ F 3 "~" H 7350 7250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED_RGB D11
+L TeleprinterHat-rescue:LED_RGB-Device D11
 U 1 1 611483D9
 P 7350 8150
 F 0 "D11" H 7350 8647 50  0000 C CNN
@@ -3510,7 +3319,7 @@ Connection ~ 7050 8350
 Wire Wire Line
 	7050 8350 7050 8150
 $Comp
-L Device:C_Small C17
+L TeleprinterHat-rescue:C_Small-Device C17
 U 1 1 6128E1EE
 P 10950 5550
 F 0 "C17" H 11042 5596 50  0000 L CNN
@@ -3521,7 +3330,7 @@ F 3 "~" H 10950 5550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR028
+L TeleprinterHat-rescue:GND-power #PWR028
 U 1 1 6128E340
 P 10950 5700
 F 0 "#PWR028" H 10950 5450 50  0001 C CNN
@@ -3541,7 +3350,7 @@ Wire Wire Line
 Wire Wire Line
 	10950 5700 10950 5650
 $Comp
-L Device:C_Small C23
+L TeleprinterHat-rescue:C_Small-Device C23
 U 1 1 61527C14
 P 11350 5550
 F 0 "C23" H 11442 5596 50  0000 L CNN
@@ -3552,7 +3361,7 @@ F 3 "~" H 11350 5550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR040
+L TeleprinterHat-rescue:GND-power #PWR040
 U 1 1 61527C1A
 P 11350 5700
 F 0 "#PWR040" H 11350 5450 50  0001 C CNN
@@ -3565,7 +3374,7 @@ $EndComp
 Wire Wire Line
 	11350 5700 11350 5650
 $Comp
-L Device:C_Small C15
+L TeleprinterHat-rescue:C_Small-Device C15
 U 1 1 6157B870
 P 5900 5850
 F 0 "C15" H 5992 5896 50  0000 L CNN
@@ -3576,7 +3385,7 @@ F 3 "~" H 5900 5850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR026
+L TeleprinterHat-rescue:GND-power #PWR026
 U 1 1 6157B876
 P 5900 6000
 F 0 "#PWR026" H 5900 5750 50  0001 C CNN
@@ -3589,7 +3398,7 @@ $EndComp
 Wire Wire Line
 	5900 6000 5900 5950
 $Comp
-L Device:C_Small C24
+L TeleprinterHat-rescue:C_Small-Device C24
 U 1 1 6167701D
 P 11750 5550
 F 0 "C24" H 11842 5596 50  0000 L CNN
@@ -3600,7 +3409,7 @@ F 3 "~" H 11750 5550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR041
+L TeleprinterHat-rescue:GND-power #PWR041
 U 1 1 61677023
 P 11750 5700
 F 0 "#PWR041" H 11750 5450 50  0001 C CNN
@@ -3613,7 +3422,7 @@ $EndComp
 Wire Wire Line
 	11750 5700 11750 5650
 $Comp
-L Device:C_Small C25
+L TeleprinterHat-rescue:C_Small-Device C25
 U 1 1 6167702A
 P 12150 5550
 F 0 "C25" H 12242 5596 50  0000 L CNN
@@ -3624,7 +3433,7 @@ F 3 "~" H 12150 5550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR042
+L TeleprinterHat-rescue:GND-power #PWR042
 U 1 1 61677030
 P 12150 5700
 F 0 "#PWR042" H 12150 5450 50  0001 C CNN
@@ -3717,7 +3526,7 @@ Text Notes 2700 6600 0    50   ~ 0
 Text Notes 7600 9850 0    50   ~ 0
  649-54601-906001WPLF
 $Comp
-L 24LC32AT-SOT-23-5:24LC32AT-IOT U6
+L TeleprinterHat-rescue:24LC32AT-IOT-24LC32AT-SOT-23-5 U6
 U 1 1 609564A3
 P 9750 1150
 F 0 "U6" H 9978 1196 50  0000 L CNN
@@ -3732,7 +3541,7 @@ Wire Wire Line
 Wire Wire Line
 	9700 1500 9700 1450
 $Comp
-L EA2-5NU:EA2-5NU K1
+L TeleprinterHat-rescue:EA2-5NU-EA2-5NU K1
 U 1 1 60C17E60
 P 6950 1350
 F 0 "K1" V 6183 1350 50  0000 C CNN
@@ -3744,7 +3553,7 @@ F 3 "" H 6750 1350 50  0001 C CNN
 $EndComp
 Connection ~ 6650 1450
 $Comp
-L Connector_Generic:Conn_02x20_Odd_Even J7
+L TeleprinterHat-rescue:Conn_02x20_Odd_Even-Connector_Generic J7
 U 1 1 683729D4
 P 10650 2050
 F 0 "J7" H 10700 3167 50  0000 C CNN
@@ -3764,7 +3573,7 @@ Wire Wire Line
 	1100 10000 1350 10000
 Connection ~ 1350 10000
 $Comp
-L power:GND #PWR0117
+L TeleprinterHat-rescue:GND-power #PWR0117
 U 1 1 60E7A1C7
 P 1750 10400
 F 0 "#PWR0117" H 1750 10150 50  0001 C CNN
@@ -3777,7 +3586,7 @@ $EndComp
 Wire Wire Line
 	1750 10400 1750 10300
 $Comp
-L power:GND #PWR0106
+L TeleprinterHat-rescue:GND-power #PWR0106
 U 1 1 6117D971
 P 1600 7700
 F 0 "#PWR0106" H 1600 7450 50  0001 C CNN
@@ -3792,7 +3601,7 @@ Wire Wire Line
 Wire Wire Line
 	1600 7300 1600 7100
 $Comp
-L power:+5V #PWR0107
+L TeleprinterHat-rescue:+5V-power #PWR0107
 U 1 1 6122BDA1
 P 1350 9750
 F 0 "#PWR0107" H 1350 9600 50  0001 C CNN
@@ -3805,7 +3614,7 @@ $EndComp
 Wire Wire Line
 	1350 10000 1350 9750
 $Comp
-L power:+5V #PWR0118
+L TeleprinterHat-rescue:+5V-power #PWR0118
 U 1 1 61282F57
 P 7350 3750
 F 0 "#PWR0118" H 7350 3600 50  0001 C CNN
@@ -3816,7 +3625,7 @@ F 3 "" H 7350 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0119
+L TeleprinterHat-rescue:+5V-power #PWR0119
 U 1 1 612833F2
 P 6300 3750
 F 0 "#PWR0119" H 6300 3600 50  0001 C CNN
@@ -3827,7 +3636,7 @@ F 3 "" H 6300 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0126
+L TeleprinterHat-rescue:+5V-power #PWR0126
 U 1 1 61284126
 P 600 700
 F 0 "#PWR0126" H 600 550 50  0001 C CNN
@@ -3838,7 +3647,7 @@ F 3 "" H 600 700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0128
+L TeleprinterHat-rescue:+5V-power #PWR0128
 U 1 1 61284653
 P 7550 700
 F 0 "#PWR0128" H 7550 550 50  0001 C CNN
@@ -3849,7 +3658,7 @@ F 3 "" H 7550 700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0131
+L TeleprinterHat-rescue:+5V-power #PWR0131
 U 1 1 61285010
 P 6450 700
 F 0 "#PWR0131" H 6450 550 50  0001 C CNN
@@ -3860,7 +3669,7 @@ F 3 "" H 6450 700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0138
+L TeleprinterHat-rescue:+5V-power #PWR0138
 U 1 1 61285E7A
 P 11000 950
 F 0 "#PWR0138" H 11000 800 50  0001 C CNN
@@ -3871,7 +3680,7 @@ F 3 "" H 11000 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG0101
+L TeleprinterHat-rescue:PWR_FLAG-power #FLG0101
 U 1 1 61287811
 P 11350 1050
 F 0 "#FLG0101" H 11350 1125 50  0001 C CNN
@@ -3886,7 +3695,7 @@ Wire Wire Line
 Wire Wire Line
 	11350 1150 11350 1050
 $Comp
-L power:PWR_FLAG #FLG0102
+L TeleprinterHat-rescue:PWR_FLAG-power #FLG0102
 U 1 1 612DEB67
 P 1900 800
 F 0 "#FLG0102" H 1900 875 50  0001 C CNN
@@ -3896,4 +3705,378 @@ F 3 "~" H 1900 800 50  0001 C CNN
 	1    1900 800 
 	1    0    0    -1  
 $EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 61E77917
+P 12450 1850
+F 0 "H1" H 12550 1896 50  0000 L CNN
+F 1 "MountingHole" H 12550 1805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 12450 1850 50  0001 C CNN
+F 3 "~" H 12450 1850 50  0001 C CNN
+	1    12450 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 61E77C42
+P 12450 2150
+F 0 "H2" H 12550 2196 50  0000 L CNN
+F 1 "MountingHole" H 12550 2105 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 12450 2150 50  0001 C CNN
+F 3 "~" H 12450 2150 50  0001 C CNN
+	1    12450 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 61E77E30
+P 12450 2450
+F 0 "H3" H 12550 2496 50  0000 L CNN
+F 1 "MountingHole" H 12550 2405 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 12450 2450 50  0001 C CNN
+F 3 "~" H 12450 2450 50  0001 C CNN
+	1    12450 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 61E78204
+P 12450 2750
+F 0 "H4" H 12550 2796 50  0000 L CNN
+F 1 "MountingHole" H 12550 2705 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 12450 2750 50  0001 C CNN
+F 3 "~" H 12450 2750 50  0001 C CNN
+	1    12450 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H5
+U 1 1 61ED03E4
+P 13600 1850
+F 0 "H5" H 13700 1896 50  0000 L CNN
+F 1 "MountingHole" H 13700 1805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 13600 1850 50  0001 C CNN
+F 3 "~" H 13600 1850 50  0001 C CNN
+	1    13600 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H6
+U 1 1 61ED03EA
+P 13600 2150
+F 0 "H6" H 13700 2196 50  0000 L CNN
+F 1 "MountingHole" H 13700 2105 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 13600 2150 50  0001 C CNN
+F 3 "~" H 13600 2150 50  0001 C CNN
+	1    13600 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H7
+U 1 1 61ED03F0
+P 13600 2450
+F 0 "H7" H 13700 2496 50  0000 L CNN
+F 1 "MountingHole" H 13700 2405 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 13600 2450 50  0001 C CNN
+F 3 "~" H 13600 2450 50  0001 C CNN
+	1    13600 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H8
+U 1 1 61ED03F6
+P 13600 2750
+F 0 "H8" H 13700 2796 50  0000 L CNN
+F 1 "MountingHole" H 13700 2705 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 13600 2750 50  0001 C CNN
+F 3 "~" H 13600 2750 50  0001 C CNN
+	1    13600 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L tinkerforge:SWITCH-DIP10 SW1
+U 1 1 61F28080
+P 13800 6600
+F 0 "SW1" H 13350 7287 60  0000 C CNN
+F 1 "SWITCH-DIP10" H 13350 7181 60  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 13800 6600 60  0001 C CNN
+F 3 "" H 13800 6600 60  0000 C CNN
+	1    13800 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13650 6200 13750 6200
+Wire Wire Line
+	13750 6200 13750 6300
+Wire Wire Line
+	13650 7100 13750 7100
+Connection ~ 13750 7100
+Wire Wire Line
+	13750 7100 13750 7300
+Wire Wire Line
+	13650 7000 13750 7000
+Connection ~ 13750 7000
+Wire Wire Line
+	13750 7000 13750 7100
+Wire Wire Line
+	13650 6900 13750 6900
+Connection ~ 13750 6900
+Wire Wire Line
+	13750 6900 13750 7000
+Wire Wire Line
+	13650 6800 13750 6800
+Connection ~ 13750 6800
+Wire Wire Line
+	13750 6800 13750 6900
+Wire Wire Line
+	13650 6700 13750 6700
+Connection ~ 13750 6700
+Wire Wire Line
+	13750 6700 13750 6800
+Wire Wire Line
+	13650 6600 13750 6600
+Connection ~ 13750 6600
+Wire Wire Line
+	13750 6600 13750 6700
+Wire Wire Line
+	13650 6500 13750 6500
+Connection ~ 13750 6500
+Wire Wire Line
+	13750 6500 13750 6600
+Wire Wire Line
+	13650 6400 13750 6400
+Connection ~ 13750 6400
+Wire Wire Line
+	13750 6400 13750 6500
+Wire Wire Line
+	13650 6300 13750 6300
+Connection ~ 13750 6300
+Wire Wire Line
+	13750 6300 13750 6400
+Wire Wire Line
+	13050 6200 12750 6200
+Wire Wire Line
+	13050 6300 12750 6300
+Wire Wire Line
+	13050 6400 12750 6400
+Wire Wire Line
+	13050 6500 12750 6500
+Wire Wire Line
+	13050 6600 12750 6600
+Wire Wire Line
+	13050 6700 12750 6700
+Wire Wire Line
+	13050 6800 12750 6800
+Wire Wire Line
+	13050 6900 12750 6900
+Wire Wire Line
+	13050 7000 12750 7000
+Wire Wire Line
+	13050 7100 12750 7100
+Text Label 12750 6200 0    50   ~ 0
+TEST0
+Text Label 12750 6300 0    50   ~ 0
+TEST1
+Text Label 12750 6400 0    50   ~ 0
+TPBAUD0
+Text Label 12750 6500 0    50   ~ 0
+TPBAUD1
+Text Label 12750 6700 0    50   ~ 0
+HBAUD1
+Text Label 12750 6600 0    50   ~ 0
+HBAUD0
+Text Label 12750 6800 0    50   ~ 0
+CURR0
+Text Label 12750 6900 0    50   ~ 0
+CURR1
+Text Label 12750 7000 0    50   ~ 0
+VOLT0
+Text Label 12750 7100 0    50   ~ 0
+VOLT1
+Text Label 8950 8050 0    50   ~ 0
+TPBAUD0
+Text Label 8950 7950 0    50   ~ 0
+TPBAUD1
+Text Label 8950 7850 0    50   ~ 0
+HBAUD0
+Text Label 8950 7650 0    50   ~ 0
+CURR0
+Text Label 8950 7550 0    50   ~ 0
+CURR1
+Text Label 9000 6750 0    50   ~ 0
+VOLT0
+Text Label 9000 6650 0    50   ~ 0
+VOLT1
+Text Label 8200 7100 0    50   ~ 0
+LED1
+Text Label 8200 7300 0    50   ~ 0
+LED2
+Text Label 8200 7500 0    50   ~ 0
+LED3
+Text Label 8200 7600 0    50   ~ 0
+LED4
+Text Label 8300 7700 0    50   ~ 0
+LED5
+Text Label 8350 7800 0    50   ~ 0
+LED6
+Text Label 8950 7450 0    50   ~ 0
+LED3
+Text Label 8950 7350 0    50   ~ 0
+LED2
+Text Label 8950 7250 0    50   ~ 0
+LED1
+Text Label 8950 7150 0    50   ~ 0
+LED6
+Text Label 10800 8050 0    50   ~ 0
+LED5
+Text Label 10850 7750 0    50   ~ 0
+LED4
+Text Label 10850 7650 0    50   ~ 0
+TEST0
+Text Label 8950 7750 0    50   ~ 0
+HBAUD1
+Wire Wire Line
+	9400 7750 8900 7750
+Wire Wire Line
+	9400 7850 8900 7850
+NoConn ~ 10700 7050
+NoConn ~ 10700 7150
+Text Label 10850 7350 0    50   ~ 0
+TEST1
+NoConn ~ 10700 6750
+$Comp
+L power:GND #PWR03
+U 1 1 62E4DC65
+P 2050 4450
+F 0 "#PWR03" H 2050 4200 50  0001 C CNN
+F 1 "GND" H 2055 4277 50  0000 C CNN
+F 2 "" H 2050 4450 50  0001 C CNN
+F 3 "" H 2050 4450 50  0001 C CNN
+	1    2050 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR043
+U 1 1 62E4DE7C
+P 2600 3950
+F 0 "#PWR043" H 2600 3800 50  0001 C CNN
+F 1 "+5V" H 2615 4123 50  0000 C CNN
+F 2 "" H 2600 3950 50  0001 C CNN
+F 3 "" H 2600 3950 50  0001 C CNN
+	1    2600 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 4150 2600 4150
+Wire Wire Line
+	2600 4150 2600 3950
+Wire Wire Line
+	2050 4400 2050 4450
+$Comp
+L power:GND #PWR01
+U 1 1 62EFA916
+P 1900 4450
+F 0 "#PWR01" H 1900 4200 50  0001 C CNN
+F 1 "GND" H 1905 4277 50  0000 C CNN
+F 2 "" H 1900 4450 50  0001 C CNN
+F 3 "" H 1900 4450 50  0001 C CNN
+	1    1900 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 4450 1900 4400
+$Comp
+L tinkerforge:DC_JACK J3
+U 1 1 62F536D2
+P 1950 4200
+F 0 "J3" H 2031 4537 60  0000 C CNN
+F 1 "DC_JACK" H 2031 4431 60  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002" H 1950 4200 60  0001 C CNN
+F 3 "" H 1950 4200 60  0000 C CNN
+	1    1950 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J9
+U 1 1 630B165A
+P 3950 4400
+F 0 "J9" H 4056 4578 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 4056 4487 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 3950 4400 50  0001 C CNN
+F 3 "~" H 3950 4400 50  0001 C CNN
+	1    3950 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J10
+U 1 1 630B1993
+P 3950 4850
+F 0 "J10" H 4056 5028 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 4056 4937 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 3950 4850 50  0001 C CNN
+F 3 "~" H 3950 4850 50  0001 C CNN
+	1    3950 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 630B1BFD
+P 4200 4450
+F 0 "#PWR0112" H 4200 4200 50  0001 C CNN
+F 1 "GND" H 4205 4277 50  0000 C CNN
+F 2 "" H 4200 4450 50  0001 C CNN
+F 3 "" H 4200 4450 50  0001 C CNN
+	1    4200 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0140
+U 1 1 630B1D30
+P 4200 4900
+F 0 "#PWR0140" H 4200 4650 50  0001 C CNN
+F 1 "GND" H 4205 4727 50  0000 C CNN
+F 2 "" H 4200 4900 50  0001 C CNN
+F 3 "" H 4200 4900 50  0001 C CNN
+	1    4200 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 4400 4200 4400
+Wire Wire Line
+	4200 4400 4200 4450
+Wire Wire Line
+	4150 4850 4200 4850
+Wire Wire Line
+	4200 4850 4200 4900
+$Comp
+L Connector:Conn_01x01_Male J8
+U 1 1 63161915
+P 3550 700
+F 0 "J8" H 3656 878 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 3656 787 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 3550 700 50  0001 C CNN
+F 3 "~" H 3550 700 50  0001 C CNN
+	1    3550 700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 700  3750 800 
+$Comp
+L Connector:Conn_01x01_Male J11
+U 1 1 631BA224
+P 6600 2550
+F 0 "J11" H 6573 2480 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 6573 2571 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 6600 2550 50  0001 C CNN
+F 3 "~" H 6600 2550 50  0001 C CNN
+	1    6600 2550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6400 2550 6400 2450
+Connection ~ 6400 2450
+Text Label 1950 8500 0    50   ~ 0
+USB_P
+Text Label 1950 8600 0    50   ~ 0
+USB_N
 $EndSCHEMATC
