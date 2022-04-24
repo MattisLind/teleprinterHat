@@ -3,6 +3,8 @@ A RaspberryPi HAT that interfaces a old school teleprinter
 
 ![Finished board](https://i.imgur.com/QwgbDhd.jpg)
 
+![Schematic](https://raw.githubusercontent.com/MattisLind/teleprinterHat/master/hardware/TeleprinterHat/TeleprinterHat.svg)
+
 ## History
 Some time ago I started planning to get an old Lorenz Lo15 teleprinter working. Then arose the question about how to interface those old machines to the real world. While investigating this I gained quite some knowledge of teleprinter interfacing and Telex networks. For example the normal line voltage of a US teleprinter line is 120VDC and the current is 60 mA.
 
